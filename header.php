@@ -68,8 +68,8 @@
 			<li>
 
 				<!-- <a href="#Appetizer">-->
-                	<img id="CartID" onclick="orderList()" src="Assets/shopping-cart.png">
-					</li>
+                	<a href="./cart.php"><img id="CartID"  src="Assets/shopping-cart.png"></a>
+                	</li>
 		</ul>
 		</div>
 	</div>

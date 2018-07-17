@@ -293,9 +293,25 @@ function AddToCart(){
 	var str = document.getElementById("abc123").src;
 	var res = str.split("Assets/");
     var res2 = res[1].split(".");
-    
+    var product = {
+    	id :  res2[0].concat(a),
+    	qty : b
+    }
 	
-cart.push([res2[0].concat(a),b]);
+
+
+
+
+var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+
+    	// console.log(this.responseText);
+    }
+  };
+  xhttp.open("POST", "ajax.php", true);
+xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+xhttp.send('cart='+JSON.stringify(product));
 
 
 		

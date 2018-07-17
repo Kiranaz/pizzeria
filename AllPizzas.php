@@ -1,4 +1,5 @@
-<?php include 'header.php'; ?>
+<?php include 'header.php'; 
+	?>
 
 <title>All Pizzas</title>
 </head>
@@ -38,6 +39,8 @@
 
 	<div class="overlay" onmouseleave="resume()" >
 		<p id="overlaytext1" class="overlaytext"> </p>
+
+
 	 <button class="button button1" onclick="AddToCart()" align="center">Add to Cart</button>
 	 <div id="custom-selectid" class="custom-select" >
 
@@ -96,6 +99,11 @@
 
 
 
+<style type="text/css">
+	.name{
+		color:white;
+	}
+</style>
 
 
 

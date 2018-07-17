@@ -24,7 +24,7 @@
 
 	<div class="overlay" onmouseleave="resume()" >
 		<p id="overlaytext1" class="overlaytext"> </p>
-	 <button class="button button1" align="center">Add to Cart</button>
+	 <button class="button button1" onclick="AddToCart()" align="center">Add to Cart</button>
 	 <div id="custom-selectid" class="custom-select" >
 
     <select id="1" style="visibility: visible;">
