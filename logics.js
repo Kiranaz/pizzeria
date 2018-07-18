@@ -321,8 +321,6 @@ xhttp.send('cart='+JSON.stringify(product));
 
 }
 
-function orderList(){
-	alert(cart);
-}
+
 
 
