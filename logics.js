@@ -1,4 +1,6 @@
 function getpagename(){
+
+
 	var t="";
 	t=document.title;
 	var z = "";
@@ -55,6 +57,7 @@ function getpagename(){
 		}
 		else{
 			document.getElementById("logoimg").style.width="100px";
+			
 		}
 	}
 
@@ -91,7 +94,7 @@ function change(x){
 	x.style.visibility="hidden";
 var t = document.getElementById("overlaytext1");
 	if (m == "http://localhost/pizzeria/Assets/menu1.png") {
-		t.innerHTML='<span style="font-size:21px; font-family:Pacifico;">A recipe of traditional chicken tikka, onions & topped with mozzarell a cheese<br>&emsp;&emsp;&emsp;Rs 360</span>';
+		t.innerHTML='<span style="font-size:21px; font-family:Pacifico;">A recipe of traditional chicken tikka, onions & topped with mozzarell a cheese<p id="price1"></p></span>';
 }																																																			
 	else if (m == "http://localhost/pizzeria/Assets/menu2.png") {
 		t.innerHTML= t.innerHTML='<span style="font-size:22px; font-family:Pacifico;">Green Chicken, Green Paper, Onion, Jalapeno, Green Olive & Alfreo<br>&emsp;&emsp;&emsp;Rs 360</span>';
@@ -163,7 +166,7 @@ var t = document.getElementById("overlaytext1");
 		t.innerHTML= t.innerHTML='<span style="font-size:16px; font-family:Pacifico;">Layers of lasagne with cream sauce and beef sauce Mozzarella cheese topped with cheese served with garlic bread & drink<br>&emsp;&emsp;&emsp;&emsp;&emsp; Rs 380</span>';
 	}
 	else if (m == "http://localhost/pizzeria/Assets/pasta5.png") {
-		t.innerHTML= t.innerHTML='<span style="font-size:16px; font-family:Pacifico;">Layers of lasagne filled with chicken cream sauce topped with mozzarella cheese served with garlic bread & drink<br>&emsp;&emsp;&emsp;&emsp;&emsp; Rs 380</span>';
+		t.innerHTML= t.innerHTML='<span style="font-size:16px; font-family:Pacifico;">Layers of lasagne filled with chicken cream sauce topped with mozzarella cheese served with garlic bread & drink<br>&emsp;&emsp;&emsp;&emsp; Rs 380</span>';
 	}
 	else if (m == "http://localhost/pizzeria/Assets/pasta6.png") {
 		t.innerHTML= t.innerHTML='<span style="font-size:18px; font-family:Pacifico;">Topped with mozzarella cheese meat sauce mushrooms & noddles served with garlic bread & drink<br>&emsp;&emsp;&emsp;&emsp; Rs 380</span>';
@@ -280,7 +283,15 @@ for (i=0; i < a.length ; i++) {
 var cartflag = 0;
 var cart = [];
 
+
+
+
 function AddToCart(){
+
+	$('#success_message').fadeIn().html("<span style='font-size:50px' > &#10004; </span>");
+	setTimeout(function () { $('#success_message').fadeOut("slow"); }, 1500);
+	
+
 	if (cartflag == 0) {
 		cartflag=1;
 		document.getElementById("CartID").src="Assets/filled-cart.png"; 
@@ -314,13 +325,36 @@ xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 xhttp.send('cart='+JSON.stringify(product));
 
 
-		
-
-
-
+	
 
 }
 
 
 
+
+function pricedisplay(){
+	
+	var price;
+	var x = document.getElementById("1");
+	var a = x.options[x.selectedIndex].value;
+	var y = document.getElementById("2");
+	var b = y.options[y.selectedIndex].value;
+	var ab = parseInt(b);
+
+	if(a=="small"){
+		price = 360;
+	}
+	else if(a=="regular"){
+		price= 700;
+	}
+	else{
+		price = 1050;
+	}
+	var multi = price * ab;
+	
+	document.getElementById("price1").innerHTML="&emsp;&emsp;Rs "+multi;
+	
+
+
+}
 
