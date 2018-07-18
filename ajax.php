@@ -11,7 +11,7 @@ if (isset($_POST["cart"])) {
 		array_push($_SESSION['items'],$name);
 	}
 	
-	echo json_encode($name);
+	
 }
 
 ?>
