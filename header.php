@@ -61,7 +61,7 @@
 					<div class="dropdown-content">
     				 		<a href="AllAppetizer.php">All</a>
    					 		<a href="Soup.php">Soup</a>
-   					 		<a href="Salad.php">salad</a>
+   					 		<a href="Salad.php">Salad</a>
    					 		<a href="Rolls.php">Rolls</a>
 						</div>
 			</div>

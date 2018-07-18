@@ -3,43 +3,32 @@ function getpagename(){
 	t=document.title;
 	var z = "";
 	z = document.src;
-	if(z == "Assets/app2.png" &&  z == "Assets/app1.png"){
-		var k = document.getElementById("1");
-		k.style.visibility="visible";
-		}	
-	
-	
-	else if (t == 'All Pizzas' && t == "Beef Pizzas" && t == "Chicken Pizza" && t == "Special Pizza") {
-		var k = document.getElementById("1");
+	var k = document.getElementById("1");
+
+ if (t == 'All Pizzas' && t == "Beef Pizzas" && t == "Chicken Pizza" && t == "Special Pizza") {
+		
 		k.style.visibility="visible";			
 	}
 
-	else if (t == "Soup")
+	else if (t == "Soup" && t == "Pasta" && t == "Salad" && t == "Rolls")
 	{
-		var k = document.getElementById("1");
 		k.style.visibility="hidden";
 	}
 
-	else if (t == "Pasta")
-	{
-		var k = document.getElementById("1");
-		k.style.visibility="hidden";
-	}
-	else if (t == "Salad")
-	{
-		var k = document.getElementById("1");
-		k.style.visibility="hidden";
-	}
-	else if (t == "Rolls")
-	{
-		var k = document.getElementById("1");
-		k.style.visibility="hidden";
-	}
-	else if (z == "Assets/app3.png")
-	{
-			var k = document.getElementById("1");
-		k.style.visibility="hidden";
+	else if(t == 'AllAppetizer'){
+		 if (z == "Assets/app3.png")
+		{
+			k.style.visibility="visible";
+		}
+		else if (z != "Assets/app3.png")
 
+		{
+			k.style.visibility="hidden";
+		}	
+		else
+	{
+		k.style.visibility="hidden";
+	}	
 	}
 
 }
