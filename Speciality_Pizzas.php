@@ -4,6 +4,7 @@
 </head>
 
 <body onload="getpagename()">
+<div id="success_message"> </div>
         <div class="big" id="b4a">
             <div class="bg" id="b4b"></div>
 		<p id="pizzaNamesID" class="pizza names" style=" position:absolute; font-size:30px; margin-top:530px; margin-left:100px; font-family:'fredericka'; color:#ff7733; "> SIGNATURE CRUST  </p>
@@ -18,25 +19,24 @@
     <p id="pizzaNamesID" class="pizza names" style=" position:absolute; font-size:30px; margin-top:930px; margin-left:930px; font-family:'fredericka'; color:#ff7733; "> MIX SUPREME  </p>
 
         
-		<div class="container1" id="abc12345" onmouseleave="imgchange(this)" style="top:200px; left:100px;">
+		<div class="container1" onmouseover="pricedisplay()" id="abc12345" onmouseleave="imgchange(this)" style="top:200px; left:100px;">
 		<li>	
 			
 	<img id="abc123" src="x" class="image"   style="visibility: hidden; ">
 
 	<div class="overlay" onmouseleave="resume()" >
 		<p id="overlaytext1" class="overlaytext"> </p>
-	 <button class="button button1" align="center">Add to Cart</button>
+	 <button class="button button1" onclick="AddToCart(); tick();" align="center">Add to Cart</button>
 	 <div  id="custom-selectid" class="custom-select" >
 
-    <select id="1" >
+    <select onchange="pricedisplay()" id="1" >
     	
         <option>small</option>
         <option>regular</option>
         <option>large</option>
-        <option>jumbo</option>
     </select>
 
-    <select id="2" style="visibility: visible;" >
+    <select id="2" onchange="pricedisplay()" style="visibility: visible;" >
     	
         <option>1</option>
         <option>2</option>

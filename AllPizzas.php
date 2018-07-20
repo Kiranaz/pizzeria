@@ -1,10 +1,10 @@
-<?php include 'header.php'; 
-	?>
+<?php include 'header.php';?>
 
 <title>All Pizzas</title>
 </head>
 
 <body onload="getpagename()">
+    <div id="success_message"> </div>
         <div class="big" id="b1a">
             <div class="bg" id="b1b"></div>
 
@@ -32,28 +32,28 @@
     <p id="pizzaNamesID" class="pizza names" style=" position:absolute; font-size:30px; margin-top:2530px; margin-left:900px; font-family:'fredericka'; color:#ff7733; "> EUROPEAN FEAST  </p>
 
 		
-		<div class="container1" id="abc12345"  onmouseover="pricedisplay()" onmouseleave="imgchange(this)" style="top:200px; left:100px;">
+		<div class="container1" id="abc12345"  onmouseover="pricedisplay()"  onmouseleave="imgchange(this)" style="top:200px; left:100px;">
 		<li>	
 			
 	<img id="abc123" value="y" src="x" class="image"   style="visibility: hidden; ">
 
 	<div class="overlay" onmouseleave="resume()" >
-		<p id="overlaytext1" class="overlaytext"> </p>
+		<p id="overlaytext1" class="overlaytext" > </p>
 
 
-	 <button class="button button1" onclick="AddToCart()" align="center">Add to Cart</button>
-	 <div id="custom-selectid" class="custom-select" >
+	 <button class="button button1" onclick="AddToCart(); tick();" align="center">Add to Cart</button>
+	 <div  id="custom-selectid" class="custom-select">
 
     <select onchange="pricedisplay()" id="1" style="visibility: visible;"; >
     	
-        <option value="small">small</option>
+        <option value="small" selected>small</option>
         <option value="regular">regular</option>
         <option value="large">large</option>
     </select>
 
-    <select id="2" onchange="pricedisplay()" >
+    <select id="2"  onchange="pricedisplay()" >
     	
-        <option value="1">1</option>
+        <option value="1" selected>1</option>
         <option value="2">2</option>
         <option value="3">3</option>
         <option value="4">4</option>

@@ -596,111 +596,32 @@ html,body{
 	
 }
 
-#b1a{
-height: 480%;
-}
-
-#b1b{
-	height: 90%;
-}
-
-
-#b2a{
-height: 230%;
-}
-
-#b2b{
-height: 80%;
-}
-
-#b3a{
-height: 102%;
-}
-#b3b{
-height: 58%;
-}
-
-
-#b4a{
-height: 230%;
-}
-#b4b{
-height: 80%;
-}
-
-
-#b5a{
-height: 102%;
-}
-#b5b{
-height: 58%;
-}
-
-
-#b6a{
-height: 245%;
-}
-#b6b{
-height: 78%;
-}
-
-
-#b7a{
-height: 170%;
-}
-#b7b{
-height: 70%;
-}
-
-
-#b8a{
-height: 170%;
-}
-#b8b{
-height: 73%;
-}
-
-
-#b9a{
-height: 102%;
-}
-#b9b{
-height: 58%;
-}
-
-
-#b10a{
-height: 355%;
-}
-
-#b10b{
-	height: 87%;
-}
-
-
-#b11a{
-height: 102%;
-}
-#b11b{
-height:60%;
-}
-
-
-#b12a{
-height: 102%;
-}
-#b12b{
-height:60%;
-}
-
-
-#b13a{
-height: 102%;
-}
-#b13b{
-height:60%;
-}
-
+#b1a{height: 480%;}
+#b1b{height: 90%;}
+#b2a{height: 230%;}
+#b2b{height: 80%;}
+#b3a{height: 102%;}
+#b3b{height: 58%;}
+#b4a{height: 230%;}
+#b4b{height: 80%;}
+#b5a{height: 155%;}
+#b5b{height: 75%;}
+#b6a{height: 245%;}
+#b6b{height: 78%;}
+#b7a{height: 170%;}
+#b7b{height: 70%;}
+#b8a{height: 170%;}
+#b8b{height: 73%;}
+#b9a{height: 102%;}
+#b9b{height: 58%;}
+#b10a{height: 355%;}
+#b10b{	height: 87%;}
+#b11a{height: 102%;}
+#b11b{height:60%;}
+#b12a{height: 102%;}
+#b12b{height:60%;}
+#b13a{height: 102%;}
+#b13b{height:60%;}
 /*Contact sectiom*/
 .content-header{
   font-family: 'Oleo Script', cursive;
@@ -719,7 +640,7 @@ height:60%;
   width: 100%;
   width: 100vw;
   height: 550px; 
-  background: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1));
+  background: linear-gradient(to right, rgba(255, 0, 0, 0), rgba(255,0,0,1));
   color : #000000;    
 }
 .contact-section{
@@ -758,4 +679,22 @@ textarea.form-control {
   background-color: transparent;
   color: #fff;
 
+}
+
+
+#success_message{
+     position: fixed;
+    background-color: rgba(2, 0, 0, 0.5);
+    top: 40%;
+    border-top:4px solid rgb(248, 191, 45);
+    color:darkgoldenrod;
+    text-shadow: 2px 2px rgb(252, 252, 145);
+    display: none;
+    width: 200px; height:auto;
+    left:41%;
+    border-radius: 10px;
+    border-bottom:4px solid rgb(248, 191, 45);
+    text-align: center; padding: 10px;
+    z-index: 100;
+    box-shadow: 2px lightyellow;
 }

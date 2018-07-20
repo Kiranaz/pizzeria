@@ -6,6 +6,7 @@
 </head>
 
 <body onload="getpagename()">
+<div id="success_message"> </div>
         <div class="big" id="b3a">
             <div class="bg" id="b3b"></div>
 
@@ -17,25 +18,24 @@
 
 	
 		
-		<div class="container1" id="abc12345" onmouseleave="imgchange(this)" style="top:200px; left:100px;">
+		<div class="container1" onmouseover="pricedisplay()" id="abc12345" onmouseover="pricedisplay()" onmouseleave="imgchange(this)" style="top:200px; left:100px;">
 		<li>	
 			
 	<img id="abc123" src="x" class="image"   style="visibility: hidden; ">
 
 	<div class="overlay" onmouseleave="resume()" >
 		<p id="overlaytext1" class="overlaytext"> </p>
-	 <button class="button button1" onclick="AddToCart()" align="center">Add to Cart</button>
+	 <button class="button button1" onclick="AddToCart(); tick();" onclick="AddToCart()" align="center">Add to Cart</button>
 	 <div id="custom-selectid" class="custom-select" >
 
-    <select id="1" style="visibility: visible;">
+    <select id="1" onchange="pricedisplay()" style="visibility: visible;">
     	
         <option>small</option>
         <option>regular</option>
         <option>large</option>
-        <option>jumbo</option>
     </select>
 
-    <select id="2" >
+    <select onchange="pricedisplay()" id="2" >
     	
         <option>1</option>
         <option>2</option>
