@@ -33,7 +33,7 @@
 
 
 
-<?php include 'footer.php'; ?>
+
 
 
 
