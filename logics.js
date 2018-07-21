@@ -378,7 +378,8 @@ function pricedisplay2(){
 		if(res3 == "pasta"+i)
 
 				document.getElementById("pricep"+i).innerHTML="&emsp;&emsp;&emsp;&emsp;Rs "+multi;
-	}}
+	}
+}
 
 	
 function pricedisplay3(){

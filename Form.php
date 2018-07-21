@@ -92,7 +92,7 @@
     if(isset($_POST['submit']) && $nameErr=="" && $EmailErr=="" && $PhoneErr=="" ) {
     
 
-    $conn = mysqli_connect('localhost','root','','pizzeria');
+    $conn = mysqli_connect('localhost','root','abc123','pizzeria');
 
     if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());}
