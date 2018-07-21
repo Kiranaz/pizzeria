@@ -8,13 +8,41 @@
 
 
 <?php
-session_start();
- $items = $_SESSION['items'];
-for($i = 0; $i < sizeof($items) ; $i++ ){
-	echo "id : ". $items[$i]->id ."<br>";
- 	echo "qty : ". $items[$i]->qty ."<br>";
+// session_start();
+//  $items = $_SESSION['items'];
+// for($i = 0; $i < sizeof($items) ; $i++ ){
+// 	echo "id : ". $items[$i]->id ."<br>";
+//  	echo "qty : ". $items[$i]->qty ."<br>";
+// }
+
+$conn = mysqli_connect('localhost','root','abc123','pizzeria');
+
+    if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());}
+
+    if (!mysqli_select_db($conn,'pizzeria')) {
+        echo "Database Not Selected";
+    }
+
+    $sql = "SELECT Name, Price, Size FROM products WHERE ProductID = 'menu1large' ";
+
+    $result = mysqli_query($conn, $sql);
+
+if (mysqli_num_rows($result) > 0) {
+    // output data of each row
+    while($row = mysqli_fetch_assoc($result)) {
+        echo "<br><br><br><br><br><br><br>Name" . $row["Name"]. "  price:" . $row["Price"]. "  Size: " . $row["Size"] . "<br>";
+    }
+} else {
+    echo "0 results";
 }
+
+
+
+
+
 ?>
+
 
 
 	<div class="order_table_div">

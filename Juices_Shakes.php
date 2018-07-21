@@ -12,13 +12,13 @@
             <div class="bg" id="b8b"></div>
 
 		
-		<div class="container1" id="abc12345" onmouseover="pricedisplay4()" onmouseleave="imgchange(this)" style="top:200px; left:100px;">
+		<div class="container1" id="abc12345" onmouseover="pricedisplay4();down();" onmouseleave="imgchange(this)" style="top:200px; left:100px;">
 		<li>	
 			
 	<img id="abc123" src="x" class="image"   style="visibility: hidden; ">
 
 	<div class="overlay" onmouseleave="resume()" >
-		<p id="overlaytext1" onmouseover="down()" class="overlaytext"> </p>
+		<p id="overlaytext1" onmouseover="" class="overlaytext"> </p>
 	 <button class="button button1" onclick="AddToCart(); tick();" align="center">Add to Cart</button>
 	 <div  id="custom-selectid" class="custom-select" >
 
