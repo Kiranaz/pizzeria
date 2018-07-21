@@ -577,19 +577,19 @@ function cart_table1(){
 
 			// creating small option // 
 	var option1 = document.createElement("option");
-		var option1_value = document.createAttribute("id"); option1_value.value ="small";
+		var option1_value = document.createAttribute("value"); option1_value.value ="small";
 		option1.setAttributeNode(option1_value);
 		option1.appendChild(document.createTextNode("small"));
 
 			// creating medium option // 
 	var option2 = document.createElement("option");
-		var option2_value = document.createAttribute("id"); option2_value.value ="regular";
+		var option2_value = document.createAttribute("value"); option2_value.value ="regular";
 		option2.setAttributeNode(option2_value);
 		option2.appendChild(document.createTextNode("regular"));
 
 			// creating large option //
 	var option3 = document.createElement("option");
-		var option3_value = document.createAttribute("id"); option3_value.value ="large";
+		var option3_value = document.createAttribute("value"); option3_value.value ="large";
 		option3.setAttributeNode(option3_value);
 		option3.appendChild(document.createTextNode("large"));
 
@@ -608,32 +608,32 @@ function cart_table1(){
 
 			// creating 1 option // 
 	var option4 = document.createElement("option");
-		var option4_value = document.createAttribute("id"); option4_value.value ="1";
+		var option4_value = document.createAttribute("value"); option4_value.value ="1";
 		option4.setAttributeNode(option4_value);
 		option4.appendChild(document.createTextNode("1"));
 
 
 			// creating 2 option // 
 	var option5 = document.createElement("option");
-		var option5_value = document.createAttribute("id"); option5_value.value ="2";
+		var option5_value = document.createAttribute("value"); option5_value.value ="2";
 		option5.setAttributeNode(option5_value);
 		option5.appendChild(document.createTextNode("2"));
 
 			// creating 3 option //
 	var option6 = document.createElement("option");
-		var option6_value = document.createAttribute("id"); option6_value.value ="3";
+		var option6_value = document.createAttribute("value"); option6_value.value ="3";
 		option6.setAttributeNode(option6_value);
 		option6.appendChild(document.createTextNode("3"));
 
 			// creating 4 option //
 	var option7 = document.createElement("option");
-		var option7_value = document.createAttribute("id"); option7_value.value ="4";
+		var option7_value = document.createAttribute("value"); option7_value.value ="4";
 		option7.setAttributeNode(option7_value);
 		option7.appendChild(document.createTextNode("4"));
 
 			// creating 5 option //
 	var option8 = document.createElement("option");
-		var option8_value = document.createAttribute("id"); option8_value.value ="4";
+		var option8_value = document.createAttribute("value"); option8_value.value ="4";
 		option8.setAttributeNode(option8_value);
 		option8.appendChild(document.createTextNode("5"));
 
