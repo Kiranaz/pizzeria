@@ -15,7 +15,7 @@
 //  	echo "qty : ". $items[$i]->qty ."<br>";
 // }
 
-$conn = mysqli_connect('localhost','root','abc123','pizzeria');
+$conn = mysqli_connect('localhost','root','','pizzeria');
 
     if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());}
@@ -43,9 +43,6 @@ if (mysqli_num_rows($result) > 0) {
 
 ?>
 
-if (!mysqli_select_db($conn,'pizzeria')) {
-	echo "Database Not Selected";
-}
 
 	<div class="order_table_div">
 		
