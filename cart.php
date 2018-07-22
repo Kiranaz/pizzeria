@@ -47,20 +47,7 @@ if ($num_of_results > 0) {
     echo "0 results";
 }
 
-$row1 = mysqli_fetch_assoc($result);
 
-foreach ($result as $key => $value) {
-	$str = implode($value);
-    echo "Key: $key; Value: $str ";
-}
-
-//echo implode($row)."<br>";
-echo implode(" ", $dataprice)."<br>";
-echo implode(" ", $datasize);
-
-echo $dataname[0];
-
-$abc = implode($dataname);
 
 
 
