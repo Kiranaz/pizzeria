@@ -28,7 +28,11 @@ $conn = mysqli_connect('localhost','root','abc123','pizzeria');
         echo "Database Not Selected";
     }
 
-    $sql = "SELECT Name, Price, Size FROM products WHERE Price = '200' ";
+
+    for($i = 0; $i < sizeof($items) ; $i++ ){
+
+    	$PrdtID = $items[$i]->id;
+    $sql = "SELECT Name, Price, Size FROM products WHERE ProductID = '$PrdtID' ";
 
     $result = mysqli_query($conn, $sql);
 
@@ -36,19 +40,21 @@ $conn = mysqli_connect('localhost','root','abc123','pizzeria');
 
 if ($num_of_results > 0) {
     // output data of each row
-    while($row=mysqli_fetch_row($result)) {
-        echo "<br><br><br><br><br><br><br>Name" . $row[0]. "  price:" . $row[1]. "  Size: " . $row[2] . "<br>";
-        array_push($dataname,$row[0]);
-        array_push($dataprice,$row[1]);
-        array_push($datasize,$row[2]);
-        
-    }
-} else {
-    echo "0 results";
+    	while($row=mysqli_fetch_row($result)) {
+        //echo "<br><br><br><br><br><br><br>Name" . $row[0]. "  price:" . $row[1]. "  Size: " . $row[2] . "<br>";
+        	array_push($dataname,$row[0]);
+        	array_push($dataprice,$row[1]);
+        	array_push($datasize,$row[2]);        
+    	}
+	} 
+	else {echo "0 results";}
+
 }
 
-
-
+echo implode($dataname);
+echo implode($dataprice);
+echo implode($datasize);
+echo sizeof($dataname);
 
 
 
@@ -103,9 +109,9 @@ if ($num_of_results > 0) {
 	function cart_table1()
 {
 	
-	 var no_of_loops = '<?php echo $num_of_results; ?>';
+	 var no_of_loops = '<?php echo sizeof($dataname); ?>';
 
-
+	 
 	 for (var i = 0; i < no_of_loops; i++) {
 
 
