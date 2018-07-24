@@ -1,7 +1,7 @@
 <?php include 'header.php';?>
 	<title>Cart</title>
 </head>
-<body>
+<body onload="cart_table1()">
 	
 
 
@@ -10,6 +10,10 @@
 <?php
 session_start();
  $items = $_SESSION['items'];
+<<<<<<< HEAD
+=======
+ 
+>>>>>>> 27d25d88aac40e6221c93126cc3604c39a735a64
 // for($i = 0; $i < sizeof($items) ; $i++ ){
 // 	echo "id : ". $items[$i]->id ."<br>";
 //  	echo "qty : ". $items[$i]->qty ."<br>";
@@ -18,6 +22,7 @@ session_start();
  $dataname=array();
  $dataprice=array();
  $datasize=array();
+ $dataquantity=array();
 
 $conn = mysqli_connect('localhost','root','','pizzeria');
 
@@ -31,6 +36,7 @@ $conn = mysqli_connect('localhost','root','','pizzeria');
 
     for($i = 0; $i < sizeof($items) ; $i++ ){
 
+    	array_push($dataquantity,$items[$i]->qty);  
     	$PrdtID = $items[$i]->id;
     $sql = "SELECT Name, Price, Size FROM products WHERE ProductID = '$PrdtID' ";
 
@@ -51,6 +57,15 @@ if ($num_of_results > 0) {
 
 }
 
+<<<<<<< HEAD
+=======
+
+
+function remove_session(){
+	session_unset();
+}
+
+>>>>>>> 27d25d88aac40e6221c93126cc3604c39a735a64
 
 
 ?>
@@ -91,7 +106,7 @@ if ($num_of_results > 0) {
 
 </div>
 
-<button onclick="cart_table1()">Try it haseeb</button>
+
 
 <?php
     $simple = 'demo text string';
@@ -108,7 +123,10 @@ if ($num_of_results > 0) {
 {
 	
 	 var no_of_loops = '<?php echo sizeof($dataname); ?>';
-
+	 var data_node1 = <?php echo json_encode($dataname); ?>;
+	 var data_node2 = <?php echo json_encode($datasize); ?>;
+	 var data_node3 = <?php echo json_encode($dataquantity); ?>;
+	 var data_node4 = <?php echo json_encode($dataprice); ?>;
 	 
 	 for (var i = 0; i < no_of_loops; i++) {
 
@@ -165,91 +183,29 @@ if ($num_of_results > 0) {
 
 					//_________________________________filling node 1 __________________________________________//
 					
-	var data_node1 = <?php echo json_encode($dataname); ?>;
+	
 	var node1_textnode = document.createTextNode(data_node1[i]);
 	node1.appendChild(node1_textnode);
 
 
 					//_________________________________filling node 2 __________________________________________//
 
-	var select1 = document.createElement("select");
 
-			// creating small option // 
-	var option1 = document.createElement("option");
-		var option1_value = document.createAttribute("value"); option1_value.value ="small";
-		option1.setAttributeNode(option1_value);
-		option1.appendChild(document.createTextNode("small"));
-
-			// creating medium option // 
-	var option2 = document.createElement("option");
-		var option2_value = document.createAttribute("value"); option2_value.value ="regular";
-		option2.setAttributeNode(option2_value);
-		option2.appendChild(document.createTextNode("regular"));
-
-			// creating large option //
-	var option3 = document.createElement("option");
-		var option3_value = document.createAttribute("value"); option3_value.value ="large";
-		option3.setAttributeNode(option3_value);
-		option3.appendChild(document.createTextNode("large"));
-
-			//appending options to select //
-	select1.appendChild(option1);
-	select1.appendChild(option2);
-	select1.appendChild(option3);
-			// appending select1 to node2 //
-	node2.appendChild(select1);
-
-
+	
+	var node2_textnode = document.createTextNode(data_node2[i]);
+	node2.appendChild(node2_textnode);
 
 					//_________________________________filling node 3 __________________________________________//
 
-	var select2 = document.createElement("select");
-
-			// creating 1 option // 
-	var option4 = document.createElement("option");
-		var option4_value = document.createAttribute("value"); option4_value.value ="1";
-		option4.setAttributeNode(option4_value);
-		option4.appendChild(document.createTextNode("1"));
-
-
-			// creating 2 option // 
-	var option5 = document.createElement("option");
-		var option5_value = document.createAttribute("value"); option5_value.value ="2";
-		option5.setAttributeNode(option5_value);
-		option5.appendChild(document.createTextNode("2"));
-
-			// creating 3 option //
-	var option6 = document.createElement("option");
-		var option6_value = document.createAttribute("value"); option6_value.value ="3";
-		option6.setAttributeNode(option6_value);
-		option6.appendChild(document.createTextNode("3"));
-
-			// creating 4 option //
-	var option7 = document.createElement("option");
-		var option7_value = document.createAttribute("value"); option7_value.value ="4";
-		option7.setAttributeNode(option7_value);
-		option7.appendChild(document.createTextNode("4"));
-
-			// creating 5 option //
-	var option8 = document.createElement("option");
-		var option8_value = document.createAttribute("value"); option8_value.value ="4";
-		option8.setAttributeNode(option8_value);
-		option8.appendChild(document.createTextNode("5"));
-
-			//appending options to select //
-	select2.appendChild(option4);
-	select2.appendChild(option5);
-	select2.appendChild(option6);
-	select2.appendChild(option7);
-	select2.appendChild(option8);
-			// appending select1 to node2 //
-	node3.appendChild(select2);
+	
+	var node3_textnode = document.createTextNode(data_node3[i]);
+	node3.appendChild(node3_textnode);
 
 
 				//_________________________________filling node 4 __________________________________________//
 
-	var data_node2 = <?php echo json_encode($dataprice); ?>;
-	var node4_textnode = document.createTextNode(data_node2[i]);
+	
+	var node4_textnode = document.createTextNode(data_node4[i]*data_node3[i]);
 	node4.appendChild(node4_textnode);
 	
 
@@ -271,7 +227,9 @@ if ($num_of_results > 0) {
 				//_________________________________appending all nodes to <tr> __________________________________________//
 
 	var main_node = document.createElement("TR");
-	var main_node_id = document.createAttribute("id"); main_node_id.value ="table_list";
+	var main_node_class = document.createAttribute("class"); main_node_class.value ="table_list";
+	main_node.setAttributeNode(main_node_class);
+	var main_node_id = document.createAttribute("id"); main_node_id.value = i ;
 	main_node.setAttributeNode(main_node_id);
 	main_node.appendChild(node1);
 	main_node.appendChild(node2);
