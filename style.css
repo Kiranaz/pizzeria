@@ -727,7 +727,7 @@ textarea.form-control {
 	border: solid black;
 }
 
-#table_list{
+.table_list{
 	color: red;
 	text-align: center;
 	padding-top: 10px;

@@ -285,12 +285,12 @@ function AddToCart(){
 
 
 var xhttp = new XMLHttpRequest();
-  xhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
+  // xhttp.onreadystatechange = function() {
+  //   if (this.readyState == 4 && this.status == 200) {
 
-    	// console.log(this.responseText);
-    }
-  };
+  //   	// console.log(this.responseText);
+  //   }
+  // };
   xhttp.open("POST", "ajax.php", true);
 xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 xhttp.send('cart='+JSON.stringify(product));
@@ -503,7 +503,7 @@ function pricedisplay4(){
 // // }}
 
 function set(){
-	var elements = document.getElementsByTagName("select")
+	var elements = document.getElementsByTagName("select");
 	for(i=0; i < elements.length ; i++){
 	 elements[i].selectedIndex= 0;
 	}
@@ -519,11 +519,22 @@ function set(){
 
 
 function cart_table_remove(x){
-	
-	
 	var b = x.parentNode.parentNode;
 	var c = document.getElementById("table_body");
 	c.removeChild(b);
+	
+
+	var xhttp = new XMLHttpRequest();
+  xhttp.open("POST", "ajax2.php", true);
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+
+    	console.log(this.responseText);
+    }
+  };
+xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+var id_number = b.id; //storing id attribute
+xhttp.send(`id=${id_number}`);
 
 }
 
