@@ -204,7 +204,7 @@ var t = document.getElementById("overlaytext1");
 		 t.innerHTML='<span style="font-size:30px; font-family:Pacifico;"><p id="pricepp10"></p></span>';
 	}
 	else if (m == "http://localhost/pizzeria/Assets/app11.png") {
-		 t.innerHTML='<span style="font-size:16px; font-family:Pacifico;">Made with tantalizing hot sauce smoked chicken and imported jalapeno served with a garnish of green pepper<p id="pricepp11"></p></span>';
+		 t.innerHTML='<span style="font-size:16px; font-family:Pacifico;">Made with hot sauce smoked chicken and jalapeno served with a garnish of green pepper<p id="pricepp11"></p></span>';
 	}
 	else if (m == "http://localhost/pizzeria/Assets/app12.png") {
 		 t.innerHTML='<span style="font-size:18px; font-family:Pacifico;">A prelude to a perfect meal - our very own thick chicken soup with sweet corn chicken<p id="pricepp12"></p></span>';

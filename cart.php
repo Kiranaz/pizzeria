@@ -10,10 +10,7 @@
 <?php
 session_start();
  $items = $_SESSION['items'];
-<<<<<<< HEAD
-=======
  
->>>>>>> 27d25d88aac40e6221c93126cc3604c39a735a64
 // for($i = 0; $i < sizeof($items) ; $i++ ){
 // 	echo "id : ". $items[$i]->id ."<br>";
 //  	echo "qty : ". $items[$i]->qty ."<br>";
@@ -57,22 +54,17 @@ if ($num_of_results > 0) {
 
 }
 
-<<<<<<< HEAD
-=======
 
 
 function remove_session(){
 	session_unset();
 }
 
->>>>>>> 27d25d88aac40e6221c93126cc3604c39a735a64
 
 
 ?>
 
 
-<<<<<<< HEAD
-=======
 
 
 <script type="text/javascript">
@@ -80,10 +72,9 @@ function remove_session(){
     
 </script>
 
->>>>>>> d7df17bc3504425a8d242f1c95f554bbc014e0ff
 	<div class="order_table_div">
 		
-
+<br><br><br>
 	<table class="order_history">
 
 <thead > 
@@ -92,7 +83,7 @@ function remove_session(){
 <th width="40%" class="table_head_css">Name</th>
 <th width="20%" class="table_head_css">Size</th>
 <th width="20%" class="table_head_css">Quantity</th>
-<th width="18%" class="table_head_css">price</th>
+<th width="18%" class="table_head_css">Price</th>
 <th width="2%"  class="table_head_css">Remove</th>
 </tr>
 </thead>
@@ -103,7 +94,7 @@ function remove_session(){
 </tbody>
 
 </table>
-
+<br><br><br>
 </div>
 
 

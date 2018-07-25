@@ -707,14 +707,14 @@ textarea.form-control {
 	top: 200px;
 	left: 100px;
 	width: 80%;
-	height: 80%;	
+	height: auto;	
 	border: 5px solid red;
 	
 }
 .order_history{
 	
 	border: 2px solid black;
-	position: absolute;
+	position: relative;
 	width: 95%;
 	top: 4%;
 	left: 2.5%;
