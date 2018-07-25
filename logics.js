@@ -303,9 +303,6 @@ xhttp.send('cart='+JSON.stringify(product));
 
 }
 
-function orderList(){
-	alert(cart);
-}
 
 //------------------------------------  PRICE -----------------------------------------//
 function pricedisplay(){
@@ -519,22 +516,49 @@ function set(){
 
 
 function cart_table_remove(x){
+	var price = 0;
 	var b = x.parentNode.parentNode;
 	var c = document.getElementById("table_body");
 	c.removeChild(b);
 	
+
 
 	var xhttp = new XMLHttpRequest();
   xhttp.open("POST", "ajax2.php", true);
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
 
-    	console.log(this.responseText);
+    	//console.log(this.responseText);
     }
   };
 xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 var id_number = b.id; //storing id attribute
 xhttp.send(`id=${id_number}`);
+
+if (c.firstChild == null ) {
+		document.getElementById("subtotalvalue").innerHTML = "0";
+		document.getElementById("totalvalue").innerHTML = "0";		
+	}
+	else{
+		var sibling = document.getElementById("table_body").firstElementChild;
+		while(sibling != null){
+			price += parseInt(sibling.lastElementChild.previousElementSibling.innerHTML);
+			sibling = sibling.nextSibling;
+		}
+
+
+		document.getElementById("subtotalvalue").innerHTML = price;
+
+		if (price == 0){
+			document.getElementById("totalvalue").innerHTML= 0;
+		}
+		else{
+			document.getElementById("totalvalue").innerHTML=price+150;
+		}
+
+		
+	}
+
 
 }
 
