@@ -711,6 +711,8 @@ textarea.form-control {
 	border: 5px solid red;
 	
 }
+
+
 .order_history{
 	
 	border: 2px solid black;
@@ -738,4 +740,25 @@ textarea.form-control {
 .each_row{
 	padding-top: 10px; padding-bottom: 10px;
 	border-bottom: solid red 1px;
+}
+
+.totals{
+	color: red;
+	border:solid green;
+	position: relative;
+	text-align: center;
+	width: 17%;
+	height: auto;
+	left: 80%;
+
+}
+
+.proceed_button{
+	color: red;
+	border:solid green;
+	height: auto;
+	position: relative;
+	left:80%;
+	width:17%;
+	
 }

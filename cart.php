@@ -74,7 +74,8 @@ function remove_session(){
 
 	<div class="order_table_div">
 		
-<br><br><br>
+		
+	<br><br><br>	
 	<table class="order_history">
 
 <thead > 
@@ -94,19 +95,41 @@ function remove_session(){
 </tbody>
 
 </table>
+<br>
+<div class="totals">
+	<table>
+	
+	<tr>
+		<td id="subtotal">Subtotal:</td>
+		<td id="subtotalvalue"></td>
+	</tr>
+	<tr>
+		<td id="deliverycharges">Delivery charges:</td>
+		<td id="deliverychargesvalue">Rs 150</td>
+	</tr>
+	<tr>
+		<td id="total">Total:</td>
+		<td id="totalvalue"></td>
+	</tr>
+
+	</table>
+	
+	
+</div>
+
+<div class="proceed_button">
+	<button><a href="Form.php">PROCEED</button>	
+</div>
+
 <br><br><br>
 </div>
 
 
 
-<?php
-    $simple = 'demo text string';
-    
-?>
 
 <script type="text/javascript">
 
-
+var subtotal=0;
 
 
 
@@ -195,7 +218,7 @@ function remove_session(){
 
 				//_________________________________filling node 4 __________________________________________//
 
-	
+	subtotal +=  (data_node4[i]*data_node3[i]);
 	var node4_textnode = document.createTextNode(data_node4[i]*data_node3[i]);
 	node4.appendChild(node4_textnode);
 	
@@ -232,6 +255,18 @@ function remove_session(){
 	document.getElementById("table_body").appendChild(main_node);
 	 	
 	 }
+
+	  
+	 document.getElementById("subtotalvalue").innerHTML= subtotal;
+	 if (subtotal == 0){
+	 document.getElementById("totalvalue").innerHTML= 0;
+
+	 }else{
+	 	document.getElementById("totalvalue").innerHTML=subtotal+150;
+	 }
+
+
+
 	
 
 
