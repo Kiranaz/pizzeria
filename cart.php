@@ -2,20 +2,22 @@
 	<title>Cart</title>
 </head>
 <body onload="cart_table1()">
-	
+
+
+
+
+	<!-----------------------------------------------------------PHP---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 
 
 
 
 <?php
+$nameErr=$EmailErr=$PhoneErr="";
+ $name = $Email = $comment =$Phone="";
+ 
+
 session_start();
  $items = $_SESSION['items'];
- 
-// for($i = 0; $i < sizeof($items) ; $i++ ){
-// 	echo "id : ". $items[$i]->id ."<br>";
-//  	echo "qty : ". $items[$i]->qty ."<br>";
-// }
-
  $dataname=array();
  $dataprice=array();
  $datasize=array();
@@ -23,12 +25,9 @@ session_start();
 
 $conn = mysqli_connect('localhost','root','','pizzeria');
 
-    if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());}
+    if (!$conn) {die("Connection failed: " . mysqli_connect_error());}
 
-    if (!mysqli_select_db($conn,'pizzeria')) {
-        echo "Database Not Selected";
-    }
+    if (!mysqli_select_db($conn,'pizzeria')) { echo "Database Not Selected"; }
 
 
     for($i = 0; $i < sizeof($items) ; $i++ ){
@@ -42,9 +41,8 @@ $conn = mysqli_connect('localhost','root','','pizzeria');
     $num_of_results = mysqli_num_rows($result);
 
 if ($num_of_results > 0) {
-    // output data of each row
+    
     	while($row=mysqli_fetch_row($result)) {
-        //echo "<br><br><br><br><br><br><br>Name" . $row[0]. "  price:" . $row[1]. "  Size: " . $row[2] . "<br>";
         	array_push($dataname,$row[0]);
         	array_push($dataprice,$row[1]);
         	array_push($datasize,$row[2]);        
@@ -55,23 +53,12 @@ if ($num_of_results > 0) {
 }
 
 
-
-function remove_session(){
-	session_unset();
-}
-
-
-
 ?>
+ 
 
 
-
-
-<script type="text/javascript">
-
-    
-</script>
-
+<!-------------------------------------------------------------HTML-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+	
 	<div class="order_table_div">
 		
 		
@@ -118,7 +105,7 @@ function remove_session(){
 </div>
 
 <div class="proceed_button">
-	<button><a href="Form.php">PROCEED</button>	
+	<button onclick="openNav()">PROCEED</button>	
 </div>
 
 <br><br><br>
@@ -126,6 +113,63 @@ function remove_session(){
 
 
 
+<div id="myNav" class="sidebar_overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <!--<div class="Sidebar_overlay-content">  -->
+
+
+    <div id="contact">
+    <div class="section-content">
+        <h1 class="section-header">Make Order</h1>
+    </div>
+    <div class="contact-section">
+        <div class="container">
+    <form action="Form.php" method="POST" >
+        <div class="col-md-6 form-line">
+        <div class="form-group">
+        <label for="exampleInputUsername">Your Name:</label>
+        <input type="text" class="form-control" name="name" value="<?php echo $name; ?>" placeholder="Enter Name">
+        <span class="error"><?= $nameErr?></span>
+        </div>
+        <div class="form-group">
+            <label for="exampleInputEmail">Email Address</label>
+        <input type="text" class="form-control" name="Email" value="<?php echo $Email; ?>" placeholder="Enter Email ID">
+        <span class="error"><?= $EmailErr;?></p> </span>
+        </div>
+        <div class="form-group">
+        <label for="telephone">Mobile No.</label>
+            <input type="text" class="form-control" name="Phone" value="<?php echo $Phone; ?>" placeholder="Enter 11-digit mobile no.">
+        <span class="error"><?=$PhoneErr; ?></p> </span>
+        </div>
+    </div>
+    
+    <div class="col-md-6">
+        <div class="form-group">
+           <label for ="description"> Address</label>
+        <textarea class="form-control" name="comment" placeholder="Enter Your Complete Address">
+            <?php echo $comment; ?>
+        </textarea>
+    </div>
+    <div>
+            <button type="submit" name="submit" value="submit" class="btn btn-default submit">  Order</button>
+                        </div>
+                         <p class="text-warning">Order must of Rs 500 or more.</p>
+                        
+                    </div>
+
+    </form>
+    </div>
+</div>
+  
+
+
+</div>
+
+
+
+
+
+<!----------------------------------------------------------JAVASCRIPT----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 
 <script type="text/javascript">
 
@@ -273,11 +317,18 @@ var subtotal=0;
 }
 
 
+function openNav() {
+    document.getElementById("myNav").style.width = "100%";
+}
 
-
+function closeNav() {
+    document.getElementById("myNav").style.width = "0%";
+}
 
 
 </script>
+
+
 
 
 

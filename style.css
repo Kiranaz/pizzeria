@@ -72,7 +72,7 @@
 		text-align: center;
 		transition: 0.5s;
 		position: auto;
-		height: 10%;
+		height: 13%;
 		background-color: black;
 	}
 
@@ -92,7 +92,8 @@
 		font-family: "Rock Salt";
 		cursor: pointer;
 		border-radius: 8px;
-		transition: 0.5s;
+    transition: 0.5s;
+    margin-top: 0%;
 
 	}
 
@@ -344,7 +345,6 @@
 
 #sticky {
   width:100%;
-  height: auto;
   padding-top: 10px;
   padding-bottom:6px;
   padding-left:10px;
@@ -357,7 +357,7 @@
      /*Here's what sticks it*/
   
     z-index: 9999;
-    height: 20em;
+    height: 26em;
     margin-top: relative;
   
   /*to the bottom of the body*/
@@ -377,23 +377,26 @@ float: left;
 width: 30%;
 margin-left: 2%;
 letter-spacing: 2px;
+word-spacing: 5px;
 
 }
 .about{
 float: left;
 width: 32%;
 margin-left: 3%;
-letter-spacing: 2px;
+letter-spacing: 1px;
+word-spacing: 5px;
 }
 
 .media{
-width: 30px;
-font-size: 30px;
-height: 30px;
-line-height: 30px;
+margin-top: -2em;
+width: 35px;
+font-size: 28px;
+height: 40px;
+line-height: 40px;
 text-align: center;
 display: inline-block;
-padding: 5px;
+padding: 2px;
 background-color: #6A5C5C;
  border-radius: 8px;
 }
@@ -417,23 +420,28 @@ box-shadow: 1px 1px white;
 .address i{
 	 color: #804000;
 }
+ 
+.address p{
+  line-height: 35px;
+}
+
 .links p {
-padding-bottom: 20px;
+padding-bottom: 2px;
 padding-top:10px;
+line-height: 28px;
 }
 .marker{
-width: 30px;
+width: 32px;
 height: 30px;
-color: #8600b3;
 font-size: 20px;
 line-height: 30px;
 background-color: #6A5C5C;
 display: inline-block;
 text-align: center;
-padding: 5px;
+align-content: center;
+padding: 3px;
 border-radius: 50%;
 margin-right: 5px;
-float: auto;
 }
 
 
@@ -448,115 +456,6 @@ width: 9%;
 
 
 
-.parallex1{
-	background: url(Assets/pastaback3.jpg) no-repeat fixed 100% ;
-	background-size: cover;
-	
-}
-
-.parallex1-inner{
-	padding-top: 20%;
-	padding-bottom: 30%;
-
-}
-
-.parallex2{
-	background: url(Assets/pastaback1.jpg) no-repeat fixed 100%;
-		background-size: cover;
-
-}
-
-.parallex2-inner{
-	padding-top: 18%;
-	padding-bottom: 28%;
-}
-
-.parallex1{
-	background: url(Assets/pastaback3.jpg) no-repeat fixed 100% ;
-	background-size: cover;
-	
-}
-
-.parallex1-inner{
-	padding-top: 20%;
-	padding-bottom: 30%;
-
-}
-
-.parallex2{
-	background: url(Assets/pastaback1.jpg) no-repeat fixed 100%;
-		background-size: cover;
-
-}
-
-.parallex2-inner{
-	padding-top: 20%;
-	padding-bottom: 30%;
-}
-
-
-.parallex3{
-	background: url(Assets/dessertback5.jpg) no-repeat fixed 100%;
-		background-size: cover;
-
-}
-
-.parallex3-inner{
-	padding-top: 20%;
-	padding-bottom: 30%;
-}
-
-
-.parallex4{
-	background: url(Assets/dessertback1.jpg) no-repeat fixed 100%;
-		background-size: cover;
-
-}
-
-.parallex4-inner{
-	padding-top: 20%;
-	padding-bottom: 30%;
-}
-
-
-.parallex5{
-	background: url(Assets/dessertback2.jpeg) no-repeat fixed 100%;
-		background-size: cover;
-
-}
-
-.parallex5-inner{
-	padding-top: 20%;
-	padding-bottom: 30%;
-}
-
-
-.parallex6{
-	background: url(Assets/dessertback3.jpg) no-repeat fixed 100%;
-		background-size: cover;
-
-}
-
-.parallex6-inner{
-	padding-top: 20%;
-	padding-bottom: 30%;
-}
-
-.parallex7{
-	background: url(Assets/dessertback4.jpg) no-repeat fixed 100%;
-		background-size: cover;
-
-}
-
-.parallex7-inner{
-	padding-top: 20%;
-	padding-bottom: 30%;
-}
-
-
-t.innerHTML{
-	font-size: 12px;
-}
 
 /*body {
     background-image: url(Assets/pizza-pattern2.jpg);
@@ -606,12 +505,12 @@ html,body{
 #b4b{height: 80%;}
 #b5a{height: 155%;}
 #b5b{height: 75%;}
-#b6a{height: 245%;}
-#b6b{height: 78%;}
+#b6a{height: 320%;}
+#b6b{height: 82%;}
 #b7a{height: 170%;}
 #b7b{height: 70%;}
-#b8a{height: 170%;}
-#b8b{height: 73%;}
+#b8a{height: 250%;}
+#b8b{height: 80%;}
 #b9a{height: 102%;}
 #b9b{height: 58%;}
 #b10a{height: 355%;}
@@ -625,7 +524,7 @@ html,body{
 /*Contact sectiom*/
 .content-header{
   font-family: 'Oleo Script', cursive;
-  color:#D3D38F;
+  color:yellow;
   font-size: 45px;
 }
 
@@ -634,14 +533,15 @@ html,body{
 
 }
 #contact{
-    
+    position: absolute;
   font-family: 'Teko', sans-serif;
-  padding-top: 60px;
-  width: 100%;
-  width: 100vw;
-  height: 550px; 
+  padding-top: 10px;
+  top:15%;
+  left: 5%;  
+  width: 90vw;
+  height: auto; 
   background: linear-gradient(to right, rgba(255, 0, 0, 0), rgba(255,0,0,1));
-  color : #000000;    
+  color : white;    
 }
 .contact-section{
   padding-top: 40px;
@@ -760,5 +660,58 @@ textarea.form-control {
 	position: relative;
 	left:80%;
 	width:17%;
-	
+
+}
+
+
+/*--------------------------------SIDE BAR------------------------------------------------ */
+
+.sidebar_overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 80px;
+    left: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.9);
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.Sidebar_overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.sidebar_overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar_overlay a:hover, .sidebar_overlay a:focus {
+    color: #f1f1f1;
+}
+
+.sidebar_overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidebar_overlay a {font-size: 20px}
+  .sidebar_overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
 }

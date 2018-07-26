@@ -11,6 +11,8 @@
             <div class="bg" id="b12b"></div>
 
 		
+        <p id="pizzaNamesID" class="pizza names" style=" position:absolute; font-size:30px; margin-top:515px; margin-left:195px; font-family:'cabin sketch'; color:#ff7733; "> Salad  </p>
+
 		<div class="container1"  onmouseover="pricedisplay3()" id="abc12345" onmouseleave="imgchange(this)" style="top:200px; left:100px;">
 		<li>	
 			

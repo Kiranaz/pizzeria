@@ -12,6 +12,10 @@
         <div class="big" id="b3a">
             <div class="bg" id="b13b"></div>
 
+
+            <p id="pizzaNamesID" class="pizza names" style=" position:absolute; font-size:30px; margin-top:510px; margin-left:110px; font-family:'cabin sketch'; color:#ff7733; "> Spicy Chicken Roll  </p>
+    <p id="pizzaNamesID" class="pizza names" style=" position:absolute; font-size:30px; margin-top:510px; margin-left:510px; font-family: 'cabin sketch'; color:#ff7733; "> Chicken Cream Roll  </p>
+
 		<div class="container1" onmouseover="pricedisplay3()"  id="abc12345" onmouseleave="imgchange(this)" style="top:200px; left:100px;">
 		<li>	
 			

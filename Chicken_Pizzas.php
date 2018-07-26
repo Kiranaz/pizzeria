@@ -9,17 +9,17 @@
 <div id="success_message"> </div>
         <div class="big" id="b2a">
             <div class="bg" id="b2b"></div>
-         <p id="pizzaNamesID" class="pizza names" style=" position:absolute; font-size:30px; margin-top:530px; margin-left:150px; font-family:'fredericka'; color:#ff7733; "> BBQ TIKKA  </p>
-    <p id="pizzaNamesID" class="pizza names" style=" position:absolute; font-size:30px; margin-top:930px; margin-left:100px; font-family:'fredericka'; color:#ff7733; "> CHICKEN TANDOORI  </p>
-    <p id="pizzaNamesID" class="pizza names" style=" position:absolute; font-size:30px; margin-top:1330px; margin-left:110px; font-family:'fredericka'; color:#ff7733; "> SICILIAN CHICKEN  </p>
+         <p id="pizzaNamesID" class="pizza names" style=" position:absolute; font-size:30px; margin-top:530px; margin-left:150px; font-family:'cabin sketch'; color:#ff7733; "> BBQ TIKKA  </p>
+    <p id="pizzaNamesID" class="pizza names" style=" position:absolute; font-size:30px; margin-top:930px; margin-left:100px; font-family:'cabin sketch'; color:#ff7733; "> CHICKEN TANDOORI  </p>
+    <p id="pizzaNamesID" class="pizza names" style=" position:absolute; font-size:30px; margin-top:1330px; margin-left:120px; font-family:'cabin sketch'; color:#ff7733; "> SICILIAN CHICKEN  </p>
 
-    <p id="pizzaNamesID" class="pizza names" style=" position:absolute; font-size:30px; margin-top:530px; margin-left:520px; font-family:'fredericka'; color:#ff7733; "> CRUST SPECIAL  </p>
-    <p id="pizzaNamesID" class="pizza names" style=" position:absolute; font-size:30px; margin-top:930px; margin-left:520px; font-family:'fredericka'; color:#ff7733; "> CHICKEN TIKKA  </p>
-    <p id="pizzaNamesID" class="pizza names" style=" position:absolute; font-size:30px; margin-top:1330px; margin-left:520px; font-family:'fredericka'; color:#ff7733; "> EUROPEAN FEAST  </p>
+    <p id="pizzaNamesID" class="pizza names" style=" position:absolute; font-size:30px; margin-top:530px; margin-left:530px; font-family:'cabin sketch'; color:#ff7733; "> CRUST SPECIAL  </p>
+    <p id="pizzaNamesID" class="pizza names" style=" position:absolute; font-size:30px; margin-top:930px; margin-left:530px; font-family:'cabin sketch'; color:#ff7733; "> CHICKEN TIKKA  </p>
+    <p id="pizzaNamesID" class="pizza names" style=" position:absolute; font-size:30px; margin-top:1330px; margin-left:535px; font-family:'cabin sketch'; color:#ff7733; "> EUROPEAN FEAST  </p>
 
-    <p id="pizzaNamesID" class="pizza names" style=" position:absolute; font-size:30px; margin-top:530px; margin-left:920px; font-family:'fredericka'; color:#ff7733; "> CHICKEN SUPER  </p>
-    <p id="pizzaNamesID" class="pizza names" style=" position:absolute; font-size:30px; margin-top:930px; margin-left:920px; font-family:'fredericka'; color:#ff7733; "> CHICKEN FAJITA  </p>
-    <p id="pizzaNamesID" class="pizza names" style=" position:absolute; font-size:30px; margin-top:1330px; margin-left:910px; font-family:'fredericka'; color:#ff7733; "> CHICKEN DELUXE </p>
+    <p id="pizzaNamesID" class="pizza names" style=" position:absolute; font-size:30px; margin-top:530px; margin-left:930px; font-family:'cabin sketch'; color:#ff7733; "> CHICKEN SUPER  </p>
+    <p id="pizzaNamesID" class="pizza names" style=" position:absolute; font-size:30px; margin-top:930px; margin-left:930px; font-family:'cabin sketch'; color:#ff7733; "> CHICKEN FAJITA  </p>
+    <p id="pizzaNamesID" class="pizza names" style=" position:absolute; font-size:30px; margin-top:1330px; margin-left:920px; font-family:'cabin sketch'; color:#ff7733; "> CHICKEN DELUXE </p>
 
 		
 		<div class="container1" id="abc12345" onmouseover="pricedisplay()" onmouseleave="imgchange(this)" style="top:200px; left:100px;">

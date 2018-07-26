@@ -171,7 +171,16 @@ var t = document.getElementById("overlaytext1");
 		 t.innerHTML='<span style="font-size:30px; font-family:Pacifico;"><p id="priceppp8"></p></span>';
 	}
 	else if (m == "http://localhost/pizzeria/Assets/dessert9.png") {
-		 t.innerHTML='<span style="font-size:25px; font-family:Pacifico;"><br>Strawberry, Mango, Chocolate, Vanilla<p id="priceppp9"></p></span>';
+		 t.innerHTML='<span style="font-size:22px; font-family:Pacifico;">A cool and tempting fruit drink prepared by simply blending ripe mango pieces, milk and sugar.<p id="priceppp9"></p></span>';
+	}
+	else if (m == "http://localhost/pizzeria/Assets/dessert10.png") {
+		 t.innerHTML='<span style="font-size:22px; font-family:Pacifico;">A smooth and creamy concoction of vanilla ice cream, milk, vanilla extract topped up with whipped cream<p id="priceppp9"></p></span>';
+	}
+	else if (m == "http://localhost/pizzeria/Assets/dessert11.png") {
+		 t.innerHTML='<span style="font-size:22px; font-family:Pacifico;">Strawberry Shake is made with vanilla soft serve and strawberry flavored deliciousness<p id="priceppp9"></p></span>';
+	}
+	else if (m == "http://localhost/pizzeria/Assets/dessert12.png") {
+		 t.innerHTML='<span style="font-size:22px; font-family:Pacifico;">Made with creamy, fresh milk ingredients and chocolate syrup, so thick it barely makes it up the straw<p id="priceppp9"></p></span>';
 	}
 	else if (m == "http://localhost/pizzeria/Assets/app1.png") {
 		 t.innerHTML='<span style="font-size:30px; font-family:Pacifico;"><p id="pricepp1"></p></span>';
@@ -425,8 +434,7 @@ function pricedisplay3(){
 function pricedisplay4(){
 	
 	var price;
-	var x = document.getElementById("3");
-	var a = x.options[x.selectedIndex].value;
+	
 	var y = document.getElementById("2");
 	var b = y.options[y.selectedIndex].value;
 	var ab = parseInt(b);
@@ -440,7 +448,7 @@ function pricedisplay4(){
 	else if(res3=="dessert6" || res3 == "dessert7" || res3 == "dessert8"){
 		price = 100;
 	}
-	else if(res3 == "dessert9"){
+	else if(res3 == "dessert9"|| res3 == "dessert10" || res3 == "dessert11" || res3 == "dessert12"){
 		price = 120;
 	}
 	else{
