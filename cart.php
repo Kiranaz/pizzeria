@@ -1,11 +1,9 @@
 <?php include 'header.php';?>
 	<title>Cart</title>
 </head>
-<body onload="cart_table1()">
-
-
-
-
+<body onload="cart_table1()" class="bigcart" id="b14a">
+<div class="bigcart" id="b14a">
+<div class="bgcart" id="b14b"></div>
 	<!-----------------------------------------------------------PHP---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 
 
@@ -63,16 +61,16 @@ if ($num_of_results > 0) {
 		
 		
 	<br><br><br>	
-	<table class="order_history">
+	<table class="table table-striped  table-dark hoverTable table-bordered">
 
 <thead > 
 
 <tr style=" color: black; ">
-<th width="40%" class="table_head_css">Name</th>
-<th width="20%" class="table_head_css">Size</th>
-<th width="20%" class="table_head_css">Quantity</th>
-<th width="18%" class="table_head_css">Price</th>
-<th width="2%"  class="table_head_css">Remove</th>
+<th width="40%" class="table_head_css"scope="col"><center>Name</center></th>
+<th width="20%" class="table_head_css"scope="col"><center>Size</center></th>
+<th width="20%" class="table_head_css"scope="col"><center>Quantity</center></th>
+<th width="18%" class="table_head_css"scope="col"><center>Price&emsp;<small style="font-size: 12px;" >In Rs</small></center></th>
+<th width="2%"  class="table_head_css"scope="col"><center>Remove</center></th>
 </tr>
 </thead>
 
@@ -84,18 +82,18 @@ if ($num_of_results > 0) {
 </table>
 <br>
 <div class="totals">
-	<table>
+	<table> 
 	
 	<tr>
-		<td id="subtotal">Subtotal:</td>
+		<td id="subtotal">Subtotal:&emsp;&emsp;&emsp;Rs</td>
 		<td id="subtotalvalue"></td>
 	</tr>
 	<tr>
-		<td id="deliverycharges">Delivery charges:</td>
-		<td id="deliverychargesvalue">Rs 150</td>
+		<td id="deliverycharges">Delivery charges: Rs</td>
+		<td id="deliverychargesvalue">150</td>
 	</tr>
-	<tr>
-		<td id="total">Total:</td>
+	<tr id="tdcolor">
+		<td id="total">Total:&emsp;&emsp;&emsp;&ensp;&ensp;Rs</td>
 		<td id="totalvalue"></td>
 	</tr>
 
@@ -103,14 +101,15 @@ if ($num_of_results > 0) {
 	
 	
 </div>
-
+<div class="container">
 <div class="proceed_button">
-	<button onclick="openNav()">PROCEED</button>	
+	<button onclick="openNav()" class="btn btn-success">PROCEED</button>	
 </div>
-
+</div>
 <br><br><br>
 </div>
 
+</div>
 
 
 <div id="myNav" class="sidebar_overlay">
@@ -289,6 +288,7 @@ var subtotal=0;
 	main_node.setAttributeNode(main_node_class);
 	var main_node_id = document.createAttribute("id"); main_node_id.value = i ;
 	main_node.setAttributeNode(main_node_id);
+	
 	main_node.appendChild(node1);
 	main_node.appendChild(node2);
 	main_node.appendChild(node3);
@@ -316,7 +316,7 @@ var subtotal=0;
 
 }
 
-
+	
 function openNav() {
     document.getElementById("myNav").style.width = "100%";
 }

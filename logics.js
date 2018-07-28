@@ -69,34 +69,34 @@ function change(x){
 	x.style.visibility="hidden";
 var t = document.getElementById("overlaytext1");
 	if (m == "http://localhost/pizzeria/Assets/menu1.png") {
-		t.innerHTML='<span style="font-size:21px; font-family:Pacifico;">A recipe of traditional chicken tikka, onions & topped with mozzarell a cheese<p id="price1"></p></span>';
+		t.innerHTML='<span style="font-size:19px; font-family:Pacifico;">A recipe of traditional chicken tikka, onions & topped with mozzarell a cheese<p id="price1"></p></span>';
 }																																																			
 	else if (m == "http://localhost/pizzeria/Assets/menu2.png") {
 		t.innerHTML= t.innerHTML='<span style="font-size:22px; font-family:Pacifico;">Green Chicken, Green Paper, Onion, Jalapeno, Green Olive & Alfreo<p id="price2"></p></span>';
 	}
 	else if (m == "http://localhost/pizzeria/Assets/menu3.png") {
-		t.innerHTML= t.innerHTML='<span style="font-size:19px; font-family:Pacifico;">Green Chicken, Tandoori Chicken, Mushroom Italian Herb, Mix Creamy Sauce & Mozzarella Cheese<p id="price3"></p></span>';
+		t.innerHTML= t.innerHTML='<span style="font-size:15px; font-family:Pacifico;">Green Chicken, Tandoori Chicken, Mushroom Italian Herb, Mix Creamy Sauce & Mozzarella Cheese<p id="price3"></p></span>';
 	}
 	else if (m == "http://localhost/pizzeria/Assets/menu4.png") {
 		t.innerHTML= t.innerHTML='<span style="font-size:24px; font-family:Pacifico;">Marinated Chicken, Jalapeno, Italian Herb, Sweet Corn<p id="price4"></p></span>';
 	}
 	else if (m == "http://localhost/pizzeria/Assets/menu5.png") {
-		t.innerHTML= t.innerHTML='<span style="font-size:17px; font-family:Pacifico;">A Delicious combination of shawarma chicken, onion,green pepper, jalapeno, mushrooms, olives & mozzarella cheese<p id="price5"></p></span>';
+		t.innerHTML= t.innerHTML='<span style="font-size:16px; font-family:Pacifico;">A Delicious combination of shawarma chicken, onion, jalapeno, mushrooms, olives & cheese<p id="price5"></p></span>';
 	}
 	else if (m == "http://localhost/pizzeria/Assets/menu6.png") {
-		t.innerHTML= t.innerHTML='<span style="font-size:20px; font-family:Pacifico;">A creamy recipe with malai boti chicken tomatoes, onion, green pepper creamy sauce & mozzarella cheese<p id="price6"></p></span>';
+		t.innerHTML= t.innerHTML='<span style="font-size:16px; font-family:Pacifico;">A creamy recipe with malai boti chicken tomatoes, onion, creamy sauce & mozzarella cheese<p id="price6"></p></span>';
 	}
 	else if (m == "http://localhost/pizzeria/Assets/menu7.png") {
-		t.innerHTML= t.innerHTML='<span style="font-size:21px; font-family:Pacifico;">Mushroom, Creamy Sauce, Fajita Chickken , Jalapino & Italian Herb<p id="price7"></p></span>';
+		t.innerHTML= t.innerHTML='<span style="font-size:20px; font-family:Pacifico;">Mushroom, Creamy Sauce, Fajita Chickken , Jalapino & Italian Herb<p id="price7"></p></span>';
 	}
 	else if (m == "http://localhost/pizzeria/Assets/menu8.png") {
-		t.innerHTML= t.innerHTML='<span style="font-size:13.7px; font-family:Pacifico;">A Delight Blend Of Spicy Chicken , Chicken Sausages ,Chicken Tikka , Onion , Green Pepper, Mushroom, Mozzarella Cheese & Olive<p id="price8"></p></span>';
+		t.innerHTML= t.innerHTML='<span style="font-size:16px; font-family:Pacifico;">A Delight Blend Of Spicy Chicken , Chicken Sausages & Tikka , Onion , Green Pepper, Mushroom<p id="price8"></p></span>';
 	}
 	else if (m == "http://localhost/pizzeria/Assets/menu9.png") {
-		t.innerHTML= t.innerHTML='<span style="font-size:20px; font-family:Pacifico;">A Tasty Combination of pepperoni, Beef Onion, Mushrooms black Olive & Mozzarella Cheese<p id="price9"></p></span>';
+		t.innerHTML= t.innerHTML='<span style="font-size:16px; font-family:Pacifico;">A Tasty Combination of pepperoni, Beef Onion, Mushrooms black Olive & Mozzarella Cheese<p id="price9"></p></span>';
 	}
 	else if (m == "http://localhost/pizzeria/Assets/menu10.png") {
-		t.innerHTML= t.innerHTML='<span style="font-size:15px; font-family:Pacifico;">A Blend Of Smoke Chicken ,Pepperoni ,Beef , Smoke Veal , Onion,Mushroom,Capsicum, Black Olive & Mozzarella Cheese<p id="price10"></p></span>';
+		t.innerHTML= t.innerHTML='<span style="font-size:14px; font-family:Pacifico;">A Blend Of Smoke Chicken ,Pepperoni ,Beef , Smoke Veal , Mushroom, Capsicum, Black Olive & Cheese<p id="price10"></p></span>';
 	}
 	else if (m == "http://localhost/pizzeria/Assets/menu11.png") {
 		t.innerHTML= t.innerHTML='<span style="font-size:22px; font-family:Pacifico;">Afghani Chicken Onion Creamy Sauce & Mozzarella Cheese<p id="price11"></p></span>';
@@ -105,46 +105,46 @@ var t = document.getElementById("overlaytext1");
 		t.innerHTML= t.innerHTML='<span style="font-size:21px; font-family:Pacifico;">A Tasty Tandoori Chicken ,Onion ,Tomatoes, Mozzarella Cheese<p id="price12"></p></span>';
 	}
 	else if (m == "http://localhost/pizzeria/Assets/menu13.png") {
-		t.innerHTML= t.innerHTML='<span style="font-size:20px; font-family:Pacifico;">Traditional Pakistani Recipe With Chicken Tikka ,Onion & Mozzarella Cheese<p id="price13"></p></span>';
+		t.innerHTML= t.innerHTML='<span style="font-size:18px; font-family:Pacifico;">Traditional Pakistani Recipe With Chicken Tikka ,Onion & Mozzarella Cheese<p id="price13"></p></span>';
 	}
 	else if (m == "http://localhost/pizzeria/Assets/menu14.png") {
 		t.innerHTML=t.innerHTML='<span style="font-size:19px; font-family:Pacifico;">A Tasty Combination Of Chicken Fajita,Onion,Green Pepper & Mozzarella Cheese<p id="price14"></p></span>' ;
 	}
 	else if (m == "http://localhost/pizzeria/Assets/menu15.png") {
-		t.innerHTML=t.innerHTML='<span style="font-size:17px; font-family:Pacifico;">Just To Spice Your Taste Buds With Chicken fajita, Onion, Green Pepper Jalapeno &Mozzarella Cheese<p id="price15"></p></span>' ;
+		t.innerHTML=t.innerHTML='<span style="font-size:16px; font-family:Pacifico;">Just To Spice Your Taste Buds With Chicken fajita, Onion, Green Pepper Jalapeno & Cheese<p id="price15"></p></span>' ;
 	}
 	else if (m == "http://localhost/pizzeria/Assets/menu16.png") {
-		t.innerHTML= t.innerHTML='<span style="font-size:20px; font-family:Pacifico;">If You Like It Hot Try Beef Hot,Jalapeno ,Onion,Tomato & Mozzarella Cheese<p id="price16"></p></span>';
+		t.innerHTML= t.innerHTML='<span style="font-size:18px; font-family:Pacifico;">If You Like It Hot Try Beef Hot,Jalapeno ,Onion,Tomato & Mozzarella Cheese<p id="price16"></p></span>';
 	}
 	else if (m == "http://localhost/pizzeria/Assets/menu17.png") {
 		t.innerHTML= t.innerHTML='<span style="font-size:22px; font-family:Pacifico;">A Delicious Combination Of Pepperoni & Mozzarella Cheese<p id="price17"></p></span>';
 	}
 	else if (m == "http://localhost/pizzeria/Assets/menu18.png") {
-		t.innerHTML=t.innerHTML='<span style="font-size:14px; font-family:Pacifico;">Have It European Style topped with Chicken Sausages,Smoked Chicken Mushroom, Green Pepper,Tomato Olive & Mozzarella Cheese<p id="price18"></p></span>' ;
+		t.innerHTML=t.innerHTML='<span style="font-size:14px; font-family:Pacifico;">Have It European Style topped with Sausages,Smoked Chicken Mushroom, Pepper,Tomato Olive & Cheese<p id="price18"></p></span>' ;
 	}
 	else if (m == "http://localhost/pizzeria/Assets/menu19.png") {
 		t.innerHTML= t.innerHTML='<span style="font-size:22px; font-family:Pacifico;">If You Love Just Cheese Enjoy 100% Mozzarella Cheese<p id="price19"></p></span>' ;
 	}
 	else if (m == "http://localhost/pizzeria/Assets/menu20.png") {
-		t.innerHTML= t.innerHTML='<span style="font-size:20px; font-family:Pacifico;"> Colorful Combination OF Onion ,Mushroom,Green Pepper,Olive,tomatoes & Mozzarella Cheese<p id="price20"></p></span>';
+		t.innerHTML= t.innerHTML='<span style="font-size:16px; font-family:Pacifico;"> Colorful Combination of Onion, Mushroom, Green Pepper, Olive, tomatoes & Mozzarella Cheese<p id="price20"></p></span>';
 	}
 	else if (m == "http://localhost/pizzeria/Assets/pasta1.png") {
 		t.innerHTML= t.innerHTML='<span style="font-size:15px; font-family:Pacifico;">Pasta with spicy chicken cooked in creamy sauce & mozzarella cheese served with garlic bread & drink<p id="pricep1"></p></span>';
 	}
 	else if (m == "http://localhost/pizzeria/Assets/pasta2.png") {
-		t.innerHTML= t.innerHTML='<span style="font-size:17px; font-family:Pacifico;">Pasta with spicy chicken cooked in spicy creamy sauce & mozzarella cheese served with garlic bread & drink<p id="pricep2"></p></span>';
+		t.innerHTML= t.innerHTML='<span style="font-size:17px; font-family:Pacifico;">Pasta with spicy chicken, creamy sauce & cheese served with garlic bread & drink<p id="pricep2"></p></span>';
 	}
 	else if (m == "http://localhost/pizzeria/Assets/pasta3.png") {
-		t.innerHTML= t.innerHTML='<span style="font-size:15px; font-family:Pacifico;">Pasta with cheesy packed chicken cooked in special sauce of cheese & plenty served with garlic bread & drink<p id="pricep3"></p></span>';
+		t.innerHTML= t.innerHTML='<span style="font-size:16px; font-family:Pacifico;">Pasta with cheesy packed chicken cooked in special sauce of cheese served with garlic bread & drink<p id="pricep3"></p></span>';
 	}
 	else if (m == "http://localhost/pizzeria/Assets/pasta4.png") {
-		t.innerHTML= t.innerHTML='<span style="font-size:16px; font-family:Pacifico;">Layers of lasagne with cream sauce and beef sauce Mozzarella cheese topped with cheese served with garlic bread & drink<p id="pricep4"></p></span>';
+		t.innerHTML= t.innerHTML='<span style="font-size:16px; font-family:Pacifico;">Layers of lasagne with cream & beef sauce topped with cheese served with garlic bread & drink<p id="pricep4"></p></span>';
 	}
 	else if (m == "http://localhost/pizzeria/Assets/pasta5.png") {
-		t.innerHTML= t.innerHTML='<span style="font-size:16px; font-family:Pacifico;">Layers of lasagne filled with chicken cream sauce topped with mozzarella cheese served with garlic bread & drink<p id="pricep5"></p></span>';
+		t.innerHTML= t.innerHTML='<span style="font-size:16px; font-family:Pacifico;">Layers of lasagne filled with chicken, cream sauce, cheese served with garlic bread & drink<p id="pricep5"></p></span>';
 	}
 	else if (m == "http://localhost/pizzeria/Assets/pasta6.png") {
-		t.innerHTML= t.innerHTML='<span style="font-size:18px; font-family:Pacifico;">Topped with mozzarella cheese meat sauce mushrooms & noddles served with garlic bread & drink<p id="pricep6"></p></span>';
+		t.innerHTML= t.innerHTML='<span style="font-size:16px; font-family:Pacifico;">Topped with mozzarella cheese meat sauce mushrooms & noddles served with garlic bread & drink<p id="pricep6"></p></span>';
 	}
 	else if (m == "http://localhost/pizzeria/Assets/dessert1.png") {
 		 t.innerHTML='<span style="font-size:25px; font-family:Pacifico;"><br>ICE CREAM (2 SCOOPS )<p id="priceppp1"></p></span>';
@@ -159,7 +159,7 @@ var t = document.getElementById("overlaytext1");
 		 t.innerHTML='<span style="font-size:25px; font-family:Pacifico;"><br>ICE CREAM (2 SCOOPS )<p id="priceppp4"></p></span>';
 	}
 	else if (m == "http://localhost/pizzeria/Assets/dessert5.png") {
-	 t.innerHTML='<span style="font-size:18px; font-family:Pacifico;">A dense, single-layer chocolate cake similar to a brownie, although moister with more chocolate<p id="priceppp5"></p></span>';
+	 t.innerHTML='<span style="font-size:18px; font-family:Pacifico;">A dense chocolate cake similar to a brownie, although moister with more chocolate<p id="priceppp5"></p></span>';
 	}
 	else if (m == "http://localhost/pizzeria/Assets/dessert6.png") {
 		 t.innerHTML='<span style="font-size:30px; font-family:Pacifico;"><p id="priceppp6"></p></span>';
@@ -171,16 +171,16 @@ var t = document.getElementById("overlaytext1");
 		 t.innerHTML='<span style="font-size:30px; font-family:Pacifico;"><p id="priceppp8"></p></span>';
 	}
 	else if (m == "http://localhost/pizzeria/Assets/dessert9.png") {
-		 t.innerHTML='<span style="font-size:22px; font-family:Pacifico;">A cool and tempting fruit drink prepared by simply blending ripe mango pieces, milk and sugar.<p id="priceppp9"></p></span>';
+		 t.innerHTML='<span style="font-size:18px; font-family:Pacifico;">A cool drink prepared by simply blending ripe mango pieces, milk and sugar<p id="priceppp9"></p></span>';
 	}
 	else if (m == "http://localhost/pizzeria/Assets/dessert10.png") {
-		 t.innerHTML='<span style="font-size:22px; font-family:Pacifico;">A smooth and creamy concoction of vanilla ice cream, milk, vanilla extract topped up with whipped cream<p id="priceppp9"></p></span>';
+		 t.innerHTML='<span style="font-size:16px; font-family:Pacifico;">A creamy mixture of vanilla ice cream, milk, vanilla extract topped up with whipped cream<p id="priceppp10"></p></span>';
 	}
 	else if (m == "http://localhost/pizzeria/Assets/dessert11.png") {
-		 t.innerHTML='<span style="font-size:22px; font-family:Pacifico;">Strawberry Shake is made with vanilla soft serve and strawberry flavored deliciousness<p id="priceppp9"></p></span>';
+		 t.innerHTML='<span style="font-size:16px; font-family:Pacifico;">Strawberry Shake is made with vanilla soft serve and strawberry flavored deliciousness<p id="priceppp11"></p></span>';
 	}
 	else if (m == "http://localhost/pizzeria/Assets/dessert12.png") {
-		 t.innerHTML='<span style="font-size:22px; font-family:Pacifico;">Made with creamy, fresh milk ingredients and chocolate syrup, so thick it barely makes it up the straw<p id="priceppp9"></p></span>';
+		 t.innerHTML='<span style="font-size:16px; font-family:Pacifico;">Made with creamy, fresh milk and chocolate syrup, so thick it barely makes it up the straw<p id="priceppp12"></p></span>';
 	}
 	else if (m == "http://localhost/pizzeria/Assets/app1.png") {
 		 t.innerHTML='<span style="font-size:30px; font-family:Pacifico;"><p id="pricepp1"></p></span>';
@@ -456,7 +456,7 @@ function pricedisplay4(){
 	}
 	var multi = price * ab;
 
-	for (var i = 1; i <= 9; i++) {
+	for (var i = 1; i <= 12; i++) {
 		if(res3 == "dessert"+i)
 				document.getElementById("priceppp"+i).innerHTML="&emsp;&emsp;&emsp;&emsp;Rs "+multi;
 	}}

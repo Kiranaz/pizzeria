@@ -20,16 +20,9 @@
 	<div class="navbar" id='nav' >	
 		<div id="bounce" class="hvr-bounce-to-right">
 		<ul>
-			<li>
-				<!--<a href="#Deals"> -->
-					
-                	<img src="Assets/pizz1.png">
-					DEALS
-					
-				</li>
 
 				<div class="dropdown">
-					<li>  <img src="Assets/pizz2.png"> PIZZA</li>
+					<li>  <img src="Assets/pizz2.png"> Pizza</li>
 						<div class="dropdown-content">
     				 		<a href="AllPizzas.php">All</a>
    					 		<a href="Chicken_Pizzas.php">Chicken</a>
@@ -42,16 +35,12 @@
 				<li>
 				<a href="pasta.php"> 
                 	<img src="Assets/pizz3.png">
-					PASTA</li>
+					Pasta</li>
 
 
-					<div class="logo">
-						<a href="mainpage.php">
-					<li id="imglogo"><img id="logoimg"  src="Assets/logo4.png"  style="width: 100px; height: auto;" ></li>  </div>
-			
 			
 					<div class="dropdown">
-				<li> <img src="Assets/pizz5.png">APPETIZER</li>
+				<li> <img src="Assets/pizz5.png">Appetizer</li>
 					<div class="dropdown-content">
     				 		<a href="AllAppetizer.php">All</a>
    					 		<a href="Soup.php">Soup</a>
@@ -60,8 +49,14 @@
 						</div>
 			</div>
 
+			
+			<div class="logo">
+						<a href="mainpage.php">
+					<li id="imglogo"><img id="logoimg"  src="Assets/logo4.png"  style="width: 100px; height: auto;" ></li>  </div>
+			
+
 				<div class="dropdown">
-					<li>  <img src="Assets/pizz2.png"> DESSERT</li>
+					<li>  <img src="Assets/pizz2.png"> Dessert</li>
 						<div class="dropdown-content">
     				 		<a href="AllDesserts.php">All</a>
    					 		<a href="IceCream.php">Ice Cream</a>
@@ -72,6 +67,14 @@
 				</div>	
 
 
+								
+			<li>
+			
+					
+                	<img src="Assets/pizz6.png">
+					About Us
+					
+				</li>
 			<li>
 
 				<!-- <a href="#Appetizer">-->
