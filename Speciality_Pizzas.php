@@ -1,22 +1,22 @@
 <?php include 'header.php'; ?>
 
-<title>Special Pizza</title>
+<title id="title">Special Pizza</title>
 </head>
 
 <body onload="getpagename()">
 <div id="success_message"> </div>
         <div class="big" id="b4a">
             <div class="bg" id="b4b"></div>
-		<p id="pizzaNamesID" class="pizza names" style=" position:absolute; font-size:30px; margin-top:530px; margin-left:100px; font-family:'fredericka'; color:#ff7733; "> SIGNATURE CRUST  </p>
-    <p id="pizzaNamesID" class="pizza names" style=" position:absolute; font-size:30px; margin-top:930px; margin-left:150px; font-family:'fredericka'; color:#ff7733; "> MALAI BOTI  </p>
-    <p id="pizzaNamesID" class="pizza names" style=" position:absolute; font-size:30px; margin-top:1330px; margin-left:100px; font-family:'fredericka'; color:#ff7733; "> AFGHANI CHICKEN  </p>
+		<p id="pizzaNamesID" class="pizza names" style=" position:absolute; font-size:30px; margin-top:530px; margin-left:110px; font-family:'cabin sketch'; color:#ff7733; "> SIGNATURE CRUST  </p>
+    <p id="pizzaNamesID" class="pizza names" style=" position:absolute; font-size:30px; margin-top:930px; margin-left:160px; font-family:'cabin sketch'; color:#ff7733; "> MALAI BOTI  </p>
+    <p id="pizzaNamesID" class="pizza names" style=" position:absolute; font-size:30px; margin-top:1330px; margin-left:110px; font-family:'cabin sketch'; color:#ff7733; "> AFGHANI CHICKEN  </p>
 
-    <p id="pizzaNamesID" class="pizza names" style=" position:absolute; font-size:30px; margin-top:530px; margin-left:600px; font-family:'fredericka'; color:#ff7733; "> MIX 2  </p>
-    <p id="pizzaNamesID" class="pizza names" style=" position:absolute; font-size:30px; margin-top:930px; margin-left:520px; font-family:'fredericka'; color:#ff7733; "> CREAMY CRUST  </p>
-    <p id="pizzaNamesID" class="pizza names" style=" position:absolute; font-size:30px; margin-top:1330px; margin-left:550px; font-family:'fredericka'; color:#ff7733; "> VEG LOVER  </p>
+    <p id="pizzaNamesID" class="pizza names" style=" position:absolute; font-size:30px; margin-top:530px; margin-left:600px; font-family:'cabin sketch'; color:#ff7733; "> MIX 2  </p>
+    <p id="pizzaNamesID" class="pizza names" style=" position:absolute; font-size:30px; margin-top:930px; margin-left:530px; font-family:'cabin sketch'; color:#ff7733; "> CREAMY CRUST  </p>
+    <p id="pizzaNamesID" class="pizza names" style=" position:absolute; font-size:30px; margin-top:1330px; margin-left:560px; font-family:'cabin sketch'; color:#ff7733; "> VEG LOVER  </p>
 
-    <p id="pizzaNamesID" class="pizza names" style=" position:absolute; font-size:30px; margin-top:530px; margin-left:900px; font-family:'fredericka'; color:#ff7733; "> SHAWARMA CRUST  </p>
-    <p id="pizzaNamesID" class="pizza names" style=" position:absolute; font-size:30px; margin-top:930px; margin-left:930px; font-family:'fredericka'; color:#ff7733; "> MIX SUPREME  </p>
+    <p id="pizzaNamesID" class="pizza names" style=" position:absolute; font-size:30px; margin-top:530px; margin-left:910px; font-family:'cabin sketch'; color:#ff7733; "> SHAWARMA CRUST  </p>
+    <p id="pizzaNamesID" class="pizza names" style=" position:absolute; font-size:30px; margin-top:930px; margin-left:940px; font-family:'cabin sketch'; color:#ff7733; "> MIX SUPREME  </p>
 
         
 		<div class="container1" onmouseover="pricedisplay()" id="abc12345" onmouseleave="imgchange(this)" style="top:200px; left:100px;">

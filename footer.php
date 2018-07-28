@@ -6,7 +6,7 @@
 				<p style="font-size:18px; font-family:'cabin sketch'";>We use only the FRESHEST INGREDIENTS and the FINEST CHEESES. We make our dough and sauces fresh everyday.
 				</p>
 
-				<p style="background-size: 10px;">
+				<p style="background-size: 16px;">
 					<span class="media"><a href=""><i class="fa fa-twitter"></i></a></span>
 					<span class="media"><a href=""><i class="fa fa-instagram"></i></a></span>
 					<span class="media"><a href=""><i class="fa fa-facebook"></i></a></span>
@@ -14,8 +14,7 @@
 			</div>
 
 			<div class="links">
-				<h4 style="font-size: 25px; font-family: 'cabin sketch';
-				color: #804000;"> <b>Important Links</b></h4>
+				<h4 style="font-size: 25px; font-family: 'cabin sketch'; color: #804000;"> Important Links</h4>
 				<p style="font-size: 18px;  font-family: 'cabin sketch';"><a href="">About Us</a></p>
 				<p style="font-size: 18px; font-family: 'cabin sketch';"><a href="">Contact Us</a></p>
 				<p style="font-size: 18px; font-family: 'cabin sketch';"><a href="">Terms & Conditions</a></p>

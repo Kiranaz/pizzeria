@@ -68,7 +68,7 @@ function change(x){
 	var imagenamewithext = srcsplit[srcsplit.length-1];
 	var imagenamesplit = imagenamewithext.split(".");
 	var imagename = imagenamesplit[0];
-
+	
 
 var t = document.getElementById("overlaytext1");
 
@@ -80,8 +80,8 @@ var t = document.getElementById("overlaytext1");
 	var p_id = document.createAttribute("id"); p_id.value ="price1";
 	p.setAttributeNode(p_id);
 	document.getElementById("descript1").appendChild(p);
-
-	document.getElementById("abc123").style.visibility="visible";
+document.getElementById("abc123").style.visibility="visible";
+	
 
 
 
@@ -185,142 +185,6 @@ function pricedisplay(){
 
 
 
-function pricedisplay2(){
-	
-	var price = 380;
-	var y = document.getElementById("2");
-	var b = y.options[y.selectedIndex].value;
-	var ab = parseInt(b);
-	var str = document.getElementById("abc123").src;
-	var res = str.split("Assets/");
-    var res2 = res[1].split(".");
-	var res3 =  res2[0];
-	var multi = price * ab;
-	for (var i = 1; i <= 6; i++) {
-		if(res3 == "pasta"+i)
-
-				document.getElementById("pricep"+i).innerHTML="&emsp;&emsp;&emsp;&emsp;Rs "+multi;
-	}
-}
-
-	
-function pricedisplay3(){
-	
-	var y = document.getElementById("2");
-	var b = y.options[y.selectedIndex].value;
-	var ab = parseInt(b);
-	var str = document.getElementById("abc123").src;
-	var res = str.split("Assets/");
-    var res2 = res[1].split(".");
-	var res3 =  res2[0];
-	var price;
-	if(res3 == "app1" || res3 == "app9"){
-		price = 250;
-	}
-	else if(res3 == "app2" || res3 == "app5"){
-		price = 120;
-	}
-	else if(res3 == "app3" || res3 == "app4"){
-		price = 160;
-	}
-	else if(res3 == "app6" || res3 == "app14" || res3 == "app15"){
-		price = 200;
-	}
-	else if(res3 == "app8" || res3 == "app11" || res3 == "app12"){
-		price = 130;
-	}
-	else if(res3 == "app6"){
-		price = 180;
-	}
-	else if(res3 == "app13"){
-		price = 400;
-	}
-	else{
-		price = 300;
-	}
-	
-	var multi = price * ab;
-	for (var i = 1; i <= 15; i++) {
-		if(res3 == "app"+i)
-
-				document.getElementById("pricepp"+i).innerHTML="<br>&emsp;&emsp;Rs "+multi;
-	}}
-
-	
-function pricedisplay4(){
-	
-	var price;
-	var y = document.getElementById("2");
-	var b = y.options[y.selectedIndex].value;
-	var ab = parseInt(b);
-	var str = document.getElementById("abc123").src;
-	var res = str.split("Assets/");
-    var res2 = res[1].split(".");
-	var res3 =  res2[0];
-	if(res3=="dessert1" || res3 == "dessert2" || res3 == "dessert3" || res3 == "dessert4"){
-		price = 170;
-	}
-	else if(res3=="dessert6" || res3 == "dessert7" || res3 == "dessert8"){
-		price = 100;
-	}
-	else if(res3 == "dessert9"){
-		price = 120;
-	}
-	else{
-		price = 300;
-	}
-	var multi = price * ab;
-
-	for (var i = 1; i <= 9; i++) {
-		if(res3 == "dessert"+i)
-				document.getElementById("priceppp"+i).innerHTML="&emsp;&emsp;&emsp;&emsp;Rs "+multi;
-	}}
-
-	
-	// if(res3 == "pasta1"){
-	// 	price = 380;
-	// 	var multi = price * ab;
-	// 	document.getElementById("price21").innerHTML="&emsp;&emsp;&emsp;&emsp;Rs "+multi;
-	// }
-	// else if(res3 == "pasta2"){
-	// 	price = 380;
-	// 	var multi = price * ab;
-	// 	document.getElementById("price22").innerHTML="&emsp;&emsp;&emsp;&emsp;Rs "+multi;
-	// }
-	// else if(res3 == "pasta3"){
-	// 	price = 380;
-	// 	var multi = price * ab;
-	// 	document.getElementById("price23").innerHTML="&emsp;&emsp;&emsp;&emsp;Rs "+multi;
-	// }
-	// if(res3 == "pasta4"){
-	// 	price = 380;
-	// 	var multi = price * ab;
-	// 	document.getElementById("price24").innerHTML="&emsp;&emsp;&emsp;&emsp;Rs "+multi;
-	// }
-	// if(res3 == "pasta5"){
-	// 	price = 380;
-	// 	var multi = price * ab;
-	// 	document.getElementById("price25").innerHTML="&emsp;&emsp;&emsp;&emsp;Rs "+multi;
-	// }
-	// else{
-	// 	price = 380;
-	// 	var multi = price * ab;
-	// 	document.getElementById("price26").innerHTML="&emsp;&emsp;&emsp;&emsp;Rs "+multi;
-	// }
-
-	// for (var i = 1; i <= 26; i++) {
-	// 	// for(var v = 1; v <= i; v++){
-	// 		for(var v = i; v <= 6; v++)
-	// 		if(res3 == "pasta"+v)
-
-	// 	document.getElementById("price" + i).innerHTML="&emsp;&emsp;&emsp;Rs "+multi;
-	// } 
-// 	// for(var i = 1; i <= 6 ; i++){
-// 		 for(var v = 21; v <= 26; v++){
-// 			 for(var i = 1; v<=6 ; i++)
-// 		  if(res3 == "pasta" + i)
-// 		document.getElementById("price" + v).innerHTML="&emsp;&emsp;&emsp;Rs "+multi;   }
-// // }}
 
 function set(){
 	var elements = document.getElementsByTagName("select");
@@ -351,7 +215,7 @@ function cart_table_remove(x){
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
 
-    	//console.log(this.responseText);
+    	
     }
   };
 xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");

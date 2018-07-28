@@ -1,5 +1,5 @@
 <?php include 'header.php'; ?>
-<title>Appetizer</title>
+<title id="title">Appetizer</title>
 </head>
 
 <body onload="getpagename()">
@@ -8,8 +8,29 @@
         <div class="big" id="b10a">
             <div class="bg" id="b10b"></div>
 
-		
-		<div class="container1"  onmouseover="pricedisplay3()" id="abc12345" onmouseleave="imgchange(this)" style="top:200px; left:100px;">
+            <p id="pizzaNamesID" class="pizza names" style=" position:absolute; font-size:30px; margin-top:510px; margin-left:150px; font-family:'cabin sketch'; color:#ff7733; "> Chicken Fries  </p>
+    <p id="pizzaNamesID" class="pizza names" style=" position:absolute; font-size:30px; margin-top:510px; margin-left:490px; font-family: 'cabin sketch'; color:#ff7733; "> Plain Garlic Bread 4 Pcs  </p>
+    <p id="pizzaNamesID" class="pizza names" style=" position:absolute; font-size:30px; margin-top:510px; margin-left:880px; font-family:'cabin sketch'; color:#ff7733; "> Garlic Bread Cheese 4 Pcs  </p>
+
+    <p id="pizzaNamesID" class="pizza names" style=" position:absolute; font-size:30px; margin-top:900px; margin-left:115px; font-family:'cabin sketch'; color:#ff7733; "> Cheese Stick 4 Pcs  </p>
+    <p id="pizzaNamesID" class="pizza names" style=" position:absolute; font-size:30px; margin-top:900px; margin-left:530px; font-family:'cabin sketch'; color:#ff7733; "> Bread Stick 4 Pcs  </p>
+    <p id="pizzaNamesID" class="pizza names" style=" position:absolute; font-size:30px; margin-top:900px; margin-left:930px; font-family:'cabin sketch'; color:#ff7733; "> Chicken Wings 6 Pcs  </p>
+
+
+            <p id="pizzaNamesID" class="pizza names" style=" position:absolute; font-size:30px; margin-top:1310px; margin-left:100px; font-family:'cabin sketch'; color:#ff7733; "> Chicken Nuggets 5 Pcs  </p>
+    <p id="pizzaNamesID" class="pizza names" style=" position:absolute; font-size:30px; margin-top:1310px; margin-left:540px; font-family: 'cabin sketch'; color:#ff7733; "> French Fries  </p>
+    <p id="pizzaNamesID" class="pizza names" style=" position:absolute; font-size:30px; margin-top:1310px; margin-left:920px; font-family:'cabin sketch'; color:#ff7733; "> Garlic Mushroom  </p>
+
+    <p id="pizzaNamesID" class="pizza names" style=" position:absolute; font-size:30px; margin-top:1750px; margin-left:80px; font-family:'cabin sketch'; color:#ff7733; "> Jalapeno Cream Balls 6 Pcs  </p>
+    <p id="pizzaNamesID" class="pizza names" style=" position:absolute; font-size:30px; margin-top:1750px; margin-left:525px; font-family:'cabin sketch'; color:#ff7733; "> Hot & Sour Soup  </p>
+    <p id="pizzaNamesID" class="pizza names" style=" position:absolute; font-size:30px; margin-top:1750px; margin-left:920px; font-family:'cabin sketch'; color:#ff7733; "> Chicken Corn Soup  </p>
+
+		    <p id="pizzaNamesID" class="pizza names" style=" position:absolute; font-size:30px; margin-top:2100px; margin-left:190px; font-family:'cabin sketch'; color:#ff7733; "> Salad  </p>
+    <p id="pizzaNamesID" class="pizza names" style=" position:absolute; font-size:30px; margin-top:2100px; margin-left:510px; font-family:'cabin sketch'; color:#ff7733; "> Spicy Chicken Roll  </p>
+    <p id="pizzaNamesID" class="pizza names" style=" position:absolute; font-size:30px; margin-top:2100px; margin-left:910px; font-family:'cabin sketch'; color:#ff7733; "> Chicken Cream Roll  </p>
+
+
+		<div class="container1"  onmouseover="pricedisplay()" id="abc12345" onmouseleave="imgchange(this)" style="top:200px; left:100px;">
 		<li>	
 			
 	<img id="abc123" src="x" class="image"   style="visibility: hidden; ">
@@ -27,7 +48,7 @@
         <option>jumbo</option>
     </select>
 
-    <select id="2" onchange="pricedisplay3()">
+    <select id="2" onchange="pricedisplay()">
     	
         <option>1</option>
         <option>2</option>
@@ -51,7 +72,7 @@
 <img id="abc123456" src="Assets/app7.png" onmouseover="change(this)"  style=" position: absolute; top: 1050px; left:100px;  width: 20%; visibility:visible;">
 <img id="abc123456" src="Assets/app8.png" onmouseover="change(this)"  style=" position: absolute; top: 1050px; left:500px;  width: 20%; visibility:visible;">
 <img id="abc123456" src="Assets/app9.png" onmouseover="change(this)"  style=" position: absolute; top: 1050px; left:900px;  width: 20%; visibility:visible;">
-<img id="abc123456" src="Assets/app10.png" onmouseover="change(this)"  style=" position: absolute; top: 1450px; left:100px;  width: 20%; visibility:visible;">
+<img id="abc123456" src="Assets/app10.png" onmouseover="change(this)"  style=" position: absolute; top: 1450px; left:100px; height: 310px; width: 20%; visibility:visible;">
 <img id="abc123456" src="Assets/app11.png" onmouseover="change(this)"  style=" position: absolute; top: 1450px; left:500px;  width: 20%; visibility:visible;">
 <img id="abc123456" src="Assets/app12.png" onmouseover="change(this)"  style=" position: absolute; top: 1450px; left:900px;  width: 20%; visibility:visible;">
 <img id="abc123456" src="Assets/app13.png" onmouseover="change(this)"  style=" position: absolute; top: 1850px; left:100px;  width: 20%; visibility:visible;">

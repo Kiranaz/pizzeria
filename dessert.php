@@ -1,12 +1,12 @@
 <?php include 'header.php'; ?>
 
-<title>Dessert</title>
+<title id="title">Dessert</title>
 </head>
 
 <body onload="getpagename()">
 <div id="success_message"> </div>
 
-<div class="container1" id="abc12345" onmouseover="pricedisplay2()" onmouseleave="imgchange(this)" style="top:200px; left:100px;">
+<div class="container1" id="abc12345" onmouseover="pricedisplay()" onmouseleave="imgchange(this)" style="top:200px; left:100px;">
 		<li>
 	<img id="abc123" src="x" class="image"   style="visibility: hidden; ">
 
@@ -22,7 +22,7 @@
         <option>large</option>
     </select>
 
-    <select id="2"  onchange="pricedisplay2()" >
+    <select id="2"  onchange="pricedisplay()" >
     	
         <option>1</option>
         <option>2</option>

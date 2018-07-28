@@ -2,16 +2,24 @@
 
 	
 
-<title>Pasta</title>
+<title id="title">Pasta</title>
 </head>
 
 <body onload="getpagename()">
 <div id="success_message"> </div>
         <div class="big" id="b5a">
             <div class="bg" id="b5b"></div>
+        
+            <p id="pizzaNamesID" class="pizza names" style=" position:absolute; font-size:30px; margin-top:510px; margin-left:140px; font-family:'cabin sketch'; color:#ff7733; "> CREAMY PASTA  </p>
+    <p id="pizzaNamesID" class="pizza names" style=" position:absolute; font-size:30px; margin-top:510px; margin-left:505px; font-family: 'cabin sketch'; color:#ff7733; "> Spicy Chicken Pasta  </p>
+    <p id="pizzaNamesID" class="pizza names" style=" position:absolute; font-size:30px; margin-top:510px; margin-left:920px; font-family:'cabin sketch'; color:#ff7733; "> ALFREDO PASTA  </p>
+
+    <p id="pizzaNamesID" class="pizza names" style=" position:absolute; font-size:30px; margin-top:900px; margin-left:140px; font-family:'cabin sketch'; color:#ff7733; "> Beef Lasagne  </p>
+    <p id="pizzaNamesID" class="pizza names" style=" position:absolute; font-size:30px; margin-top:900px; margin-left:530px; font-family:'cabin sketch'; color:#ff7733; "> Chicken Lasagne  </p>
+    <p id="pizzaNamesID" class="pizza names" style=" position:absolute; font-size:30px; margin-top:900px; margin-left:980px; font-family:'cabin sketch'; color:#ff7733; "> Spaghetti  </p>
 
 		
-		<div class="container1" id="abc12345" onmouseover="pricedisplay2()" onmouseleave="imgchange(this)" style="top:200px; left:100px;">
+		<div class="container1" id="abc12345" onmouseover="pricedisplay()" onmouseleave="imgchange(this)" style="top:200px; left:100px;">
 		<li>	
 			
 	<img id="abc123" src="x" class="image"   style="visibility: hidden; ">
@@ -28,7 +36,7 @@
          <option>large</option>
      </select>
 
-    <select id="2" onchange="pricedisplay2()" >
+    <select id="2" onchange="pricedisplay()" >
     	
         <option selected>1</option>
         <option>2</option>

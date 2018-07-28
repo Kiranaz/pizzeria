@@ -2,7 +2,7 @@
 
 <?php include 'header.php'; ?>
 
-<title>Beef Pizzas</title>
+<title id="title">Beef Pizzas</title>
 </head>
 
 <body onload="getpagename()">
@@ -10,11 +10,11 @@
         <div class="big" id="b3a">
             <div class="bg" id="b3b"></div>
 
-    <p id="pizzaNamesID" class="pizza names" style=" position:absolute; font-size:30px; margin-top:530px; margin-left:150px; font-family:'fredericka'; color:#ff7733; "> BEEF SUPER  </p>
+    <p id="pizzaNamesID" class="pizza names" style=" position:absolute; font-size:30px; margin-top:530px; margin-left:150px; font-family:'cabin sketch'; color:#ff7733; "> BEEF SUPER  </p>
 
-    <p id="pizzaNamesID" class="pizza names" style=" position:absolute; font-size:30px; margin-top:530px; margin-left:540px; font-family:'fredericka'; color:#ff7733; "> HOT & SPICY  </p>
+    <p id="pizzaNamesID" class="pizza names" style=" position:absolute; font-size:30px; margin-top:530px; margin-left:550px; font-family:'cabin sketch'; color:#ff7733; "> HOT & SPICY  </p>
 
-    <p id="pizzaNamesID" class="pizza names" style=" position:absolute; font-size:30px; margin-top:530px; margin-left:910px; font-family:'fredericka'; color:#ff7733; "> PEPERONNI FEAST  </p>
+    <p id="pizzaNamesID" class="pizza names" style=" position:absolute; font-size:30px; margin-top:530px; margin-left:910px; font-family:'cabin sketch'; color:#ff7733; "> PEPERONNI FEAST  </p>
 
 	
 		
