@@ -63,167 +63,28 @@ function change(x){
 	document.getElementById("abc12345").style.top=x.style.top;
 	document.getElementById("abc12345").style.left=x.style.left;
 	document.getElementById("abc123").src=x.src;
-	document.getElementById("abc123").value=x.value;
-
-
 	x.style.visibility="hidden";
+	var srcsplit = m.split("/");
+	var imagenamewithext = srcsplit[srcsplit.length-1];
+	var imagenamesplit = imagenamewithext.split(".");
+	var imagename = imagenamesplit[0];
+
+
 var t = document.getElementById("overlaytext1");
-	if (m == "http://localhost/pizzeria/Assets/menu1.png") {
-		t.innerHTML='<span style="font-size:21px; font-family:Pacifico;">A recipe of traditional chicken tikka, onions & topped with mozzarell a cheese<p id="price1"></p></span>';
-}																																																			
-	else if (m == "http://localhost/pizzeria/Assets/menu2.png") {
-		t.innerHTML= t.innerHTML='<span style="font-size:22px; font-family:Pacifico;">Green Chicken, Green Paper, Onion, Jalapeno, Green Olive & Alfreo<p id="price2"></p></span>';
-	}
-	else if (m == "http://localhost/pizzeria/Assets/menu3.png") {
-		t.innerHTML= t.innerHTML='<span style="font-size:19px; font-family:Pacifico;">Green Chicken, Tandoori Chicken, Mushroom Italian Herb, Mix Creamy Sauce & Mozzarella Cheese<p id="price3"></p></span>';
-	}
-	else if (m == "http://localhost/pizzeria/Assets/menu4.png") {
-		t.innerHTML= t.innerHTML='<span style="font-size:24px; font-family:Pacifico;">Marinated Chicken, Jalapeno, Italian Herb, Sweet Corn<p id="price4"></p></span>';
-	}
-	else if (m == "http://localhost/pizzeria/Assets/menu5.png") {
-		t.innerHTML= t.innerHTML='<span style="font-size:17px; font-family:Pacifico;">A Delicious combination of shawarma chicken, onion,green pepper, jalapeno, mushrooms, olives & mozzarella cheese<p id="price5"></p></span>';
-	}
-	else if (m == "http://localhost/pizzeria/Assets/menu6.png") {
-		t.innerHTML= t.innerHTML='<span style="font-size:20px; font-family:Pacifico;">A creamy recipe with malai boti chicken tomatoes, onion, green pepper creamy sauce & mozzarella cheese<p id="price6"></p></span>';
-	}
-	else if (m == "http://localhost/pizzeria/Assets/menu7.png") {
-		t.innerHTML= t.innerHTML='<span style="font-size:21px; font-family:Pacifico;">Mushroom, Creamy Sauce, Fajita Chickken , Jalapino & Italian Herb<p id="price7"></p></span>';
-	}
-	else if (m == "http://localhost/pizzeria/Assets/menu8.png") {
-		t.innerHTML= t.innerHTML='<span style="font-size:13.7px; font-family:Pacifico;">A Delight Blend Of Spicy Chicken , Chicken Sausages ,Chicken Tikka , Onion , Green Pepper, Mushroom, Mozzarella Cheese & Olive<p id="price8"></p></span>';
-	}
-	else if (m == "http://localhost/pizzeria/Assets/menu9.png") {
-		t.innerHTML= t.innerHTML='<span style="font-size:20px; font-family:Pacifico;">A Tasty Combination of pepperoni, Beef Onion, Mushrooms black Olive & Mozzarella Cheese<p id="price9"></p></span>';
-	}
-	else if (m == "http://localhost/pizzeria/Assets/menu10.png") {
-		t.innerHTML= t.innerHTML='<span style="font-size:15px; font-family:Pacifico;">A Blend Of Smoke Chicken ,Pepperoni ,Beef , Smoke Veal , Onion,Mushroom,Capsicum, Black Olive & Mozzarella Cheese<p id="price10"></p></span>';
-	}
-	else if (m == "http://localhost/pizzeria/Assets/menu11.png") {
-		t.innerHTML= t.innerHTML='<span style="font-size:22px; font-family:Pacifico;">Afghani Chicken Onion Creamy Sauce & Mozzarella Cheese<p id="price11"></p></span>';
-	}
-	else if (m == "http://localhost/pizzeria/Assets/menu12.png") {
-		t.innerHTML= t.innerHTML='<span style="font-size:21px; font-family:Pacifico;">A Tasty Tandoori Chicken ,Onion ,Tomatoes, Mozzarella Cheese<p id="price12"></p></span>';
-	}
-	else if (m == "http://localhost/pizzeria/Assets/menu13.png") {
-		t.innerHTML= t.innerHTML='<span style="font-size:20px; font-family:Pacifico;">Traditional Pakistani Recipe With Chicken Tikka ,Onion & Mozzarella Cheese<p id="price13"></p></span>';
-	}
-	else if (m == "http://localhost/pizzeria/Assets/menu14.png") {
-		t.innerHTML=t.innerHTML='<span style="font-size:19px; font-family:Pacifico;">A Tasty Combination Of Chicken Fajita,Onion,Green Pepper & Mozzarella Cheese<p id="price14"></p></span>' ;
-	}
-	else if (m == "http://localhost/pizzeria/Assets/menu15.png") {
-		t.innerHTML=t.innerHTML='<span style="font-size:17px; font-family:Pacifico;">Just To Spice Your Taste Buds With Chicken fajita, Onion, Green Pepper Jalapeno &Mozzarella Cheese<p id="price15"></p></span>' ;
-	}
-	else if (m == "http://localhost/pizzeria/Assets/menu16.png") {
-		t.innerHTML= t.innerHTML='<span style="font-size:20px; font-family:Pacifico;">If You Like It Hot Try Beef Hot,Jalapeno ,Onion,Tomato & Mozzarella Cheese<p id="price16"></p></span>';
-	}
-	else if (m == "http://localhost/pizzeria/Assets/menu17.png") {
-		t.innerHTML= t.innerHTML='<span style="font-size:22px; font-family:Pacifico;">A Delicious Combination Of Pepperoni & Mozzarella Cheese<p id="price17"></p></span>';
-	}
-	else if (m == "http://localhost/pizzeria/Assets/menu18.png") {
-		t.innerHTML=t.innerHTML='<span style="font-size:14px; font-family:Pacifico;">Have It European Style topped with Chicken Sausages,Smoked Chicken Mushroom, Green Pepper,Tomato Olive & Mozzarella Cheese<p id="price18"></p></span>' ;
-	}
-	else if (m == "http://localhost/pizzeria/Assets/menu19.png") {
-		t.innerHTML= t.innerHTML='<span style="font-size:22px; font-family:Pacifico;">If You Love Just Cheese Enjoy 100% Mozzarella Cheese<p id="price19"></p></span>' ;
-	}
-	else if (m == "http://localhost/pizzeria/Assets/menu20.png") {
-		t.innerHTML= t.innerHTML='<span style="font-size:20px; font-family:Pacifico;"> Colorful Combination OF Onion ,Mushroom,Green Pepper,Olive,tomatoes & Mozzarella Cheese<p id="price20"></p></span>';
-	}
-	else if (m == "http://localhost/pizzeria/Assets/pasta1.png") {
-		t.innerHTML= t.innerHTML='<span style="font-size:15px; font-family:Pacifico;">Pasta with spicy chicken cooked in creamy sauce & mozzarella cheese served with garlic bread & drink<p id="pricep1"></p></span>';
-	}
-	else if (m == "http://localhost/pizzeria/Assets/pasta2.png") {
-		t.innerHTML= t.innerHTML='<span style="font-size:17px; font-family:Pacifico;">Pasta with spicy chicken cooked in spicy creamy sauce & mozzarella cheese served with garlic bread & drink<p id="pricep2"></p></span>';
-	}
-	else if (m == "http://localhost/pizzeria/Assets/pasta3.png") {
-		t.innerHTML= t.innerHTML='<span style="font-size:15px; font-family:Pacifico;">Pasta with cheesy packed chicken cooked in special sauce of cheese & plenty served with garlic bread & drink<p id="pricep3"></p></span>';
-	}
-	else if (m == "http://localhost/pizzeria/Assets/pasta4.png") {
-		t.innerHTML= t.innerHTML='<span style="font-size:16px; font-family:Pacifico;">Layers of lasagne with cream sauce and beef sauce Mozzarella cheese topped with cheese served with garlic bread & drink<p id="pricep4"></p></span>';
-	}
-	else if (m == "http://localhost/pizzeria/Assets/pasta5.png") {
-		t.innerHTML= t.innerHTML='<span style="font-size:16px; font-family:Pacifico;">Layers of lasagne filled with chicken cream sauce topped with mozzarella cheese served with garlic bread & drink<p id="pricep5"></p></span>';
-	}
-	else if (m == "http://localhost/pizzeria/Assets/pasta6.png") {
-		t.innerHTML= t.innerHTML='<span style="font-size:18px; font-family:Pacifico;">Topped with mozzarella cheese meat sauce mushrooms & noddles served with garlic bread & drink<p id="pricep6"></p></span>';
-	}
-	else if (m == "http://localhost/pizzeria/Assets/dessert1.png") {
-		 t.innerHTML='<span style="font-size:25px; font-family:Pacifico;"><br>ICE CREAM (2 SCOOPS )<p id="priceppp1"></p></span>';
-	}
-	else if (m == "http://localhost/pizzeria/Assets/dessert2.png") {
-	 t.innerHTML='<span style="font-size:25px; font-family:Pacifico;"><br>ICE CREAM (2 SCOOPS )<p id="priceppp2"></p></span>';
-	}
-	else if (m == "http://localhost/pizzeria/Assets/dessert3.png") {
-		 t.innerHTML='<span style="font-size:25px; font-family:Pacifico;"><br>ICE CREAM (2 SCOOPS )<p id="priceppp3"></p></span>';
-	}
-	else if (m == "http://localhost/pizzeria/Assets/dessert4.png") {
-		 t.innerHTML='<span style="font-size:25px; font-family:Pacifico;"><br>ICE CREAM (2 SCOOPS )<p id="priceppp4"></p></span>';
-	}
-	else if (m == "http://localhost/pizzeria/Assets/dessert5.png") {
-	 t.innerHTML='<span style="font-size:18px; font-family:Pacifico;">A dense, single-layer chocolate cake similar to a brownie, although moister with more chocolate<p id="priceppp5"></p></span>';
-	}
-	else if (m == "http://localhost/pizzeria/Assets/dessert6.png") {
-		 t.innerHTML='<span style="font-size:30px; font-family:Pacifico;"><p id="priceppp6"></p></span>';
-	}
-	else if (m == "http://localhost/pizzeria/Assets/dessert7.png") {
-		 t.innerHTML='<span style="font-size:30px; font-family:Pacifico;"<p id="priceppp7"></p></span>';
-	}
-	else if (m == "http://localhost/pizzeria/Assets/dessert8.png") {
-		 t.innerHTML='<span style="font-size:30px; font-family:Pacifico;"><p id="priceppp8"></p></span>';
-	}
-	else if (m == "http://localhost/pizzeria/Assets/dessert9.png") {
-		 t.innerHTML='<span style="font-size:25px; font-family:Pacifico;"><br>Strawberry, Mango, Chocolate, Vanilla<p id="priceppp9"></p></span>';
-	}
-	else if (m == "http://localhost/pizzeria/Assets/app1.png") {
-		 t.innerHTML='<span style="font-size:30px; font-family:Pacifico;"><p id="pricepp1"></p></span>';
-	}
-	else if (m == "http://localhost/pizzeria/Assets/app2.png") {
-		 t.innerHTML='<span style="font-size:30px; font-family:Pacifico;"><p id="pricepp2"></p></span>';
-	}
-	else if (m == "http://localhost/pizzeria/Assets/app3.png") {
-		 t.innerHTML='<span style="font-size:30px; font-family:Pacifico;"><p id="pricepp3"></p></span>';
-	}
-	else if (m == "http://localhost/pizzeria/Assets/app4.png") {
-		 t.innerHTML='<span style="font-size:30px; font-family:Pacifico;"><p id="pricepp4"></p></span>';
-	}
-		else if (m == "http://localhost/pizzeria/Assets/app5.png") {
-		 t.innerHTML='<span style="font-size:30px; font-family:Pacifico;"><p id="pricepp5"></p></span>';
-	}
-	else if (m == "http://localhost/pizzeria/Assets/app6.png") {
-		 t.innerHTML='<span style="font-size:30px; font-family:Pacifico;"><p id="pricepp6"></p></span>';
-	}
-	else if (m == "http://localhost/pizzeria/Assets/app7.png") {
-		 t.innerHTML='<span style="font-size:30px; font-family:Pacifico;"><p id="pricepp7"></p></span>';
-	}
-	else if (m == "http://localhost/pizzeria/Assets/app8.png") {
-		 t.innerHTML='<span style="font-size:30px; font-family:Pacifico;"><p id="pricepp8"></p></span>';
-	}
-	else if (m == "http://localhost/pizzeria/Assets/app9.png") {
-		 t.innerHTML='<span style="font-size:30px; font-family:Pacifico;"><p id="pricepp9"></p></span>';
-	}
-		else if (m == "http://localhost/pizzeria/Assets/ap10.png") {
-		 t.innerHTML='<span style="font-size:30px; font-family:Pacifico;"><p id="pricepp10"></p></span>';
-	}
-	else if (m == "http://localhost/pizzeria/Assets/app11.png") {
-		 t.innerHTML='<span style="font-size:16px; font-family:Pacifico;">Made with tantalizing hot sauce smoked chicken and imported jalapeno served with a garnish of green pepper<p id="pricepp11"></p></span>';
-	}
-	else if (m == "http://localhost/pizzeria/Assets/app12.png") {
-		 t.innerHTML='<span style="font-size:18px; font-family:Pacifico;">A prelude to a perfect meal - our very own thick chicken soup with sweet corn chicken<p id="pricepp12"></p></span>';
-	}
-	else if (m == "http://localhost/pizzeria/Assets/app13.png") {
-		 t.innerHTML='<span style="font-size:30px; font-family:Pacifico;"><p id="pricepp13"></p></span>';
-	}
-	else if (m == "http://localhost/pizzeria/Assets/app14.png") {
-		 t.innerHTML='<span style="font-size:30px; font-family:Pacifico;"><p id="pricepp14"></p></span>';
-	}
-		else if (m == "http://localhost/pizzeria/Assets/app15.png") {
-		 t.innerHTML='<span style="font-size:30px; font-family:Pacifico;"><p id="pricepp15"></p></span>';
-	}
 
+	var index = search_descript_price(imagename);
+	t.innerHTML='<span id="descript1" style="font-size:21px; font-family:Pacifico;"><p id="price1"></p></span>';
+	document.getElementById("descript1").innerHTML=Descrp_price[index][3];
 
-
-
+	var p = document.createElement("p");
+	var p_id = document.createAttribute("id"); p_id.value ="price1";
+	p.setAttributeNode(p_id);
+	document.getElementById("descript1").appendChild(p);
 
 	document.getElementById("abc123").style.visibility="visible";
+
+
+
 	
 }
 
@@ -285,12 +146,6 @@ function AddToCart(){
 
 
 var xhttp = new XMLHttpRequest();
-  // xhttp.onreadystatechange = function() {
-  //   if (this.readyState == 4 && this.status == 200) {
-
-  //   	// console.log(this.responseText);
-  //   }
-  // };
   xhttp.open("POST", "ajax.php", true);
 xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 xhttp.send('cart='+JSON.stringify(product));
@@ -318,47 +173,17 @@ function pricedisplay(){
     var res2 = res[1].split(".");
 	var res3 =  res2[0];
 
-	if(a=="small"){
-		price = 360; }
-		// if(res3 == "menu1"){
-		// 	price = 330;
-		// }
-		// else if(res3 == "menu4"){
-		// 	price = 500;
-		// }
-		// else{
-		// price = 360;}
+	var index = search_descript_price(res3.concat(a));
+	price = Descrp_price[index][1];
+	//alert(price);
 	
-	else if(a=="regular"){
-		if(res3 == "menu1" || res3 == "menu11" || res3 == "menu12" || res3 == "menu13" || res3 == "menu14" || res3 == "menu15" || res3 == "menu19")
-		{price= 700;
-	}
-	else{
-		price = 800;
-	}
-}
-	else{
-		if(res3 == "menu1" || res3 == "menu11" || res3 == "menu12" || res3 == "menu13" || res3 == "menu14" || res3 == "menu15" || res3 == "menu19")
-			{price= 1050;
-		}
-		else{
-			price = 1150;
-		}
-	
-	}
 	var multi = price * ab;
 	
+	document.getElementById("price1").innerHTML=multi;
 	
-	
-//  ---------------------------CONTAINER PRICE UPDATED FOR EVERY IMAGE---------------------------------------//
-for (var i = 1; i <= 20; i++) {
-	// for(var v = 1; v <= i; v++){
+}
 
-		if(res3 == "menu"+i)
-    document.getElementById("price" + i).innerHTML="&emsp;&emsp;&emsp;Rs "+multi;
-}}
 
-// }
 
 function pricedisplay2(){
 	
@@ -425,8 +250,6 @@ function pricedisplay3(){
 function pricedisplay4(){
 	
 	var price;
-	var x = document.getElementById("3");
-	var a = x.options[x.selectedIndex].value;
 	var y = document.getElementById("2");
 	var b = y.options[y.selectedIndex].value;
 	var ab = parseInt(b);
@@ -562,3 +385,37 @@ if (c.firstChild == null ) {
 
 }
 
+
+//-------------------------------------------------------GETTING PIZZA PRICE AND DESCRIPTION-------------------------//
+
+var Descrp_price; //GLOBAL VARIABLE
+
+function getpagename(){
+
+	var pagename = document.getElementById("title").innerHTML;
+	var xhttp = new XMLHttpRequest();
+  xhttp.open("POST", "ajax3.php", true);
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+
+    	console.log(this.responseText);
+    	Descrp_price = JSON.parse(this.responseText);
+    }
+  };
+xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+xhttp.send("pagename="+pagename);
+
+}
+
+
+function search_descript_price(imagename){
+
+	for (var i = 0; i < Descrp_price.length; i++) {
+		var n = Descrp_price[i][4].includes(imagename);
+		if (n == true) {
+			return i;
+		}
+	}
+
+
+}

@@ -21,12 +21,12 @@
 	 <button class="button button1" onclick="AddToCart(); tick();"  align="center">Add to Cart</button>
 	 <div id="custom-selectid" class="custom-select" >
 
-    // <select id="1" style="visibility: hidden;">
+     <select id="1" style="visibility: hidden;">
     	
-    //     <option selected>small</option>
-    //     <option>regular</option>
-    //     <option>large</option>
-    // </select>
+         <option selected>small</option>
+         <option>regular</option>
+         <option>large</option>
+     </select>
 
     <select id="2" onchange="pricedisplay2()" >
     	

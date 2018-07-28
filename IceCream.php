@@ -5,7 +5,7 @@
 <title>Ice Cream</title>
 </head>
 
-<body onload="getpagename()">
+<body >
 <div id="success_message"> </div>
 
         <div class="big" id="b7a">
@@ -18,20 +18,15 @@
 	<img id="abc123" src="x" class="image"   style="visibility: hidden; ">
 
 	<div class="overlay" onmouseleave="resume()" >
-		<p id="overlaytext1" onmouseover="down()" class="overlaytext"> </p>
+		<p id="overlaytext1"  class="overlaytext"> </p>
 	 <button class="button button1" onclick="AddToCart(); tick();" align="center">Add to Cart</button>
 	 <div  id="custom-selectid" class="custom-select" >
-     <select id="3" onmouseover="pricedisplay4()">
-        <option>Strawberry</option>
-        <option>Chocolate</option>
-        <option>Vanilla</option>
-        <option>Mango</option>
-            </select>
-    <!-- <select id="1" style="visibility: hidden;" >
+     
+    <select id="1" style="visibility: hidden;" >
         <option>small</option>
         <option>regular</option>
         <option>large</option>
-    </select> -->
+    </select> 
 
     <select id="2"  onchange="pricedisplay4()"  style="visibility: visible;" >
     	
