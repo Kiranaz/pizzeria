@@ -72,7 +72,7 @@
 		text-align: center;
 		transition: 0.5s;
 		position: auto;
-		height: 13%;
+		height: 87px;
 		background-color: black;
 	}
 
@@ -722,7 +722,7 @@ textarea.form-control {
 	border:solid rgb(255, 143, 16);
   height: auto;
 	position: relative;
-  left:74.42%;
+  left:848px;
 
   width:15.98%;
   text-align: center;
