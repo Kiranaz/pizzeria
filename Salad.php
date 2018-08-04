@@ -1,7 +1,7 @@
 <?php include 'header.php'; ?>
 	
 
-<title>Salad</title>
+<title id="title">Salad</title>
 </head>
 
 <body onload="getpagename()">
@@ -11,9 +11,9 @@
             <div class="bg" id="b12b"></div>
 
 		
-        <p id="pizzaNamesID" class="pizza names" style=" position:absolute; font-size:30px; margin-top:515px; margin-left:195px; font-family:'cabin sketch'; color:#ff7733; "> Salad  </p>
+        <p id="pizzaNamesID" class="pizza names" style=" position:absolute; font-size:30px; margin-top:520px; margin-left:195px; font-family:'cabin sketch'; color:#ff7733; "> Salad  </p>
 
-		<div class="container1"  onmouseover="pricedisplay3()" id="abc12345" onmouseleave="imgchange(this)" style="top:200px; left:100px;">
+		<div class="container1"  onmouseover="pricedisplay()" id="abc12345" onmouseleave="imgchange(this)" style="top:200px; left:100px;">
 		<li>	
 			
 	<img id="abc123" src="x" class="image"   style="visibility: hidden; ">
@@ -31,7 +31,7 @@
         <option>jumbo</option>
     </select>
 
-    <select id="2" onchange="pricedisplay3()">
+    <select id="2" onchange="pricedisplay()">
     	
         <option>1</option>
         <option>2</option>

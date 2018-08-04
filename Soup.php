@@ -2,7 +2,7 @@
 
 	
 
-<title>Soup</title>
+<title id="title">Soup</title>
 </head>
 
 <body onload="getpagename()">
@@ -15,7 +15,7 @@
             <p id="pizzaNamesID" class="pizza names" style=" position:absolute; font-size:30px; margin-top:530px; margin-left:120px; font-family:'cabin sketch'; color:#ff7733; "> Hot & Sour Soup  </p>
     <p id="pizzaNamesID" class="pizza names" style=" position:absolute; font-size:30px; margin-top:530px; margin-left:510px; font-family: 'cabin sketch'; color:#ff7733; "> Chicken Corn Soup  </p>
 
-		<div class="container1" onmouseover="pricedisplay3()"  id="abc12345" onmouseleave="imgchange(this)" style="top:200px; left:100px;">
+		<div class="container1" onmouseover="pricedisplay()"  id="abc12345" onmouseleave="imgchange(this)" style="top:200px; left:100px;">
 		<li>	
 			
 	<img id="abc123" src="x" class="image"   style="visibility: hidden; ">
@@ -31,7 +31,7 @@
         <option>jumbo</option>
     </select>
 
-    <select id="2" style="visibility: visible;" onchange="pricedisplay3()" >
+    <select id="2" style="visibility: visible;" onchange="pricedisplay()" >
     	
         <option>1</option>
         <option>2</option>

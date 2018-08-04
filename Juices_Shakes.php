@@ -2,7 +2,7 @@
 
 	
 
-<title>Juices And Shakes</title>
+<title id="title">Juices And Shakes</title>
 </head>
 
 <body onload="getpagename()">
@@ -22,7 +22,7 @@
     <p id="pizzaNamesID" class="pizza names" style=" position:absolute; font-size:30px; margin-top:1335px; margin-left:125px; font-family:'cabin sketch'; color:#ff7733; "> Chocolate Shake  </p>
 
 		
-		<div class="container1" id="abc12345" onmouseover="pricedisplay4();" onmouseleave="imgchange(this)" style="top:200px; left:100px;">
+		<div class="container1" id="abc12345" onmouseover="pricedisplay();" onmouseleave="imgchange(this)" style="top:200px; left:100px;">
 		<li>	
 			
 	<img id="abc123" src="x" class="image"   style="visibility: hidden; ">
@@ -38,7 +38,7 @@
         <option>large</option>
             </select>  
 
-    <select id="2"  onchange="pricedisplay4()" style="visibility: visible;" >
+    <select id="2"  onchange="pricedisplay()" style="visibility: visible;" >
     	
         <option>1</option>
         <option>2</option>

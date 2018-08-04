@@ -2,7 +2,7 @@
 	<title>Cart</title>
 </head>
 <body onload="cart_table1()" class="bigcart" id="b14a">
-
+<div class="" id="">
 <div class="bgcart" id="b14b"></div>
 	<!-----------------------------------------------------------PHP---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 
@@ -16,6 +16,10 @@ $nameErr=$EmailErr=$PhoneErr="";
 
 session_start();
  $items = $_SESSION['items'];
+// for($i = 0; $i < sizeof($items) ; $i++ ){
+// 	echo "id : ". $items[$i]->id ."<br>";
+//  	echo "qty : ". $items[$i]->qty ."<br>";
+// }
  $dataname=array();
  $dataprice=array();
  $datasize=array();
@@ -59,8 +63,7 @@ if ($num_of_results > 0) {
 	
 	<div class="order_table_div">
 		
-		
-	<br><br><br>	
+		<br><br><br>
 	<table class="table table-striped  table-dark hoverTable table-bordered">
 
 <thead > 
@@ -103,10 +106,10 @@ if ($num_of_results > 0) {
 </div>
 <div class="container">
 <div class="proceed_button">
-	<button onclick="openNav()" class="btn btn-success">PROCEED</button>	
+	<button onclick="checkk(); openNav()" class="btn btn-success">PROCEED</button>	
 </div>
 </div>
-<br><br><br>
+<br><br>
 </div>
 
 </div>
@@ -123,40 +126,41 @@ if ($num_of_results > 0) {
     </div>
     <div class="contact-section">
         <div class="container">
-    <form action="Form.php" method="POST" >
+    <form   id="userForm">
         <div class="col-md-6 form-line">
         <div class="form-group">
         <label for="exampleInputUsername">Your Name:</label>
-        <input type="text" class="form-control" name="name" value="<?php echo $name; ?>" placeholder="Enter Name">
-        <span class="error"><?= $nameErr?></span>
+        <input type="text" class="form-control" id="Name"  value="<?php echo $name; ?>" placeholder="Enter Name">
+        <span id="nameerror" class="error"></span>
         </div>
         <div class="form-group">
             <label for="exampleInputEmail">Email Address</label>
-        <input type="text" class="form-control" name="Email" value="<?php echo $Email; ?>" placeholder="Enter Email ID">
-        <span class="error"><?= $EmailErr;?></p> </span>
+        <input type="text" class="form-control" id="Email" value="<?php echo $Email; ?>" placeholder="Enter Email ID">
+        <span id="emailerror" class="error"></span>
         </div>
         <div class="form-group">
         <label for="telephone">Mobile No.</label>
-            <input type="text" class="form-control" name="Phone" value="<?php echo $Phone; ?>" placeholder="Enter 11-digit mobile no.">
-        <span class="error"><?=$PhoneErr; ?></p> </span>
+            <input type="text" class="form-control" id="Phone" value="<?php echo $Phone; ?>" placeholder="Enter 11-digit mobile no.">
+        <span id="phoneerror" class="error"> </span>
         </div>
     </div>
     
     <div class="col-md-6">
         <div class="form-group">
            <label for ="description"> Address</label>
-        <textarea class="form-control" name="comment" placeholder="Enter Your Complete Address">
+        <textarea class="form-control" id="Comment" placeholder="Enter Your Complete Address">
             <?php echo $comment; ?>
         </textarea>
     </div>
     <div>
-            <button type="submit" name="submit" value="submit" class="btn btn-default submit">  Order</button>
-                        </div>
-                         <p class="text-warning">Order must of Rs 500 or more.</p>
-                        
-                    </div>
+    		
+            
+                    
 
-    </form>
+	</form>
+    <button onclick="sendForm()" type="button" class="formbutton">Submit</button> 
+
+    
     </div>
 </div>
   
@@ -167,17 +171,17 @@ if ($num_of_results > 0) {
 
 
 
-
 <!----------------------------------------------------------JAVASCRIPT----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 
 <script type="text/javascript">
+
 
 var subtotal=0;
 
 
 
 	function cart_table1()
-{
+	{
 	
 	 var no_of_loops = '<?php echo sizeof($dataname); ?>';
 	 var data_node1 = <?php echo json_encode($dataname); ?>;
@@ -303,7 +307,7 @@ var subtotal=0;
 	  
 	 document.getElementById("subtotalvalue").innerHTML= subtotal;
 	 if (subtotal == 0){
-	 document.getElementById("totalvalue").innerHTML= 0;
+	 document.getElementById("totalvalue").innerHTML= 150;
 
 	 }else{
 	 	document.getElementById("totalvalue").innerHTML=subtotal+150;
@@ -314,7 +318,7 @@ var subtotal=0;
 	
 
 
-}
+	}
 
 	
 function openNav() {
@@ -324,6 +328,54 @@ function openNav() {
 function closeNav() {
     document.getElementById("myNav").style.width = "0%";
 }
+
+
+function sendForm(){
+
+
+	var name = document.getElementById("Name").value; 
+	var email = document.getElementById("Email").value;
+	var phone = document.getElementById("Phone").value;
+	var comment = document.getElementById("Comment").value;
+	//alert(name+email+phone+comment);
+	
+	var xhttp = new XMLHttpRequest();
+  xhttp.open("POST", "Form.php", true);
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+
+    	console.log(this.responseText);
+    	var k = JSON.parse(this.responseText);
+
+    	//alert(k[0]);
+    	
+		
+    	document.getElementById("nameerror").innerHTML= k[0];
+    	document.getElementById("emailerror").innerHTML=k[1];
+    	document.getElementById("phoneerror").innerHTML=k[2];
+    	 
+    }
+  };
+xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+xhttp.send("name="+name+"&email="+email+"&phone="+phone+"&comment="+comment);
+
+
+    $("button").click(function(){
+       
+            alert("Thank You " +name+ " For Ordering From PIZZERIA DE NEDIAN. WE will contact you shortly.");
+            window.location = "http://localhost/pizzeria/AllPizzas.php";
+        
+    });   
+}
+ function checkk(){
+	 if(subtotal < 500){
+		 alert("Order must be of Rs 500 or more.");
+		             window.location = "http://localhost/pizzeria/cart.php";
+	 }
+	 else{
+
+	 }
+ }
 
 
 </script>

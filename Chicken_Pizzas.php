@@ -2,7 +2,7 @@
 	
 
 <?php include 'header.php'; ?>
-<title>Chicken Pizza</title>
+<title id="title">Chicken Pizza</title>
 </head>
 
 <body onload="getpagename()">

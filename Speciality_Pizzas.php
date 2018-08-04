@@ -1,6 +1,6 @@
 <?php include 'header.php'; ?>
 
-<title>Special Pizza</title>
+<title id="title">Special Pizza</title>
 </head>
 
 <body onload="getpagename()">

@@ -2,7 +2,7 @@
 
 	
 
-<title>Cake</title>
+<title id="title">Cake</title>
 </head>
 
 <body onload="getpagename()">
@@ -11,10 +11,10 @@
         <div class="big" id="b9a">
             <div class="bg" id="b9b"></div>
 
-		    <p id="pizzaNamesID" class="pizza names" style=" position:absolute; font-size:30px; margin-top:500px; margin-left:150px; font-family:'cabin sketch'; color:#ff7733; "> Fudge Cake  </p>
+		    <p id="pizzaNamesID" class="pizza names" style=" position:absolute; font-size:30px; margin-top:530px; margin-left:150px; font-family:'cabin sketch'; color:#ff7733; "> Fudge Cake  </p>
     
         
-		<div class="container1" id="abc12345"  onmouseover="pricedisplay4()" onmouseleave="imgchange(this)" style="top:200px; left:100px;">
+		<div class="container1" id="abc12345"  onmouseover="pricedisplay()" onmouseleave="imgchange(this)" style="top:200px; left:100px;">
 		<li>	
 			
 	<img id="abc123" src="x" class="image"   style="visibility: hidden; ">
@@ -23,19 +23,14 @@
 		<p id="overlaytext1" onmouseover="down()" class="overlaytext"> </p>
 	 <button class="button button1"  onclick="AddToCart(); tick();"  align="center">Add to Cart</button>
 	 <div  id="custom-selectid" class="custom-select" >
-     <select id="3" onmouseover="pricedisplay4()">
-        <option>Strawberry</option>
-        <option>Chocolate</option>
-        <option>Vanilla</option>
-        <option>Mango</option>
-            </select>
-    <!-- <select id="1" style="visibility: hidden;" >
+  
+     <select id="1" style="visibility: hidden;" >
         <option>small</option>
         <option>regular</option>
         <option>large</option>
-    </select> -->
+            </select>  
 
-    <select id="2"  onchange="pricedisplay4()" style="visibility: visible;" >
+    <select id="2"  onchange="pricedisplay()" style="visibility: visible;" >
     	
         <option>1</option>
         <option>2</option>
@@ -43,6 +38,7 @@
         <option>4</option>
         <option>5</option>
     </select>
+
 </div> 
 	</div>
 	

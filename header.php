@@ -22,7 +22,7 @@
 		<ul>
 
 				<div class="dropdown">
-					<li>  <img src="Assets/pizz2.png"> Pizza</li>
+					<li> <a href="AllPizzas.php"> <img src="Assets/pizz2.png"> Pizza</li>
 						<div class="dropdown-content">
     				 		<a href="AllPizzas.php">All</a>
    					 		<a href="Chicken_Pizzas.php">Chicken</a>
@@ -40,7 +40,7 @@
 
 			
 					<div class="dropdown">
-				<li> <img src="Assets/pizz5.png">Appetizer</li>
+				<li> <a href="AllAppetizer.php"><img src="Assets/pizz5.png">Appetizer</li>
 					<div class="dropdown-content">
     				 		<a href="AllAppetizer.php">All</a>
    					 		<a href="Soup.php">Soup</a>
@@ -56,7 +56,7 @@
 			
 
 				<div class="dropdown">
-					<li>  <img src="Assets/pizz2.png"> Dessert</li>
+					<li> <a href="AllDesserts.php"> <img src="Assets/pizz2.png"> Dessert</li>
 						<div class="dropdown-content">
     				 		<a href="AllDesserts.php">All</a>
    					 		<a href="IceCream.php">Ice Cream</a>
@@ -77,9 +77,13 @@
 				</li>
 			<li>
 
-				<!-- <a href="#Appetizer">-->
-                	<a href="./cart.php"><img id="CartID"  src="Assets/shopping-cart.png"></a>
-                	</li>
+	<a href="./cart.php">
+					<div id="circle"><p id="number"></p></div>
+
+                <img id="CartID"  src="Assets/shopping-cart.png"></a>
+	
+				</li>
+					
 		</ul>
 		</div>
 	</div>

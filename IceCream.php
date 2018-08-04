@@ -2,7 +2,7 @@
 
 	
 
-<title>Ice Cream</title>
+<title id="title">Ice Cream</title>
 </head>
 
 <body onload="getpagename()">
@@ -11,14 +11,14 @@
         <div class="big" id="b7a">
             <div class="bg" id="b7b"></div>
 
-		    <p id="pizzaNamesID" class="pizza names" style=" position:absolute; font-size:30px; margin-top:510px; margin-left:90px; font-family:'cabin sketch'; color:#ff7733; "> Strawberry Ice Cream  </p>
-    <p id="pizzaNamesID" class="pizza names" style=" position:absolute; font-size:30px; margin-top:510px; margin-left:590px; font-family: 'cabin sketch'; color:#ff7733; "> Kulfa  </p>
-    <p id="pizzaNamesID" class="pizza names" style=" position:absolute; font-size:30px; margin-top:510px; margin-left:970px; font-family:'cabin sketch'; color:#ff7733; "> VANILLA  </p>
+		    <p id="pizzaNamesID" class="pizza names" style=" position:absolute; font-size:30px; margin-top:525px; margin-left:90px; font-family:'cabin sketch'; color:#ff7733; "> Strawberry Ice Cream  </p>
+    <p id="pizzaNamesID" class="pizza names" style=" position:absolute; font-size:30px; margin-top:525px; margin-left:590px; font-family: 'cabin sketch'; color:#ff7733; "> Kulfa  </p>
+    <p id="pizzaNamesID" class="pizza names" style=" position:absolute; font-size:30px; margin-top:525px; margin-left:970px; font-family:'cabin sketch'; color:#ff7733; "> VANILLA  </p>
 
-    <p id="pizzaNamesID" class="pizza names" style=" position:absolute; font-size:30px; margin-top:910px; margin-left:150px; font-family:'cabin sketch'; color:#ff7733; "> Chocolate  </p>
+    <p id="pizzaNamesID" class="pizza names" style=" position:absolute; font-size:30px; margin-top:918px; margin-left:150px; font-family:'cabin sketch'; color:#ff7733; "> Chocolate  </p>
 
 		
-		<div class="container1" onmouseover="pricedisplay4()" id="abc12345" onmouseleave="imgchange(this)" style="top:200px; left:100px;">
+		<div class="container1" onmouseover="pricedisplay()" id="abc12345" onmouseleave="imgchange(this)" style="top:200px; left:100px;">
 		<li>	
 			
 	<img id="abc123" src="x" class="image"   style="visibility: hidden; ">
@@ -34,7 +34,7 @@
         <option>large</option>
     </select> 
 
-    <select id="2"  onchange="pricedisplay4()"  style="visibility: visible;" >
+    <select id="2"  onchange="pricedisplay()"  style="visibility: visible;" >
     	
         <option>1</option>
         <option>2</option>
