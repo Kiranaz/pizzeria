@@ -77,7 +77,7 @@
 				</li>
 			<li>
 
-				<!-- <a href="#Appetizer">-->
+				 <a href="#Appetizer">
                 	<a href="./cart.php"><img id="CartID"  src="Assets/shopping-cart.png"></a>
                 	</li>
 		</ul>
