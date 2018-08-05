@@ -99,18 +99,84 @@
     $Comment = $_POST["comment"];
     $Phone=$_POST["phone"];
 
-    $sql="INSERT INTO User(Name,Email,Phone,Address) VALUES('$Name','$Email','$Phone','$Comment')";
 
-    if (!mysqli_query($conn,$sql)) {
+    $sql1="SELECT ID FROM user WHERE Phone='$Phone' ";
+$result = mysqli_query($conn,$sql1);
+    if (mysqli_num_rows($result) == 0) {
+            $sql="INSERT INTO user(Name,Email,Phone,Address) VALUES('$Name','$Email','$Phone','$Comment')";
+
+        if (!mysqli_query($conn,$sql)) {
         echo 'Not inserted';
-    }else{
+        }else{
         echo 'Inserted';
+        }
+
+        $latest_userID = mysqli_insert_id($conn);
+        
+    }else{
+        $result1 = mysqli_query($conn, $sql1);
+        $row1 = mysqli_fetch_row($result1);
+        $latest_userID=$row1[0];
     }
 
+    
+
+
+
+
+
+    
+    //echo $latest_userID;
+
+    $sql2="INSERT INTO orders1(userID) VALUES('$latest_userID')";
+
+    if (!mysqli_query($conn,$sql2)) {
+        echo 'Not inserted in order table: '. mysqli_error($conn);
+    }else{
+        //echo 'Inserted in order table';
     }
+
+    $latest_orderID = mysqli_insert_id($conn);
+    //echo $latest_orderID; 
+
+
+
+    session_start();
+    $items = $_SESSION['items'];
+
+    for($i = 0; $i < sizeof($items) ; $i++ ){
+
+        $curr_itemID = $items[$i]->id;
+        $curr_qnty = $items[$i]->qty;
+
+        $sql3 = "INSERT INTO order_items1(orderID,ProductID,quantity,price) VALUES('$latest_orderID','$curr_itemID','$curr_qnty',(SELECT Price FROM products WHERE ProductID = '$curr_itemID'))";
+
+        if (!mysqli_query($conn,$sql3)) {echo 'Not inserted in order_items1 table: '. mysqli_error($conn);}
+        else{//echo 'Inserted in order_items1 table';
+                    }
+
+    }
+
+    
+
+
+
+
+
+
+    }
+
+
+
+
+
     else{
        // echo "not";
     }
+
+
+
+
 
 
  ?>

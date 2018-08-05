@@ -2,7 +2,6 @@
 	<title>Cart</title>
 </head>
 <body onload="cart_table1()" class="bigcart" id="b14a">
-<div class="" id="">
 <div class="bgcart" id="b14b"></div>
 	<!-----------------------------------------------------------PHP---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 
@@ -69,11 +68,11 @@ if ($num_of_results > 0) {
 <thead > 
 
 <tr style=" color: black; ">
-<th width="40%" class="table_head_css"scope="col"><center>Name</center></th>
-<th width="20%" class="table_head_css"scope="col"><center>Size</center></th>
-<th width="20%" class="table_head_css"scope="col"><center>Quantity</center></th>
-<th width="18%" class="table_head_css"scope="col"><center>Price&emsp;<small style="font-size: 12px;" >In Rs</small></center></th>
-<th width="2%"  class="table_head_css"scope="col"><center>Remove</center></th>
+<th width="40%" class="table_head_css" scope="col"><center>Name</center></th>
+<th width="20%" class="table_head_css" scope="col"><center>Size</center></th>
+<th width="20%" class="table_head_css" scope="col"><center>Quantity</center></th>
+<th width="18%" class="table_head_css" scope="col"><center>Price&emsp;<small style="font-size: 12px;" >In Rs</small></center></th>
+<th width="2%"  class="table_head_css" scope="col"><center>Remove</center></th>
 </tr>
 </thead>
 
@@ -158,7 +157,7 @@ if ($num_of_results > 0) {
                     
 
 	</form>
-    <button onclick="sendForm()" type="button" class="formbutton">Submit</button> 
+    <button onclick="sendForm()" type="button" id="buttonsub" class="formbutton">Submit</button> 
 
     
     </div>
@@ -358,15 +357,20 @@ function sendForm(){
   };
 xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 xhttp.send("name="+name+"&email="+email+"&phone="+phone+"&comment="+comment);
-
-
-    $("button").click(function(){
-       
+if(name != 0 || email != 0 || phone != 0)
+thanks(name);
+else{}
+ 
+}
+function thanks(name){
+	
+ $(document).off('click', '#buttonsub').on('click', '#buttonsub',function(e) {  
             alert("Thank You " +name+ " For Ordering From PIZZERIA DE NEDIAN. WE will contact you shortly.");
             window.location = "http://localhost/pizzeria/AllPizzas.php";
-        
-    });   
+    
+});
 }
+
  function checkk(){
 	 if(subtotal < 500){
 		 alert("Order must be of Rs 500 or more.");
