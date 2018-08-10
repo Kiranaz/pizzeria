@@ -70,7 +70,8 @@
 								
 			<li>
 			
-					
+			<a href="aboutus.php"> 
+
                 	<img src="Assets/pizz6.png">
 					About Us
 					

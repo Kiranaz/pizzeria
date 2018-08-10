@@ -258,22 +258,12 @@ function search_descript_price(imagename){
 
 
 //-----------------------------------ADMIN AREA--------------------------// 
-
 var User_search_result; //GLOBAL
+var searchtype; //GLOBAL
 
 function adminsearch(){
 
-	var x = document.getElementById("search_selection_id1");
-	var a = x.options[x.selectedIndex].value;
-
-	if (a == "user") {
-		var y = document.getElementById("search_selection_id2");
-		var b = y.options[y.selectedIndex].value;
-	}else if (a == "product") {
-		var y = document.getElementById("search_selection_id3");
-		var b = y.options[y.selectedIndex].value;
-	}
-
+	
 	var category = "userdetails";
 	var searchquery = document.getElementById("searchquery").value;
 	var xhttp = new XMLHttpRequest();
@@ -283,35 +273,24 @@ function adminsearch(){
 
     	console.log(this.responseText);
     	User_search_result=JSON.parse(this.responseText);
-
-    	if (a == "user") {
+		if (searchtype == "Name" || searchtype == "Phone" || searchtype == "Email" || searchtype == "Address" ) {
     		SearchResult_By_username();
-    	}else if (a == "product") {
+    	}else if (searchtype == "Product Name" || searchtype == "Product ID") {
     		SearchResult_By_product();
-    	}	
-    	
+    	}
+
     	
     }
   };
 xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-xhttp.send("searchquery="+searchquery+"&searchType="+b+"&searchcategory="+category);
+xhttp.send("searchquery="+searchquery+"&searchType="+searchtype+"&searchcategory="+category);
 }
 
 
+function on_searchType_click(x){
+	searchtype=x.innerHTML;          
+        }
 
-function search_selection(){
-	var x = document.getElementById("search_selection_id2");
-	var a = x.options[x.selectedIndex].value;
-
-	if (a == "phone") {
-		document.getElementById("searchquery").type = "number";
-	}
-	else if (a == "name" || a == "email" || a == "address"){
-		document.getElementById("searchquery").type = "text";
-
-	}
-
-}
 
 
 
@@ -323,13 +302,14 @@ function SearchResult_By_username(){
 			var node5 = document.createElement("TH");
 			var node5_textnode = document.createTextNode("Name");
 			node5.appendChild(node5_textnode);
+			
 
 			var node6 = document.createElement("TH");
-			var node6_textnode = document.createTextNode("Phone");
+			var node6_textnode = document.createTextNode("Email");
 			node6.appendChild(node6_textnode);
 
 			var node7 = document.createElement("TH");
-			var node7_textnode = document.createTextNode("Email");
+			var node7_textnode = document.createTextNode("Phone");
 			node7.appendChild(node7_textnode);
 
 			var node8 = document.createElement("TH");
@@ -341,14 +321,24 @@ function SearchResult_By_username(){
 			tr_for_th_node.appendChild(node6);
 			tr_for_th_node.appendChild(node7);
 			tr_for_th_node.appendChild(node8);
+		
 
 			var thead_node = document.createElement("thead");
 			thead_node.appendChild(tr_for_th_node);
-
+			
+			var nodeforhead = document.createAttribute("class");
+	nodeforhead.value ="headcss thead-dark";
+	thead_node.setAttributeNode(nodeforhead);
+			
 
 			var table_node = document.createElement("table");
 			var table_node_id = document.createAttribute("id"); table_node_id.value ="result_table";
 			table_node.setAttributeNode(table_node_id);
+			var nodefortable1 = document.createAttribute("class");
+			nodefortable1.value ="table table-bordered table-hover table-striped";
+			table_node.setAttributeNode(nodefortable1); 
+
+		
 
 			table_node.appendChild(thead_node);
 
@@ -375,7 +365,7 @@ function SearchResult_By_username(){
 			var a = document.createElement("a");
 			var a_onclick = document.createAttribute("onclick"); a_onclick.value ="click_on_username(this)";
 			a.setAttributeNode(a_onclick);
-			var a_style = document.createAttribute("style"); a_style.value ="cursor: pointer; cursor: hand;";
+			var a_style = document.createAttribute("style"); a_style.value ="color:blue; text-decoration: underline; cursor: pointer; cursor: hand;";
 			a.setAttributeNode(a_style);
 
 
@@ -469,14 +459,20 @@ function SearchResult_By_product(){
 
 			var thead_node = document.createElement("thead");
 			thead_node.appendChild(tr_for_th_node);
-
+			var nodeforhead = document.createAttribute("class");
+			nodeforhead.value ="headcss thead-dark";
+			thead_node.setAttributeNode(nodeforhead);
 
 			var table_node = document.createElement("table");
 			var table_node_id = document.createAttribute("id"); table_node_id.value ="result_table";
 			table_node.setAttributeNode(table_node_id);
 
 			table_node.appendChild(thead_node);
+			var nodefortable1 = document.createAttribute("class");
+			nodefortable1.value ="table table-bordered table-hover table-striped";
+			table_node.setAttributeNode(nodefortable1); 
 
+		
 			var tableBody_node = document.createElement("tbody");
 			var tableBody_node_id = document.createAttribute("id"); tableBody_node_id.value ="table_body";
 			tableBody_node.setAttributeNode(tableBody_node_id);
@@ -593,12 +589,17 @@ function SearchResult_By_UserOrders(){
 
 			var thead_node = document.createElement("thead");
 			thead_node.appendChild(tr_for_th_node);
+			var nodeforhead = document.createAttribute("class");
+			nodeforhead.value ="headcss thead-dark";
+			thead_node.setAttributeNode(nodeforhead);
 
 
 			var table_node = document.createElement("table");
 			var table_node_id = document.createAttribute("id"); table_node_id.value ="result_table";
 			table_node.setAttributeNode(table_node_id);
-
+			var nodefortable1 = document.createAttribute("class");
+			nodefortable1.value ="table table-bordered table-hover table-striped";
+			table_node.setAttributeNode(nodefortable1); 
 			table_node.appendChild(thead_node);
 
 			var tableBody_node = document.createElement("tbody");
@@ -625,7 +626,7 @@ function SearchResult_By_UserOrders(){
 			var a = document.createElement("a");
 			var a_onclick = document.createAttribute("onclick"); a_onclick.value ="click_on_orderid(this)";
 			a.setAttributeNode(a_onclick);
-			var a_style = document.createAttribute("style"); a_style.value ="cursor: pointer; cursor: hand;";
+			var a_style = document.createAttribute("style"); a_style.value ="color:blue; text-decoration: underline;cursor: pointer; cursor: hand;";
 			a.setAttributeNode(a_style);
 
 			var a_textnode = document.createTextNode(User_search_result[i][0]);
@@ -709,7 +710,9 @@ function SearchResult_By_OrderItems(){
 
 			var thead_node = document.createElement("thead");
 			thead_node.appendChild(tr_for_th_node);
-
+			var nodeforhead = document.createAttribute("class");
+			nodeforhead.value ="headcss thead-dark";
+			thead_node.setAttributeNode(nodeforhead);
 
 			var table_node = document.createElement("table");
 			var table_node_id = document.createAttribute("id"); table_node_id.value ="result_table";
@@ -720,6 +723,10 @@ function SearchResult_By_OrderItems(){
 			var tableBody_node = document.createElement("tbody");
 			var tableBody_node_id = document.createAttribute("id"); tableBody_node_id.value ="table_body";
 			tableBody_node.setAttributeNode(tableBody_node_id);
+
+			var nodefortable1 = document.createAttribute("class");
+			nodefortable1.value ="table table-bordered table-hover table-striped";
+			table_node.setAttributeNode(nodefortable1); 
 
 			table_node.appendChild(tableBody_node);
 

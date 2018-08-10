@@ -822,12 +822,3 @@ textarea.form-control {
   font-weight: bold;
   font-style: 'Poor Story';
 }
-
-/*@media screen and (max-height: 450px) {
-  .sidebar_overlay a {font-size: 20px}
-  .sidebar_overlay .closebtn {
-    font-size: 40px;
-    top: 15px;
-    right: 35px;
-  }
-}*
