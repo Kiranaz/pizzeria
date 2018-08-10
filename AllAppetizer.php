@@ -53,14 +53,14 @@
     <p id="pizzaNamesID" class="pizza names" style=" position:absolute; font-size:30px; margin-top:510px; margin-left:490px; font-family: 'cabin sketch'; color:#ff7733; "> Plain Garlic Bread 4 Pcs  </p>
     <p id="pizzaNamesID" class="pizza names" style=" position:absolute; font-size:30px; margin-top:510px; margin-left:880px; font-family:'cabin sketch'; color:#ff7733; "> Garlic Bread Cheese 4 Pcs  </p>
 
-    <p id="pizzaNamesID" class="pizza names" style=" position:absolute; font-size:30px; margin-top:900px; margin-left:115px; font-family:'cabin sketch'; color:#ff7733; "> Cheese Stick 4 Pcs  </p>
-    <p id="pizzaNamesID" class="pizza names" style=" position:absolute; font-size:30px; margin-top:900px; margin-left:530px; font-family:'cabin sketch'; color:#ff7733; "> Bread Stick 4 Pcs  </p>
-    <p id="pizzaNamesID" class="pizza names" style=" position:absolute; font-size:30px; margin-top:900px; margin-left:930px; font-family:'cabin sketch'; color:#ff7733; "> Chicken Wings 6 Pcs  </p>
+    <p id="pizzaNamesID" class="pizza names" style=" position:absolute; font-size:30px; margin-top:920px; margin-left:115px; font-family:'cabin sketch'; color:#ff7733; "> Cheese Stick 4 Pcs  </p>
+    <p id="pizzaNamesID" class="pizza names" style=" position:absolute; font-size:30px; margin-top:920px; margin-left:530px; font-family:'cabin sketch'; color:#ff7733; "> Bread Stick 4 Pcs  </p>
+    <p id="pizzaNamesID" class="pizza names" style=" position:absolute; font-size:30px; margin-top:920px; margin-left:930px; font-family:'cabin sketch'; color:#ff7733; "> Chicken Wings 6 Pcs  </p>
 
 
-            <p id="pizzaNamesID" class="pizza names" style=" position:absolute; font-size:30px; margin-top:1310px; margin-left:100px; font-family:'cabin sketch'; color:#ff7733; "> Chicken Nuggets 5 Pcs  </p>
-    <p id="pizzaNamesID" class="pizza names" style=" position:absolute; font-size:30px; margin-top:1310px; margin-left:540px; font-family: 'cabin sketch'; color:#ff7733; "> French Fries  </p>
-    <p id="pizzaNamesID" class="pizza names" style=" position:absolute; font-size:30px; margin-top:1310px; margin-left:920px; font-family:'cabin sketch'; color:#ff7733; "> Garlic Mushroom  </p>
+            <p id="pizzaNamesID" class="pizza names" style=" position:absolute; font-size:30px; margin-top:1325px; margin-left:100px; font-family:'cabin sketch'; color:#ff7733; "> Chicken Nuggets 5 Pcs  </p>
+    <p id="pizzaNamesID" class="pizza names" style=" position:absolute; font-size:30px; margin-top:1325px; margin-left:540px; font-family: 'cabin sketch'; color:#ff7733; "> French Fries  </p>
+    <p id="pizzaNamesID" class="pizza names" style=" position:absolute; font-size:30px; margin-top:1325px; margin-left:920px; font-family:'cabin sketch'; color:#ff7733; "> Garlic Mushroom  </p>
 
     <p id="pizzaNamesID" class="pizza names" style=" position:absolute; font-size:30px; margin-top:1750px; margin-left:80px; font-family:'cabin sketch'; color:#ff7733; "> Jalapeno Cream Balls 6 Pcs  </p>
     <p id="pizzaNamesID" class="pizza names" style=" position:absolute; font-size:30px; margin-top:1750px; margin-left:525px; font-family:'cabin sketch'; color:#ff7733; "> Hot & Sour Soup  </p>

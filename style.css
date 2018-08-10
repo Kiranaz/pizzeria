@@ -74,12 +74,16 @@
 		transition: 0.5s;
 		position: auto;
 		height: 88px;
-		background-color: black;
+    background-color: #111;
+    background-image: linear-gradient(#444, #111);
+    box-shadow: 0 2px 1px #9c9c9c;
 	}
 
 #cart{		
 	 	width: 80%;		
-	 	height: auto;		
+     height: auto;		
+     margin-bottom: 20px;
+     position: sticky;
 	 }
 
 
@@ -108,26 +112,27 @@
 .dropdown {
     position: relative;
     display: inline-block;
+    
 }
 
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #f9f9f9;
+    background-color: rgba(0, 0, 0, 0.9);
     min-width: 160px;
     box-shadow: 0px 2px 10px 0px black;
     z-index: 1;
-    border-radius: 10px;
+    border-radius: 10px yellow;
 }
 
 .dropdown-content a {
-    color: black;
+    color: rgb(255, 255, 255);
     padding: 12px 16px;
     text-decoration: none;
     display: block;
     border-radius: 10px;
 }
-.dropdown-content a:hover {background-color: #f1f1f1}
+.dropdown-content a:hover {background-color: rgb(46, 43, 36)}
 
 .dropdown:hover .dropdown-content {
     display: block;
@@ -368,7 +373,8 @@
   animation:jump .5s linear;
   animation-iteration-count:2;
   animation-delay:1s;
-  
+  background-image: linear-gradient(rgb(32, 32, 32), #111);
+
 }
 
 
@@ -506,7 +512,7 @@ html,body{
 	background-position: center center;
     background-repeat: no-repeat;
   	background-attachment: fixed;	
-  	background-size: cover;
+    background-size: cover; 
 }
 
 
@@ -564,6 +570,30 @@ html,body{
   text-align: center;
 
 }
+.formbutton{
+  padding: 15px 20px;
+  font-size: 20px;
+  
+  text-align: center;
+  height: 50px;;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  margin-left: 90%;
+  margin-bottom: 50%;
+  border-radius: 10px;
+  top: 200px;
+  box-shadow: 0 2px #999;
+}
+.formbutton:hover {background-color: #3e8e41}
+
+.formbutton:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
 #contact{
     position: absolute;
   font-family: 'Teko', sans-serif;
@@ -581,7 +611,9 @@ html,body{
 .contact-section .col-md-6{
   width: 50%;
 }
-
+.text-warning{
+color: rgb(255, 255, 255);
+}
 .form-line{
   border-right: 1px solid #B29999;
 }
@@ -601,17 +633,10 @@ label{
 }
 textarea.form-control {
     height: 135px;
+    width: 400px;
    /* margin-top: px;*/
 }
 
-.submit{
-  font-size: 1.1em;
-  float: right;
-  width: 150px;
-  background-color: transparent;
-  color: #fff;
-
-}
 
 
 #success_message{
@@ -635,7 +660,7 @@ textarea.form-control {
 .order_table_div{
  	
 	border-radius: 10px;
-	position: relative;
+  position: relative;
 	top: 200px;
 	left: 100px;
 	width: 80%;
@@ -663,15 +688,17 @@ textarea.form-control {
   text-shadow: 2px #ddb256;
   font-family: 'Pacifico';
   font-size: 20px;
+  
 }
 
 .table_list{
 	color: rgb(102, 4, 4);
 	text-align: center;
 	padding-top: 10px;
-	padding-bottom: 10px;
-
+  padding-bottom: 10px;
+  position: auto;
 }
+
 #X_btn{
   color: red;
   font-size: 20px;
@@ -720,13 +747,11 @@ textarea.form-control {
  
 
 .proceed_button{
-	color: red;
-	border:solid rgb(255, 143, 16);
   height: auto;
 	position: relative;
-  left:74.42%;
-
-  width:15.98%;
+  left:863px;
+  float: center;
+  width:17.05%;
   text-align: center;
   padding-top: 5px;
   padding-bottom: 5px;
@@ -779,11 +804,23 @@ textarea.form-control {
     font-size: 60px;
 }
 
-/*@media screen and (max-height: 450px) {
-  .sidebar_overlay a {font-size: 20px}
-  .sidebar_overlay .closebtn {
-    font-size: 40px;
-    top: 15px;
-    right: 35px;
-  }
-}*/
+#circle{
+  width: 20px;
+  height: 20px;
+  background: red;
+  position: sticky;
+  left: 200px;
+  margin-top: 5px;
+  top: 2%;
+  z-index: 9999;
+  border-radius: 10px;
+  color: rgb(0, 0, 0);
+  
+}
+
+#number{
+  text-align: center;
+  font-size: 10px;
+  font-weight: bold;
+  font-style: 'Poor Story';
+}

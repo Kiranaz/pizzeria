@@ -1,30 +1,3 @@
-function down(){
-	var t="";
-	t=document.title;
-	var k = document.getElementById("3");
-	var str = document.getElementById("abc123").src;
-	var res = str.split("Assets/");
-    var res2 = res[1].split(".");
-	var res3 =  res2[0];
-	
-	if(res3 == "dessert9"){
-	
-		
-		k.style.visibility = "visible";
-		k.style.fontSize = "small";
-		k.style.marginLeft = "2px";
-	}
-	else{
-		k.style.visibility = "hidden";
-		k.style.fontSize = "xx-small";
-		k.style.marginLeft = "10px";
-	}
-	
-	
-}
-
-	
-
 	window.onscroll = function(){
 		var nav = document.getElementById('nav');
 		if (window.pageYOffset > 80) {
@@ -84,21 +57,21 @@ function change(x){
 	var t = document.getElementById("overlaytext1");
 
 	var index = search_descript_price(imagename);
-	t.innerHTML='<span id="descript1" style="font-size:21px; font-family:Pacifico;"></span>';
+	t.innerHTML='<span id="descript1" style="font-size:2vh; font-family:Pacifico; line-height: 0.6;"><p id="price1"></p></span>'; //line-height is minimized to show complete overlay text
 	document.getElementById("descript1").innerHTML=Descrp_price[index][3];
-
+	var rs = document.createTextNode("Rs "); //For showing Rs
 	var p = document.createElement("p");
 	var p_id = document.createAttribute("id"); p_id.value ="price1";
+	p.style.fontWeight = 'bold'; //for making price bold
+	p.style.fontSize = '20px'; //for making it prominent
 	p.setAttributeNode(p_id);
-	document.getElementById("descript1").appendChild(p);
-//document.getElementById("abc123").style.visibility="visible";
-	
-
-
-
-	
+	var rs_p = document.createElement("p"); //same as we did for var p
+		document.getElementById("descript1").appendChild(p);
+		rs_p.appendChild(rs); //appending in p
+	document.getElementById("descript1").insertBefore(rs_p, document.getElementById("descript1").childNodes[1]) //will show Rs before price being appended
+document.getElementById("abc123").style.visibility="visible";
+		
 }
-
 
 
 
@@ -129,21 +102,24 @@ for (i=0; i < a.length ; i++) {
 //______________ADD TO CART BUTTON/ICON__________________________
 var cartflag = 0;
 var cart = [];
-
+var n= 0;
+var cart1 = [];
 function AddToCart(){
 
 	$('#success_message').fadeIn().html("<span style='font-size:50px' > &#10004; </span>");
 	setTimeout(function () { $('#success_message').fadeOut("slow"); }, 1500);
 
-	if (cartflag == 0) {
-		cartflag=1;
-		document.getElementById("CartID").src="Assets/filled-cart.png"; 
-	}
+	// if (cartflag == 0) {
+	// 	cartflag=1;
+	// 	document.getElementById("CartID").src="Assets/filled-cart.png"; 
+	// }
 
 	var x = document.getElementById("1");
 	var a = x.options[x.selectedIndex].value;
+	
 	var y = document.getElementById("2");
 	var b = y.options[y.selectedIndex].value;
+	
 	var str = document.getElementById("abc123").src;
 	var res = str.split("Assets/");
     var res2 = res[1].split(".");
@@ -152,8 +128,10 @@ function AddToCart(){
     	qty : b
     }
 	
-
-
+	 ab = parseInt(b);
+		n = n+ ab;
+	
+	document.getElementById('number').innerHTML = n;
 
 
 var xhttp = new XMLHttpRequest();
@@ -162,6 +140,10 @@ xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 xhttp.send('cart='+JSON.stringify(product));
 
 
+var xhttp1 = new XMLHttpRequest();
+  xhttp1.open("POST", "ajax4.php", true);
+xhttp1.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+xhttp1.send('cart='+n);
 		
 
 
@@ -170,7 +152,7 @@ xhttp.send('cart='+JSON.stringify(product));
 }
 
 
-//------------------------------------  PRICE -----------------------------------------//
+//-----------------s-------------------  PRICE -----------------------------------------//
 function pricedisplay(){
 	
 	var price;
@@ -285,7 +267,6 @@ function search_descript_price(imagename){
 
 
 //-----------------------------------ADMIN AREA--------------------------// 
-
 var User_search_result; //GLOBAL
 var searchtype; //GLOBAL
 
@@ -301,13 +282,12 @@ function adminsearch(){
 
     	console.log(this.responseText);
     	User_search_result=JSON.parse(this.responseText);
-
-    	if (searchtype == "Name" || searchtype == "Phone" || searchtype == "Email" || searchtype == "Address" ) {
+		if (searchtype == "Name" || searchtype == "Phone" || searchtype == "Email" || searchtype == "Address" ) {
     		SearchResult_By_username();
     	}else if (searchtype == "Product Name" || searchtype == "Product ID") {
     		SearchResult_By_product();
-    	}	
-    	
+    	}
+
     	
     }
   };
@@ -330,13 +310,14 @@ function SearchResult_By_username(){
 			var node5 = document.createElement("TH");
 			var node5_textnode = document.createTextNode("Name");
 			node5.appendChild(node5_textnode);
+			
 
 			var node6 = document.createElement("TH");
-			var node6_textnode = document.createTextNode("Phone");
+			var node6_textnode = document.createTextNode("Email");
 			node6.appendChild(node6_textnode);
 
 			var node7 = document.createElement("TH");
-			var node7_textnode = document.createTextNode("Email");
+			var node7_textnode = document.createTextNode("Phone");
 			node7.appendChild(node7_textnode);
 
 			var node8 = document.createElement("TH");
@@ -348,14 +329,24 @@ function SearchResult_By_username(){
 			tr_for_th_node.appendChild(node6);
 			tr_for_th_node.appendChild(node7);
 			tr_for_th_node.appendChild(node8);
+		
 
 			var thead_node = document.createElement("thead");
 			thead_node.appendChild(tr_for_th_node);
-
+			
+			var nodeforhead = document.createAttribute("class");
+	nodeforhead.value ="headcss thead-dark";
+	thead_node.setAttributeNode(nodeforhead);
+			
 
 			var table_node = document.createElement("table");
 			var table_node_id = document.createAttribute("id"); table_node_id.value ="result_table";
 			table_node.setAttributeNode(table_node_id);
+			var nodefortable1 = document.createAttribute("class");
+			nodefortable1.value ="table table-bordered table-hover table-striped";
+			table_node.setAttributeNode(nodefortable1); 
+
+		
 
 			table_node.appendChild(thead_node);
 
@@ -389,7 +380,7 @@ function SearchResult_By_username(){
 			var a = document.createElement("a");
 			var a_onclick = document.createAttribute("onclick"); a_onclick.value ="click_on_username(this)";
 			a.setAttributeNode(a_onclick);
-			var a_style = document.createAttribute("style"); a_style.value ="cursor: pointer; cursor: hand;";
+			var a_style = document.createAttribute("style"); a_style.value ="color:blue; text-decoration: underline; cursor: pointer; cursor: hand;";
 			a.setAttributeNode(a_style);
 
 
@@ -486,14 +477,20 @@ function SearchResult_By_product(){
 
 			var thead_node = document.createElement("thead");
 			thead_node.appendChild(tr_for_th_node);
-
+			var nodeforhead = document.createAttribute("class");
+			nodeforhead.value ="headcss thead-dark";
+			thead_node.setAttributeNode(nodeforhead);
 
 			var table_node = document.createElement("table");
 			var table_node_id = document.createAttribute("id"); table_node_id.value ="result_table";
 			table_node.setAttributeNode(table_node_id);
 
 			table_node.appendChild(thead_node);
+			var nodefortable1 = document.createAttribute("class");
+			nodefortable1.value ="table table-bordered table-hover table-striped";
+			table_node.setAttributeNode(nodefortable1); 
 
+		
 			var tableBody_node = document.createElement("tbody");
 			var tableBody_node_id = document.createAttribute("id"); tableBody_node_id.value ="table_body";
 			tableBody_node.setAttributeNode(tableBody_node_id);
@@ -616,12 +613,17 @@ function SearchResult_By_UserOrders(){
 
 			var thead_node = document.createElement("thead");
 			thead_node.appendChild(tr_for_th_node);
+			var nodeforhead = document.createAttribute("class");
+			nodeforhead.value ="headcss thead-dark";
+			thead_node.setAttributeNode(nodeforhead);
 
 
 			var table_node = document.createElement("table");
 			var table_node_id = document.createAttribute("id"); table_node_id.value ="result_table";
 			table_node.setAttributeNode(table_node_id);
-
+			var nodefortable1 = document.createAttribute("class");
+			nodefortable1.value ="table table-bordered table-hover table-striped";
+			table_node.setAttributeNode(nodefortable1); 
 			table_node.appendChild(thead_node);
 
 			var tableBody_node = document.createElement("tbody");
@@ -654,7 +656,7 @@ function SearchResult_By_UserOrders(){
 			var a = document.createElement("a");
 			var a_onclick = document.createAttribute("onclick"); a_onclick.value ="click_on_orderid(this)";
 			a.setAttributeNode(a_onclick);
-			var a_style = document.createAttribute("style"); a_style.value ="cursor: pointer; cursor: hand;";
+			var a_style = document.createAttribute("style"); a_style.value ="color:blue; text-decoration: underline;cursor: pointer; cursor: hand;";
 			a.setAttributeNode(a_style);
 
 			var a_textnode = document.createTextNode(User_search_result[i][0]);
@@ -738,7 +740,9 @@ function SearchResult_By_OrderItems(){
 
 			var thead_node = document.createElement("thead");
 			thead_node.appendChild(tr_for_th_node);
-
+			var nodeforhead = document.createAttribute("class");
+			nodeforhead.value ="headcss thead-dark";
+			thead_node.setAttributeNode(nodeforhead);
 
 			var table_node = document.createElement("table");
 			var table_node_id = document.createAttribute("id"); table_node_id.value ="result_table";
@@ -749,6 +753,10 @@ function SearchResult_By_OrderItems(){
 			var tableBody_node = document.createElement("tbody");
 			var tableBody_node_id = document.createAttribute("id"); tableBody_node_id.value ="table_body";
 			tableBody_node.setAttributeNode(tableBody_node_id);
+
+			var nodefortable1 = document.createAttribute("class");
+			nodefortable1.value ="table table-bordered table-hover table-striped";
+			table_node.setAttributeNode(nodefortable1); 
 
 			table_node.appendChild(tableBody_node);
 

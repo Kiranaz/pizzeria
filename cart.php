@@ -1,8 +1,7 @@
 <?php include 'header.php';?>
 	<title>Cart</title>
 </head>
-<body onload="cart_table1()" class="" id="">
-<div class="" id="">
+<body onload="cart_table1()" class="bigcart" id="b14a">
 <div class="bgcart" id="b14b"></div>
 	<!-----------------------------------------------------------PHP---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 
@@ -16,10 +15,10 @@ $nameErr=$EmailErr=$PhoneErr="";
 
 session_start();
  $items = $_SESSION['items'];
-for($i = 0; $i < sizeof($items) ; $i++ ){
-	echo "id : ". $items[$i]->id ."<br>";
- 	echo "qty : ". $items[$i]->qty ."<br>";
-}
+// for($i = 0; $i < sizeof($items) ; $i++ ){
+// 	echo "id : ". $items[$i]->id ."<br>";
+//  	echo "qty : ". $items[$i]->qty ."<br>";
+// }
  $dataname=array();
  $dataprice=array();
  $datasize=array();
@@ -71,11 +70,11 @@ if ($num_of_results > 0) {
 <thead > 
 
 <tr style=" color: black; ">
-<th width="40%" class="table_head_css"scope="col"><center>Name</center></th>
-<th width="20%" class="table_head_css"scope="col"><center>Size</center></th>
-<th width="20%" class="table_head_css"scope="col"><center>Quantity</center></th>
-<th width="18%" class="table_head_css"scope="col"><center>Price&emsp;<small style="font-size: 12px;" >In Rs</small></center></th>
-<th width="2%"  class="table_head_css"scope="col"><center>Remove</center></th>
+<th width="40%" class="table_head_css" scope="col"><center>Name</center></th>
+<th width="20%" class="table_head_css" scope="col"><center>Size</center></th>
+<th width="20%" class="table_head_css" scope="col"><center>Quantity</center></th>
+<th width="18%" class="table_head_css" scope="col"><center>Price&emsp;<small style="font-size: 12px;" >In Rs</small></center></th>
+<th width="2%"  class="table_head_css" scope="col"><center>Remove</center></th>
 </tr>
 </thead>
 
@@ -108,10 +107,10 @@ if ($num_of_results > 0) {
 </div>
 <div class="container">
 <div class="proceed_button">
-	<button onclick="openNav()" class="btn btn-success">PROCEED</button>	
+	<button onclick="checkk(); openNav()" class="btn btn-success">PROCEED</button>	
 </div>
 </div>
-<br><br><br>
+<br><br>
 </div>
 
 </div>
@@ -128,7 +127,7 @@ if ($num_of_results > 0) {
     </div>
     <div class="contact-section">
         <div class="container">
-    <form   id="userForm"  >
+    <form   id="userForm">
         <div class="col-md-6 form-line">
         <div class="form-group">
         <label for="exampleInputUsername">Your Name:</label>
@@ -157,13 +156,10 @@ if ($num_of_results > 0) {
     <div>
     		
             
-                        </div>
-                         <p class="text-warning">Order must of Rs 500 or more.</p>
-                        
-                    </div>
+                    
 
-    </form>
-    <button  onclick="sendForm()"> submit1 </button> 
+	</form>
+    <button onclick="sendForm()" type="button" id="buttonsub" class="formbutton">Submit</button> 
 
     
     </div>
@@ -176,10 +172,10 @@ if ($num_of_results > 0) {
 
 
 
-
 <!----------------------------------------------------------JAVASCRIPT----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 
 <script type="text/javascript">
+
 
 var subtotal=0;
 
@@ -188,7 +184,7 @@ var subtotal=0;
 	function cart_table1()
 	{
 	
-	 var no_of_loops = '<?php echo sizeof($dataname); ?>';
+	 		var no_of_loops = '<?php echo sizeof($dataname); ?>';
 	 var data_node1 = <?php echo json_encode($dataname); ?>;
 	 var data_node2 = <?php echo json_encode($datasize); ?>;
 	 var data_node3 = <?php echo json_encode($dataquantity); ?>;
@@ -312,7 +308,7 @@ var subtotal=0;
 	  
 	 document.getElementById("subtotalvalue").innerHTML= subtotal;
 	 if (subtotal == 0){
-	 document.getElementById("totalvalue").innerHTML= 0;
+	 document.getElementById("totalvalue").innerHTML= 150;
 
 	 }else{
 	 	document.getElementById("totalvalue").innerHTML=subtotal+150;
@@ -338,8 +334,6 @@ function closeNav() {
 function sendForm(){
 
 
-
-
 	var name = document.getElementById("Name").value; 
 	var email = document.getElementById("Email").value;
 	var phone = document.getElementById("Phone").value;
@@ -356,7 +350,7 @@ function sendForm(){
 
     	//alert(k[0]);
     	
-
+		
     	document.getElementById("nameerror").innerHTML= k[0];
     	document.getElementById("emailerror").innerHTML=k[1];
     	document.getElementById("phoneerror").innerHTML=k[2];
@@ -365,9 +359,29 @@ function sendForm(){
   };
 xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 xhttp.send("name="+name+"&email="+email+"&phone="+phone+"&comment="+comment);
-
+if(name != 0 || email != 0 || phone != 0)
+thanks(name);
+else{}
+ 
+}
+function thanks(name){
+	
+ $(document).off('click', '#buttonsub').on('click', '#buttonsub',function(e) {  
+            alert("Thank You " +name+ " For Ordering From PIZZERIA DE NEDIAN. WE will contact you shortly.");
+            window.location = "http://localhost/pizzeria/AllPizzas.php";
+    
+});
 }
 
+ function checkk(){
+	 if(subtotal < 500){
+		 alert("Order must be of Rs 500 or more.");
+		             window.location = "http://localhost/pizzeria/cart.php";
+	 }
+	 else{
+
+	 }
+ }
 
 
 </script>
