@@ -11,30 +11,39 @@ $conn = mysqli_connect('localhost','root','abc123','pizzeria');
     }
 $search_results=array();
 
-if ($_POST['searchcategory']== "userdetails") {
+
+if ($_POST['searchcategory'] == "Add Product") {
+
+    
+    
+}
+
+
+
+if ($_POST['searchcategory'] == "userdetails") {
 
 	$searchquery = $_POST['searchquery'];
-$searchType = $_POST['searchType'];
+    $searchType = $_POST['searchType'];
 
 
 
 
-if ($searchType == "name") {
+if ($searchType == "Name") {
 	$sql="SELECT ID,Name,Email,Phone,Address FROM user WHERE Name LIKE '%{$searchquery}%'";
 }
-elseif ($searchType == "phone") {
+elseif ($searchType == "Phone") {
 	$sql="SELECT ID,Name,Email,Phone,Address FROM user WHERE Phone LIKE '%{$searchquery}%'";
 	
-}elseif ($searchType == "email") {
+}elseif ($searchType == "Email") {
 	$sql="SELECT ID,Name,Email,Phone,Address FROM user WHERE Email LIKE '%{$searchquery}%'";
 
-}elseif ($searchType == "address") {
+}elseif ($searchType == "Address") {
 	$sql="SELECT ID,Name,Email,Phone,Address FROM user WHERE Address LIKE '%{$searchquery}%'";
 
-}elseif ($searchType == "product name") {
+}elseif ($searchType == "Product Name") {
 	$sql="SELECT ProductID,Name,Price,Size,Description FROM products WHERE Name LIKE '%{$searchquery}%'";
 
-}elseif ($searchType == "product ID") {
+}elseif ($searchType == "Product ID") {
 	$sql="SELECT ProductID,Name,Price,Size,Description FROM products WHERE ProductID LIKE '%{$searchquery}%'";
 }
 

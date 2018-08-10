@@ -84,7 +84,7 @@
 
     if( $nameErr=="" && $EmailErr=="" && $PhoneErr=="" ) {
     
-
+        
     $conn = mysqli_connect('localhost','root','abc123','pizzeria');
 
     if (!$conn) {
@@ -101,8 +101,10 @@
 
 
     $sql1="SELECT ID FROM User WHERE Phone='$Phone' ";
+    $result = mysqli_query($conn,$sql1);
+    
 
-    if (mysqli_query($conn,$sql1) == FALSE) {
+    if (mysqli_num_rows($result) == 0) {
             $sql="INSERT INTO User(Name,Email,Phone,Address) VALUES('$Name','$Email','$Phone','$Comment')";
 
         if (!mysqli_query($conn,$sql)) {

@@ -5,6 +5,7 @@
 	border: 0;
 	list-style: none;
 	text-decoration: none;
+  box-sizing: border-box;
 }
 
 .slider{
@@ -212,7 +213,7 @@
 /*_________________pizza images overlay ___________________*/
 
 .container1{
-		position: relative;
+		position: absolute;
 		width: 20%;
 		height: auto;	
 
@@ -307,7 +308,7 @@
 	display: inline-block;
 	top: -42px;
 	cursor: pointer;
-
+  margin-right: 120px;
 }
 
 
@@ -315,7 +316,6 @@
 	    position: relative;
         display: inline-block;
         padding: 9px 6px;
-        margin-left: 4px;
         font: arial;
         font-size: 16px;
         outline:none; /* remove focus ring from Webkit */
@@ -325,12 +325,12 @@
         border:2px solid black;
         border-radius: 5px;
         cursor: pointer;
-		
     }
+
 
 .custom-select select option{
 	background-color: transparent;
-	margin-left: 20px;
+	/*margin-left: 20px;*/
 	position: relative;
 }
 
@@ -478,21 +478,23 @@ html,body{
     background-repeat: no-repeat;
   	background-attachment: fixed;	
   	background-size: cover;
+    height: auto;
 }
 
 
 .bg{
 	background-color:rgba(0,0,0,0.7);
 	content: "";
-	position: absolute;
+	position: relative;
 	width: 90%;
-	
+  height: auto;	
 	border:25px black;
-	padding: 0px;
 	top: 200px;
 	left: 50px;
 	border-radius: 50px;
 	box-shadow: 0px 0px 30px yellow ;
+  text-align: center;
+  padding-top: 25px;
 	
 }
 
@@ -525,9 +527,9 @@ html,body{
 #b1a{height: 480%;}
 #b1b{height: 90%;}
 #b2a{height: 230%;}
-#b2b{height: 80%;}
-#b3a{height: 102%;}
-#b3b{height: 58%;}
+#b2b{height: 80%;}/*
+#b3a{height: 102%;}*/
+/*#b3b{height: 10%;}*/
 #b4a{height: 230%;}
 #b4b{height: 80%;}
 #b5a{height: 155%;}

@@ -65,6 +65,7 @@ if ($num_of_results > 0) {
 		
 		
 	<br><br><br>	
+	
 	<table class="table table-striped  table-dark hoverTable table-bordered">
 
 <thead > 
