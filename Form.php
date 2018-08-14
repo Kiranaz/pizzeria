@@ -85,7 +85,7 @@
     if( $nameErr=="" && $EmailErr=="" && $PhoneErr=="" ) {
     
         
-    $conn = mysqli_connect('localhost','root','abc123','pizzeria');
+    $conn = mysqli_connect('localhost','root','','pizzeria');
 
     if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());}
@@ -100,7 +100,7 @@
     $Phone=$_POST["phone"];
 
 
-    $sql1="SELECT ID FROM User WHERE Phone='$Phone' ";
+    $sql1="SELECT ID FROM User WHERE Phone='$Phone' AND Name='$Name' ";
     $result = mysqli_query($conn,$sql1);
     
 

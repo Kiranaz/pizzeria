@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>add</title>
+</head>
+<body>
+	<div id="addProductdiv"> //mainnode in javascript
+		<div id="addProduct_namediv"> //1
+			Name: <input type="text" id="ADD_productname" > 
+		</div>
+
+		<div id="addProduct_IDdiv">//2
+			ID: <input type="text" id="ADD_productid" onfocusout="ProductNameChecker()> <span id="addProduct_id_span">*haseeb</span>
+		</div>
+
+		<div id="addProduct_pricediv" style="display: block;"> //3
+			Price: <input type="number" id="ADD_productprice">			
+		</div>
+
+		<div id="addProduct_SRL_pricediv" style="display: none;">//div7
+			Price small: <input type="number" id="ADD_productprice_S"> <br>
+			Price regular: <input type="number" id="ADD_productprice_R"> <br>
+			Price large: <input type="number" id="ADD_productprice_L">
+		</div>
+
+
+		<div id="addProduct_pagediv">//div4
+			Page:
+			<select id="addProduct_pagediv_selectid" onchange="change_price_inputs()">
+				<option>all pizza</option>
+				<option>dessert</option>
+				<option>appetizer</option>
+				<option>juice</option>
+			</select>
+		</div>
+
+		<div id="addProduct_descriptdiv">//div5
+			Description: <textarea rows="4" column="50" id="addProduct_descriptdiv_textareaid"></textarea>			
+		</div>
+
+		<div> //div6
+			<input type="file" name="post-pic" >
+		</div>
+		
+
+		<button id="AddProduct_buttonid" onclick="sendAddProductData()">ADD PRODUCT</button>
+	</div>
+</body>
+</html>
+
+
+<script type="text/javascript">
+	
+</script>
