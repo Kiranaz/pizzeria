@@ -1,7 +1,7 @@
 <?php include 'header.php';?>
 	<title>Cart</title>
 </head>
-<body onload="cart_table1()" class="bigcart" id="b14a">
+<body onload="cart_table1(); getcartnumber()" class="bigcart" id="b14a">
 <div class="bgcart" id="b14b"></div>
 	<!-----------------------------------------------------------PHP---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 
@@ -15,10 +15,7 @@ $nameErr=$EmailErr=$PhoneErr="";
 
 session_start();
  $items = $_SESSION['items'];
-// for($i = 0; $i < sizeof($items) ; $i++ ){
-// 	echo "id : ". $items[$i]->id ."<br>";
-//  	echo "qty : ". $items[$i]->qty ."<br>";
-// }
+
  $dataname=array();
  $dataprice=array();
  $datasize=array();
@@ -118,7 +115,6 @@ if ($num_of_results > 0) {
 
 <div id="myNav" class="sidebar_overlay">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <!--<div class="Sidebar_overlay-content">  -->
 
 
     <div id="contact">
@@ -332,45 +328,34 @@ function closeNav() {
 
 
 function sendForm(){
-
-
-	var name = document.getElementById("Name").value; 
+	var name = document.getElementById("Name").value;
 	var email = document.getElementById("Email").value;
 	var phone = document.getElementById("Phone").value;
 	var comment = document.getElementById("Comment").value;
-	//alert(name+email+phone+comment);
-	
+
 	var xhttp = new XMLHttpRequest();
-  xhttp.open("POST", "Form.php", true);
-  xhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-
-    	console.log(this.responseText);
-    	var k = JSON.parse(this.responseText);
-
-    	//alert(k[0]);
-    	
-		
-    	document.getElementById("nameerror").innerHTML= k[0];
-    	document.getElementById("emailerror").innerHTML=k[1];
-    	document.getElementById("phoneerror").innerHTML=k[2];
-    	 
-    }
-  };
-xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-xhttp.send("name="+name+"&email="+email+"&phone="+phone+"&comment="+comment);
-if(name != 0 || email != 0 || phone != 0)
-thanks(name);
-else{}
- 
+	xhttp.open("POST", "Form.php", true);
+	xhttp.onreadystatechange = function() {
+		if (this.readyState == 4 && this.status == 200) {
+			console.log(this.responseText);
+			var k = JSON.parse(this.responseText);
+			if (k[0]=="valid" && k[1]=="valid" && k[2]=="valid"){
+				thanks(name);
+			}else{
+			document.getElementById("nameerror").innerHTML= k[0];
+			document.getElementById("emailerror").innerHTML=k[1];
+			document.getElementById("phoneerror").innerHTML=k[2];
+			}
+		}
+	};
+	xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+	xhttp.send("name="+name+"&email="+email+"&phone="+phone+"&comment="+comment);
 }
+
+
 function thanks(name){
-	
- $(document).off('click', '#buttonsub').on('click', '#buttonsub',function(e) {  
-            alert("Thank You " +name+ " For Ordering From PIZZERIA DE NEDIAN. WE will contact you shortly.");
-            window.location = "http://localhost/pizzeria/AllPizzas.php";
-    
-});
+	alert("chalra");
+	window.location.assign("http://localhost/pizzeria/AllPizzas.php");
 }
 
  function checkk(){

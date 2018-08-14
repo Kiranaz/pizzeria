@@ -36,29 +36,28 @@
 
                         <ul class="mainnav">
                             
-                            <li class="hassubs">Filter
+                            <li class="hassubs"><div id="Filter_text">Filter</div>
                                 <ul id="myDropdown" class="dropdown">
                                     <li class="subs hassubs">User
                                         <ul class="dropdown" id="p1">
-                                            <li class="subs" onclick="on_searchType_click(this);">Name</li>
-                                            <li class="subs" onclick="on_searchType_click(this)">Phone</li>
-                                            <li class="subs" onclick="on_searchType_click(this)">Email</li>
-                                            <li class="subs" onclick="on_searchType_click(this)">Address</li>
+                                            <li class="subs" onclick="on_searchType_click(this); change_filtername(this)">Name</li>
+                                            <li class="subs" onclick="on_searchType_click(this); change_filtername(this)">Phone</li>
+                                            <li class="subs" onclick="on_searchType_click(this); change_filtername(this)">Email</li>
+                                            <li class="subs" onclick="on_searchType_click(this); change_filtername(this)">Address</li>
                                         </ul>
                                     </li>
                                    
                                     <li class="subs hassubs">Product
                                         <ul class="dropdown" id="p2">
-                                            <li class="subs" onclick="on_searchType_click(this)">Product Name</li>
-                                            <li class="subs" onclick="on_searchType_click(this)">Product ID</li>
+                                            <li class="subs" onclick="on_searchType_click(this); change_filtername(this)">Product Name</li>
+                                            <li class="subs" onclick="on_searchType_click(this); change_filtername(this)">Product ID</li>
                                           
                                         </ul>
                                     </li>
                                    <li class="subs">Page</li>
-								</ul>
-								
+								                </ul>								
                             </li>
-								</ul>
+								        </ul>
                         
                             <div class="search-container">
     <form action="/action_page.php">
@@ -79,25 +78,7 @@
             
 <div id="searchresultbodydiv" class="container">
 
-<!-- <table id="result_table">
 
-<thead> 
-
-<tr>
-<th>Name</th>
-<th>Phone</th>
-<th>Email</th>
-<th>Address</th>
-</tr>
-</thead>
-
-
-<tbody id="table_body">
-	
-</tbody>
-
-
-</table> -->
 </div>
             
 </div>

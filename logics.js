@@ -53,7 +53,7 @@ function change(x){
 	// var imagename = imagenamesplit[0];
 	
 	var imagename = m.src.slice(33,m.src.length - 4);
-	console.log(imagename)
+	//console.log(imagename)
 	var t = document.getElementById("overlaytext1");
 
 	var index = search_descript_price(imagename);
@@ -100,9 +100,9 @@ for (i=0; i < a.length ; i++) {
 
 
 //______________ADD TO CART BUTTON/ICON__________________________
-var cartflag = 0;
+
 var cart = [];
-var n= 0;
+
 var cart1 = [];
 function AddToCart(){
 
@@ -127,28 +127,16 @@ function AddToCart(){
     	id :  res2[0].concat(a),
     	qty : b
     }
-	
-	 ab = parseInt(b);
-		n = n+ ab;
-	
-	document.getElementById('number').innerHTML = n;
 
-
-var xhttp = new XMLHttpRequest();
-  xhttp.open("POST", "ajax.php", true);
-xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-xhttp.send('cart='+JSON.stringify(product));
-
-
-var xhttp1 = new XMLHttpRequest();
-  xhttp1.open("POST", "ajax4.php", true);
-xhttp1.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-xhttp1.send('cart='+n);
-		
-
-
-
-
+    	var xhttp = new XMLHttpRequest();
+        xhttp.open("POST", "ajax.php", true);
+        // xhttp.onreadystatechange = function() {
+        //     if (this.readyState == 4 && this.status == 200) {
+        //         console.log(this.responseText);
+        //     }
+        // };
+        xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        xhttp.send('cart='+JSON.stringify(product));
 }
 
 
@@ -191,7 +179,7 @@ function cart_table_remove(x){
 	var c = document.getElementById("table_body");
 	c.removeChild(b);
 	
-
+	cartIncrement("dec");
 
 	var xhttp = new XMLHttpRequest();
   xhttp.open("POST", "ajax2.php", true);
@@ -244,6 +232,7 @@ function getpagename(){
   xhttp.open("POST", "ajax3.php", true);
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
+
     	Descrp_price = JSON.parse(this.responseText);
     }
   };
@@ -254,7 +243,7 @@ xhttp.send("pagename="+pagename);
 
 
 function search_descript_price(imagename){
-	console.log(Descrp_price);
+	//console.log(Descrp_price);
 	for (var i = 0; i < Descrp_price.length; i++) {
 		var n = Descrp_price[i][4].includes(imagename);
 		if (n == true) {
@@ -280,7 +269,7 @@ function adminsearch(){
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
 
-    	console.log(this.responseText);
+    	//console.log(this.responseText);
     	User_search_result=JSON.parse(this.responseText);
 		if (searchtype == "Name" || searchtype == "Phone" || searchtype == "Email" || searchtype == "Address" ) {
     		SearchResult_By_username();
@@ -467,12 +456,22 @@ function SearchResult_By_product(){
 			var node9_textnode = document.createTextNode("Description");
 			node9.appendChild(node9_textnode);
 
+			var node11 = document.createElement("TH");
+			var node11_textnode = document.createTextNode("Edit");
+			node11.appendChild(node11_textnode);
+
+			var node12 = document.createElement("TH");
+			var node12_textnode = document.createTextNode("Delete");
+			node12.appendChild(node12_textnode);
+
 			var tr_for_th_node = document.createElement("TR");
 			tr_for_th_node.appendChild(node5);
 			tr_for_th_node.appendChild(node6);
 			tr_for_th_node.appendChild(node7);
 			tr_for_th_node.appendChild(node8);
 			tr_for_th_node.appendChild(node9);
+			tr_for_th_node.appendChild(node11);
+			tr_for_th_node.appendChild(node12);
 
 
 			var thead_node = document.createElement("thead");
@@ -512,6 +511,8 @@ function SearchResult_By_product(){
 			var node3 = document.createElement("TD");
 			var node4 = document.createElement("TD");
 			var node5 = document.createElement("TD");
+			var node10 = document.createElement("TD");
+			var node13 = document.createElement("TD");
 	
 
 
@@ -530,6 +531,12 @@ function SearchResult_By_product(){
 			var node_id5 = document.createAttribute("id"); node_id5.value ="product_Description";
 			node5.setAttributeNode(node_id5);
 
+			var node_id10 = document.createAttribute("id"); node_id10.value ="product_Edit";
+			node10.setAttributeNode(node_id10);
+
+			var node_id13 = document.createAttribute("id"); node_id13.value ="product_delete";
+			node13.setAttributeNode(node_id13);
+
 
 			var node1_textnode = document.createTextNode(User_search_result[i][0]);
 			node1.appendChild(node1_textnode);
@@ -546,6 +553,24 @@ function SearchResult_By_product(){
 			var node5_textnode = document.createTextNode(User_search_result[i][4]);
 			node5.appendChild(node5_textnode);
 
+			var nod10_button = document.createElement("button");
+			var nod10_button_id = document.createAttribute("id"); nod10_button_id.value ="product_Edit_button_ID";
+			nod10_button.setAttributeNode(nod10_button_id);
+			var nod10_button_onclick = document.createAttribute("onclick"); nod10_button_onclick.value ="EDIT_PRODUCT(this)";
+			nod10_button.setAttributeNode(nod10_button_onclick);
+			var nod10_button_textnode = document.createTextNode("EDIT");
+			nod10_button.appendChild(nod10_button_textnode);
+			node10.appendChild(nod10_button);
+
+			var nod13_button = document.createElement("button");
+			var nod13_button_id = document.createAttribute("id"); nod13_button_id.value ="product_Delete_button_ID";
+			nod13_button.setAttributeNode(nod13_button_id);
+			var nod13_button_onclick = document.createAttribute("onclick"); nod13_button_onclick.value ="DELETE_PRODUCT(this)";
+			nod13_button.setAttributeNode(nod13_button_onclick);
+			var nod13_button_textnode = document.createTextNode("DELETE");
+			nod13_button.appendChild(nod13_button_textnode);
+			node13.appendChild(nod13_button);
+
 			var main_node = document.createElement("TR");
 			var main_node_id = document.createAttribute("id"); main_node_id.value = i ;
 			main_node.setAttributeNode(main_node_id);
@@ -556,6 +581,9 @@ function SearchResult_By_product(){
 			main_node.appendChild(node3);
 			main_node.appendChild(node4);
 			main_node.appendChild(node5);
+			main_node.appendChild(node10);
+			main_node.appendChild(node13);
+
 
 
 			tableBody_node.appendChild(main_node);
@@ -580,7 +608,7 @@ function click_on_username(x){
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
 
-    	console.log(this.responseText);
+    	//console.log(this.responseText);
     	User_search_result=JSON.parse(this.responseText);
     	SearchResult_By_UserOrders();    	
     	
@@ -698,7 +726,7 @@ function click_on_orderid(x){
   	xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
 
-    	console.log(this.responseText);
+    	//console.log(this.responseText);
     	User_search_result=JSON.parse(this.responseText);
     	SearchResult_By_OrderItems();    	
     	
@@ -1158,31 +1186,50 @@ function sendAddProductData(){
 			price.push(document.getElementById("ADD_productprice_S").value);
 			price.push(document.getElementById("ADD_productprice_R").value);
 			price.push(document.getElementById("ADD_productprice_L").value);
+			
 		}else{
 			var price= document.getElementById("ADD_productprice").value; 
+			
 		}
 
 		var description = document.getElementById("addProduct_descriptdiv_textareaid").value; 
 		var pageselect = document.getElementById("addProduct_pagediv_selectid");
 		var page = pageselect.options[pageselect.selectedIndex].value;
 		var purpose = "sendAddProductData";
+
 		var xhttp = new XMLHttpRequest();
-  		xhttp.open("POST", "AddProduct.php", true);
-  		xhttp.onreadystatechange = function() {
-  			if (this.readyState == 4 && this.status == 200) {
-  				console.log(this.responseText);
-  				fac();
-  				
-  			}
-  		};
-  		xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-  		xhttp.send("purpose="+purpose+"&name="+name+"&ID="+ID+"&price="+price+"&description="+description+"&page="+page);
+		xhttp.open("POST", "AddProduct.php", true);
+		xhttp.onreadystatechange = function() {
+			if (this.readyState == 4 && this.status == 200) {
+				//console.log(this.responseText);
+				fac();
+			}
+		};
+		xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 
-
-
+		if (name !== "" && ID !== "" && description !== "") {
+			if (typeof(price)=="object") {
+				if (price[0] !== "" && price[1] !== "" && price[2] !== "") {
+					xhttp.send("purpose="+purpose+"&name="+name+"&ID="+ID+"&price="+price+"&description="+description+"&page="+page);
+				}else{
+					alert("please enter price");
+				}				
+			}else if(price !== ""){
+				xhttp.send("purpose="+purpose+"&name="+name+"&ID="+ID+"&price="+price+"&description="+description+"&page="+page);
+			}else{
+				alert("please enter price");
+			}
+		}else{
+			if (name=="") {
+				alert("please enter product name");
+			}else if (ID == "") {
+				alert("please enter product ID");
+			}else if (description == "") {
+				alert("please enter product description");
+			}
+		}
 	}
 }
-
 
 
  function fac(){
@@ -1197,7 +1244,7 @@ function sendAddProductData(){
          xhttp.open("POST", "uploadfile.php", true);
          xhttp.onreadystatechange = function() {
          if (this.readyState == 4 && this.status == 200) {
-            console.log(this.responseText);
+            //console.log(this.responseText);
          }
         };
         
@@ -1217,4 +1264,205 @@ function change_price_inputs(){
 		document.getElementById("addProduct_SRL_pricediv").style.display="none";
 	}
 
+}
+
+
+function change_filtername(x){
+	document.getElementById("Filter_text").innerHTML= x.innerHTML; 
+}
+
+
+function EDIT_PRODUCT(x){
+
+	var default_description = x.parentNode.previousSibling.innerHTML;
+	var default_price = x.parentNode.previousSibling.previousSibling.previousSibling.innerHTML;
+	var default_name = x.parentNode.previousSibling.previousSibling.previousSibling.previousSibling.innerHTML;
+	var edit_ID = x.parentNode.parentNode.firstChild.innerHTML;
+
+	removePreviousTable();
+	var divtobedeleted_node = document.createElement("div");
+	var mainDiv_node = document.createElement("div");
+	var div1_node = document.createElement("div");
+	var div3_node = document.createElement("div");
+	var div5_node = document.createElement("div");	
+
+	var mainDiv_node_id = document.createAttribute("id"); mainDiv_node_id.value = "EditProductdiv";
+	mainDiv_node.setAttributeNode(mainDiv_node_id);
+
+	var div1_node_id = document.createAttribute("id"); div1_node_id.value = "EditProduct_namediv";
+	div1_node.setAttributeNode(div1_node_id);
+
+	var div3_node_id = document.createAttribute("id"); div3_node_id.value = "EditProduct_pricediv";
+	div3_node.setAttributeNode(div3_node_id);
+	var div3_node_style = document.createAttribute("style"); div3_node_style.value = "display: block;";
+	div3_node.setAttributeNode(div3_node_style);
+
+	var div5_node_id = document.createAttribute("id"); div5_node_id.value = "EditProduct_descriptdiv";
+	div5_node.setAttributeNode(div5_node_id);
+
+
+	var divtobedeleted_node_id = document.createAttribute("id"); divtobedeleted_node_id.value ="DivToBeDeletedID";
+	divtobedeleted_node.setAttributeNode(divtobedeleted_node_id);
+
+
+
+	var div1_textnode = document.createTextNode("Name: ");	
+
+	var div1_input_node = document.createElement("input");
+	var div1_input_node_type = document.createAttribute("type"); div1_input_node_type.value = "text";
+	div1_input_node.setAttributeNode(div1_input_node_type);
+	var div1_input_node_id = document.createAttribute("id"); div1_input_node_id.value = "EDIT_productname";
+	div1_input_node.setAttributeNode(div1_input_node_id);
+	var div1_input_node_value = document.createAttribute("value"); div1_input_node_value.value = "";
+	div1_input_node.setAttributeNode(div1_input_node_value);
+
+	var div3_textnode = document.createTextNode("Price: ");
+
+	var div3_input_node = document.createElement("input");
+	var div3_input_node_type = document.createAttribute("type"); div3_input_node_type.value = "number";
+	div3_input_node.setAttributeNode(div3_input_node_type);
+	var div3_input_node_id = document.createAttribute("id"); div3_input_node_id.value = "EDIT_productprice";
+	div3_input_node.setAttributeNode(div3_input_node_id);
+	var div3_input_node_value = document.createAttribute("value"); div3_input_node_value.value = "";
+	div3_input_node.setAttributeNode(div3_input_node_value);
+
+
+	var div5_textnode = document.createTextNode("Description: ");
+
+	var div5_textarea_node = document.createElement("textarea");
+	var div5_textarea_node_id = document.createAttribute("id"); div5_textarea_node_id.value = "EditProduct_descriptdiv_textareaid";
+	div5_textarea_node.setAttributeNode(div5_textarea_node_id);
+	var div5_node_row = document.createAttribute("row"); div5_node_row.value = "9";
+	div5_textarea_node.setAttributeNode(div5_node_row);
+	var div5_node_column = document.createAttribute("column"); div5_node_column.value = "50";
+	div5_textarea_node.setAttributeNode(div5_node_column);
+	var div5_textarea_node_value = document.createAttribute("value"); div5_textarea_node_value.value = "";
+	div5_textarea_node.setAttributeNode(div5_textarea_node_value);
+
+
+
+	var edit_button = document.createElement("button");
+	var edit_button_id = document.createAttribute("id"); edit_button_id.value = "EditProduct_buttonid";
+	edit_button.setAttributeNode(edit_button_id);
+	var edit_button_onclick = document.createAttribute("onclick"); edit_button_onclick.value = "sendEditProductData()";
+	edit_button.setAttributeNode(edit_button_onclick);
+	var edit_button_textnode = document.createTextNode("SAVE EDIT PRODUCT");
+	edit_button.appendChild(edit_button_textnode);
+
+	div1_node.appendChild(div1_textnode);
+	div1_node.appendChild(div1_input_node);
+	mainDiv_node.appendChild(div1_node);
+
+	div3_node.appendChild(div3_textnode);
+	div3_node.appendChild(div3_input_node);
+	mainDiv_node.appendChild(div3_node);	
+
+	div5_node.appendChild(div5_textnode);
+	div5_node.appendChild(div5_textarea_node);
+	mainDiv_node.appendChild(div5_node);
+
+	var p=document.createElement("p");
+	var pid = document.createAttribute("id"); pid.value = "EDIT_ID";
+	p.setAttributeNode(pid);
+	var p_style = document.createAttribute("style"); p_style.value = "display:none;";
+	p.setAttributeNode(p_style);
+	var ptext = document.createTextNode(edit_ID);
+	p.appendChild(ptext);
+	mainDiv_node.appendChild(p);
+
+	mainDiv_node.appendChild(edit_button);
+
+	divtobedeleted_node.appendChild(mainDiv_node);
+
+	document.getElementById("searchresultbodydiv").appendChild(divtobedeleted_node);
+
+	document.getElementById("EDIT_productname").defaultValue = default_name;
+	document.getElementById("EDIT_productprice").defaultValue = default_price;
+	document.getElementById("EditProduct_descriptdiv_textareaid").defaultValue = default_description;
+
+}
+
+
+function sendEditProductData(){
+
+	var name = document.getElementById("EDIT_productname").value;
+	var price = document.getElementById("EDIT_productprice").value;
+	var description = document.getElementById("EditProduct_descriptdiv_textareaid").value;
+	var ID = document.getElementById("EDIT_ID").innerHTML;	
+
+	var xhttp = new XMLHttpRequest();
+  	xhttp.open("POST", "editproduct.php", true);
+  	xhttp.onreadystatechange = function() {
+  		if (this.readyState == 4 && this.status == 200) {
+  			console.log(this.responseText);
+  		}
+  	};
+  	xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+  	xhttp.send("name="+name+"&price="+price+"&description="+description+"&ID="+ID);
+}
+
+function DELETE_PRODUCT(x){
+	var productIDtobeDelete = x.parentNode.parentNode.firstChild.innerHTML;
+	var productSizetobeDelete = x.parentNode.previousSibling.previousSibling.previousSibling.innerHTML;
+	if (productSizetobeDelete=="-") {
+		if (confirm("Are you Sure you Want to Delete '"+productIDtobeDelete+"'?")) {
+			sendDeleteProductData(productIDtobeDelete,"single");
+		}
+	}else{		
+		if (window.confirm("Are you sure you want to Delete '"+productIDtobeDelete+"' \n (WARNING: its other sizes will be deleted too)")) {
+			sendDeleteProductData(productIDtobeDelete,"triple");
+		}
+	}	
+}
+
+function sendDeleteProductData(ID,flag){
+	var xhttp = new XMLHttpRequest();
+  	xhttp.open("POST", "deleteproduct.php", true);
+  	xhttp.onreadystatechange = function() {
+  		if (this.readyState == 4 && this.status == 200) {
+  			console.log(this.responseText);
+  		}
+  	};
+  	xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+  	xhttp.send("ID="+ID+"&flag="+flag);
+}
+
+
+
+function getcartnumber(){
+		var xhttp = new XMLHttpRequest();
+        xhttp.open("POST", "ajax.php", true);
+        var purpose = "onloadcartnumber"
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+            	var n=this.responseText;
+                document.getElementById('number').innerHTML = n;
+            }
+        };
+        xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        xhttp.send("purpose="+purpose);
+}
+
+
+function cartIncrement(purpose){
+
+	var a = document.getElementById('number').innerHTML;
+	parseInt(a);
+	if (purpose == "dec") {
+		a--;
+	}else{
+		a++;
+	}
+	
+	document.getElementById('number').innerHTML = a;
+	var purpose = "cartnumberupdate";
+	var xhttp = new XMLHttpRequest();
+	xhttp.open("POST", "ajax.php", true);
+	xhttp.onreadystatechange = function() {
+		if (this.readyState == 4 && this.status == 200) {
+			console.log(this.responseText);
+		}
+	};
+	xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+	xhttp.send('cartnumberupdate='+a+"&purpose="+purpose);
 }
