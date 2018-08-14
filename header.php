@@ -17,7 +17,7 @@
 
 	
 <div class="header" >
-	<div class="navbar" id='nav' >	
+	<div class="navbar" id='nav' style="background-color:#111;background-image:linear-gradient(#444,#111);box-shadow:0 2px 1px #9c9c9c;">	
 		<div id="bounce" class="hvr-bounce-to-right">
 		<ul>
 
@@ -50,9 +50,14 @@
 			</div>
 
 			
-			<div class="logo">
+			<div class="logo" >				
+					<li id="imglogo" >
 						<a href="mainpage.php">
-					<li id="imglogo"><img id="logoimg"  src="Assets/logo4.png"  style="width: 100px; height: auto;" ></li>  </div>
+						<img  id="logoimg" src="Assets/logo4.png"  style="width: 100px; height: auto;">
+						</a>
+					</li>
+				
+			</div>
 			
 
 				<div class="dropdown">

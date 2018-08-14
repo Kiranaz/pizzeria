@@ -3,7 +3,7 @@
 <title id="title" >All Pizzas</title>
 </head>
 
-<body onload="getpagename(); get_products_image(); getcartnumber()" style=" background: url(Assets/pizza-pattern2.jpg); background-size: 100% 100%; ">
+<body onload="getpagename();  getcartnumber()" style=" background: url(Assets/pizza-pattern2.jpg); background-size: 100% 100%; ">
     <div id="success_message"> </div>  
 <div class="bg" id="b3b">
     <div class="container1" onmouseover="pricedisplay()" id="abc12345" onmouseleave="imgchange(this)" style=" display: none; top:; left:; width: 25%;">

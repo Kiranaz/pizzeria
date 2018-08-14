@@ -29,8 +29,6 @@ if (isset($_POST['pagename'])) {
     $PrdtID3 = $productsname[$i]."large";
     $sql3 = "SELECT Name, Price, Size, Description FROM products WHERE ProductID = '$PrdtID3' ";
 
-
-
     $result1 = mysqli_query($conn, $sql1);
     $row1 = mysqli_fetch_row($result1);
     $result2 = mysqli_query($conn, $sql2);

@@ -2,7 +2,7 @@
 <title id="title">Appetizer</title>
 </head>
 
-<body onload="getpagename(); get_products_image(); getcartnumber()" style=" background: url(Assets/pizza-pattern2.jpg); background-size: 100% 100%; ">
+<body onload="getpagename();  getcartnumber()" style=" background: url(Assets/pizza-pattern2.jpg); background-size: 100% 100%; ">
     <div id="success_message"> </div>
         
 <div class="bg" id="b3b">

@@ -3,7 +3,7 @@
 <title>Home</title>
 </head>
 
-<body onload="getpagename()">
+<body onload="change_navbar()">
         <div class="big" id="ba">
 	<div class="slider">
 		<figure>
