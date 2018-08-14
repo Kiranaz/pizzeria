@@ -1,7 +1,7 @@
 <?php 
 
 
-$conn = mysqli_connect('localhost','root','abc123','pizzeria');
+$conn = mysqli_connect('localhost','root','','pizzeria');
 
     if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());}

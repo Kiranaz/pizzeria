@@ -233,7 +233,6 @@ if (c.firstChild == null ) {
 var Descrp_price; //GLOBAL VARIABLE
 
 function getpagename(){
-
 	var pagename = document.getElementById("title").innerHTML;
 	var xhttp = new XMLHttpRequest();
   xhttp.open("POST", "ajax3.php", true);
@@ -864,7 +863,7 @@ function SearchResult_By_OrderItems(){
 
 
 function get_products_image(){
-
+	
 	var pagename = document.getElementById("title").innerHTML;
 	var xhttp = new XMLHttpRequest();
   xhttp.open("POST", "ajax4.php", true);
@@ -1058,9 +1057,23 @@ function show_AddProductPanel(pages){
 	var divtobedeleted_node_id = document.createAttribute("id"); divtobedeleted_node_id.value ="DivToBeDeletedID";
 	divtobedeleted_node.setAttributeNode(divtobedeleted_node_id);
 
+	// var node5 = document.createElement("TH");
+	// 		var node5_textnode = document.createTextNode("Order ID");
+	// 		node5.appendChild(node5_textnode);
+	
+
+	// var div1_textnode = document.createTextNode("Name: ");	
+	// var div1_textnode1_id = document.createAttribute("id"); div1_textnode1_id.value = "nameproduct";
+	// div1_textnode.setAttributeNode(div1_textnode1_id);
+
+		var div1_name = document.createElement("label");
+		var div1_textnode = document.createTextNode("Name: ");
+		div1_name.appendChild(div1_textnode);
+
+		var div1_textnode1_id = document.createAttribute("id"); div1_textnode1_id.value = "nameproduct";
+		div1_name.setAttributeNode(div1_textnode1_id);
 
 
-	var div1_textnode = document.createTextNode("Name: ");	
 
 	var div1_input_node = document.createElement("input");
 	var div1_input_node_type = document.createAttribute("type"); div1_input_node_type.value = "text";
@@ -1072,7 +1085,14 @@ function show_AddProductPanel(pages){
 
 
 
-	var div2_textnode = document.createTextNode("ID: ");
+
+	var div2_name = document.createElement("label");
+		var div2_textnode = document.createTextNode("ID: ");
+		div2_name.appendChild(div2_textnode);
+
+		var div2_textnode2_id = document.createAttribute("id"); div2_textnode2_id.value = "idproduct";
+		div2_name.setAttributeNode(div2_textnode2_id);
+
 
 	var div2_input_node = document.createElement("input");
 	var div2_input_node_type = document.createAttribute("type"); div2_input_node_type.value = "text";
@@ -1086,7 +1106,13 @@ function show_AddProductPanel(pages){
 	div2_input_node.setAttributeNode(div2_input_node_focusout);
 
 
-	var div3_textnode = document.createTextNode("Price: ");
+
+	var div3_name = document.createElement("label");
+		var div3_textnode = document.createTextNode("Price: ");
+		div3_name.appendChild(div3_textnode);
+
+		var div3_textnode3_id = document.createAttribute("id"); div3_textnode3_id.value = "priceproduct";
+		div3_name.setAttributeNode(div3_textnode3_id);
 
 	var div3_input_node = document.createElement("input");
 	var div3_input_node_type = document.createAttribute("type"); div3_input_node_type.value = "number";
@@ -1096,6 +1122,14 @@ function show_AddProductPanel(pages){
 	
 
 	var div4_textnode = document.createTextNode("Page: ");
+
+	var div4_name = document.createElement("label");
+		var div4_textnode = document.createTextNode("Page: ");
+		div4_name.appendChild(div4_textnode);
+
+		var div4_textnode4_id = document.createAttribute("id"); div4_textnode4_id.value = "pageproduct";
+		div4_name.setAttributeNode(div4_textnode4_id);
+
 
 	var div4_select_node = document.createElement("select");
 	var div4_select_node_id = document.createAttribute("id"); div4_select_node_id.value = "addProduct_pagediv_selectid";
@@ -1116,7 +1150,14 @@ function show_AddProductPanel(pages){
 	}
 
 
+
+	var div5_name = document.createElement("label");
 	var div5_textnode = document.createTextNode("Description: ");
+	div5_name.appendChild(div5_textnode);
+
+	var div5_textnode5_id = document.createAttribute("id"); div5_textnode5_id.value = "descriptionproduct";
+	div5_name.setAttributeNode(div5_textnode5_id);
+
 
 	var div5_textarea_node = document.createElement("textarea");
 	var div5_textarea_node_id = document.createAttribute("id"); div5_textarea_node_id.value = "addProduct_descriptdiv_textareaid";
@@ -1132,11 +1173,35 @@ function show_AddProductPanel(pages){
 	div6_input_node.setAttributeNode(div6_input_node_type);
 	var div6_input_node_name = document.createAttribute("name"); div6_input_node_name.value = "post-pic";
 	div6_input_node.setAttributeNode(div6_input_node_name);
+	var div6_textnode6_id = document.createAttribute("id"); div6_textnode6_id.value = "fileproduct";
+	div6_input_node.setAttributeNode(div6_textnode6_id);
 
 
 	var div7_textnode1 = document.createTextNode("Price small: ");
 	var div7_textnode2 = document.createTextNode("Price regular: ");
 	var div7_textnode3 = document.createTextNode("Price large: ");
+
+	var div7_name1 = document.createElement("label");
+	var div7_textnode1 = document.createTextNode("Price Small: ");
+	div7_name1.appendChild(div7_textnode1);
+
+	var div7_textnode1_id = document.createAttribute("id"); div7_textnode1_id.value = "smallproduct";
+	div7_name1.setAttributeNode(div7_textnode1_id);
+
+	var div7_name2 = document.createElement("label");
+	var div7_textnode2 = document.createTextNode("Price Regular: ");
+	div7_name2.appendChild(div7_textnode2);
+
+	var div7_textnode2_id = document.createAttribute("id"); div7_textnode2_id.value = "regularproduct";
+	div7_name2.setAttributeNode(div7_textnode2_id);
+
+	var div7_name3 = document.createElement("label");
+	var div7_textnode3 = document.createTextNode("Price Large: ");
+	div7_name3.appendChild(div7_textnode3);
+
+	var div7_textnode3_id = document.createAttribute("id"); div7_textnode3_id.value = "largeproduct";
+	div7_name3.setAttributeNode(div7_textnode3_id);
+	
 
 	var div7_input_node1 = document.createElement("input");
 	var div7_input_node1_type = document.createAttribute("type"); div7_input_node1_type.value = "number";
@@ -1164,45 +1229,46 @@ function show_AddProductPanel(pages){
 	var add_button = document.createElement("button");
 	var add_button_id = document.createAttribute("id"); add_button_id.value = "AddProduct_buttonid";
 	add_button.setAttributeNode(add_button_id);
-	var add_button_onclick = document.createAttribute("onclick"); add_button_onclick.value = "sendAddProductData()";
+	var add_button_onclick = document.createAttribute("onclick"); add_button_onclick.value = "sendAddProductData(); ";
 	add_button.setAttributeNode(add_button_onclick);
-	var add_button_textnode = document.createTextNode("ADD PRODUCT");
+
+	var add_button_textnode = document.createTextNode("Add Product");
 	add_button.appendChild(add_button_textnode);
+
 
 	
 
 
-
-	div1_node.appendChild(div1_textnode);
+	div1_node.appendChild(div1_name);
 	div1_node.appendChild(div1_input_node);
 	mainDiv_node.appendChild(div1_node);
 
-	div2_node.appendChild(div2_textnode);
+	div2_node.appendChild(div2_name);
 	div2_node.appendChild(div2_input_node);
 	div2_node.appendChild(div2_span_node);
 	mainDiv_node.appendChild(div2_node);
 
-	div3_node.appendChild(div3_textnode);
+	div3_node.appendChild(div3_name);
 	div3_node.appendChild(div3_input_node);
 	mainDiv_node.appendChild(div3_node);
 
-	div7_node.appendChild(div7_textnode1);
+	div7_node.appendChild(div7_name1);
 	div7_node.appendChild(div7_input_node1);
 	div7_node.appendChild(div7_br1);
-	div7_node.appendChild(div7_textnode2);
+	div7_node.appendChild(div7_name2);
 	div7_node.appendChild(div7_input_node2);
 	div7_node.appendChild(div7_br2);
-	div7_node.appendChild(div7_textnode3);
+	div7_node.appendChild(div7_name3);
 	div7_node.appendChild(div7_input_node3);
 	mainDiv_node.appendChild(div7_node);
 	
 
 
-	div4_node.appendChild(div4_textnode);
+	div4_node.appendChild(div4_name);
 	div4_node.appendChild(div4_select_node);
 	mainDiv_node.appendChild(div4_node);
 
-	div5_node.appendChild(div5_textnode);
+	div5_node.appendChild(div5_name);
 	div5_node.appendChild(div5_textarea_node);
 	mainDiv_node.appendChild(div5_node);
 

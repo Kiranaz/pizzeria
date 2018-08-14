@@ -3,7 +3,7 @@
 			<div class="about">
 				<h4 style="font-size: 25px; color: #804000; font-family: 'cabin sketch';">About Us</h4>
 				<p style="font-size:18px; font-family: 'cabin sketch';">At Pizzeria De NEDian, we believe pizza making comes from the heart. We specialize in PAKISTANI STYLE PIZZA that comes to you straight off the brick.</p>
-				<p style="font-size:18px; font-family:'cabin sketch'";>We use only the FRESHEST INGREDIENTS and the FINEST CHEESES. We make our dough and sauces fresh everyday.
+				<p style="font-size:18px; font-family:'cabin sketch';">We use only the FRESHEST INGREDIENTS and the FINEST CHEESES. We make our dough and sauces fresh everyday.
 				</p>
 
 				<p style="background-size: 16px;">
@@ -15,11 +15,12 @@
 
 			<div class="links">
 				<h4 style="font-size: 25px; font-family: 'cabin sketch'; color: #804000;"> Important Links</h4>
-				<p style="font-size: 18px;  font-family: 'cabin sketch';"><a href="">About Us</a></p>
-				<p style="font-size: 18px; font-family: 'cabin sketch';"><a href="">Contact Us</a></p>
-				<p style="font-size: 18px; font-family: 'cabin sketch';"><a href="">Terms & Conditions</a></p>
-				<p style="font-size: 18px; font-family: 'cabin sketch';"><a href="">Policy</a></p>
-			</div>
+				<p style="font-size: 18px;  font-family: 'cabin sketch';"><a href="http://localhost/pizzeria/aboutus.php#about">About Us</a></p>
+				<p style="font-size: 18px; font-family: 'cabin sketch';"><a href="http://localhost/pizzeria/aboutus.php#purpose">Purpose</a></p>
+				<p style="font-size: 18px; font-family: 'cabin sketch';"><a href="http://localhost/pizzeria/aboutus.php#refund">Refund Policy</a></p>
+				<p style="font-size: 18px; font-family: 'cabin sketch';"><a href="http://localhost/pizzeria/aboutus.php#contactus">Contact Us</a></p>
+
+</div>
 
 			<div class="address">
 				<h4 style="font-size: 25px; color: #804000; font-family: 'cabin sketch';">Address</h4>

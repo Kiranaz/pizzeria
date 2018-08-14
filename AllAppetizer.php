@@ -2,7 +2,15 @@
 <title id="title">Appetizer</title>
 </head>
 
+<<<<<<< HEAD
 <body onload="getpagename();  getcartnumber()" style=" background: url(Assets/pizza-pattern2.jpg); background-size: 100% 100%; ">
+=======
+<<<<<<< HEAD
+<body onload="getpagename(); get_products_image(); " class="big">
+=======
+<body onload="getpagename(); get_products_image(); getcartnumber()" style=" background: url(Assets/pizza-pattern2.jpg); background-size: 100% 100%; ">
+>>>>>>> 2458642bfe0c479764f92a4832ea0dfd4468b647
+>>>>>>> 67a1083db56c9f6094a8173c9bd63039d45b254f
     <div id="success_message"> </div>
         
 <div class="bg" id="b3b">
@@ -33,6 +41,8 @@
 </div>
 
 </body>
+<<<<<<< HEAD
+=======
  <?php include 'footer.php'; ?> 
 
 
@@ -41,8 +51,10 @@
 
 
 
+>>>>>>> 2458642bfe0c479764f92a4832ea0dfd4468b647
 
 
+ <?php include 'footer.php'; ?> 
 
 </html>
 

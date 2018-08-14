@@ -8,7 +8,7 @@
 	<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 	<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="style2.css">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nothing+You+Could+Do|Poor+Story|Permenant+Marker|Fredericka+the+Great|Londrina+Sketch|Hanalei|Sedgwick+Ave+Display|Rock+Salt|Cabin+Sketch|Nanum+Pen+Script|Sacramento|Cookies|Satisfy|Dancing+Script|Pacifico|Oregano|Jua">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nothing+You+Could+Do|Poor+Story|Dekko|Permenant+Marker|Fredericka+the+Great|Londrina+Sketch|Hanalei|Sedgwick+Ave+Display|Rock+Salt|Cabin+Sketch|Nanum+Pen+Script|Sacramento|Cookies|Satisfy|Dancing+Script|Pacifico|Oregano|Jua">
 	<link href="https://fonts.googleapis.com/css?family=Oleo+Script:400,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Teko:400,700" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
@@ -23,10 +23,10 @@
   <a href="#" onclick="closeNav(); Add_Product_Div('getpagesnames')">Add Item</a>
   <div class="hr"><hr /></div>
 
-  <a href="#">Edit Item</a>
+  <!-- <a href="#">Edit Item</a>
   <div class="hr"><hr /></div>
 
-  <a href="#">Delete Item</a>
+  <a href="#">Delete Item</a> -->
 </div>
 
 <div id="tomove">
@@ -54,7 +54,7 @@
                                           
                                         </ul>
                                     </li>
-                                   <li class="subs">Page</li>
+                                  
 								                </ul>								
                             </li>
 								        </ul>
@@ -67,7 +67,7 @@
 
   </div>
                         <br style="clear: both;">
-                        <span style="font-size:30px; cursor:pointer; color: white; margin-top: -50px; top: -77px; left:1295px;height: 30px; position: relative;"><img id="logoimg"  src="Assets/logoadmin.png"></span>
+                        <span style="font-size:30px; cursor:pointer; color: white; margin-top: -50px; top: -77px; left:1295px;height: 30px; position: relative;"><img id="logo_img"  src="Assets/logoadmin.png"></span>
 
                         
                     </div>

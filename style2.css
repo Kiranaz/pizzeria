@@ -1,5 +1,4 @@
-   
-.headcss {
+ .headcss {
     text-align: center;
     align-self: center;
     color: red;
@@ -17,7 +16,7 @@
   }
   
   
-  .main{width: 100%;
+  .main{width: 1370px;
     margin-left: -20px;
       height: 50px; background: #000; margin-top: -60px;}
   /*General Menu Styling*/
@@ -96,12 +95,12 @@
   }
   
   body {
-    font-family: "Lato", sans-serif;
+
     transition: background-color .5s;
 }
 
 .sidenav {
-    height: 100%;
+    height: 200px;
     width: 0;
     position: fixed;
     z-index: 1;
@@ -148,4 +147,163 @@ hr {
     color: whitesmoke;
     width: 75%; 
     height: 5px;
+}
+
+
+#addProductdiv{
+    /* border: #000 solid 2px;
+    box-align: center; */
+    font-family: 'Dekko';
+    font-size: 20px;
+    margin-top: 100px;
+    height: 300px;
+    border: rgb(80, 70, 70) 2px double;
+    color: black;
+    border-bottom: 5px;
+    line-height: 30px;
+    word-spacing: 3px;
+    text-align: center;
+    position: sticky;
+    box-shadow: 0px 20px 20px 0px black;
+
+    background: linear-gradient(grey, white);
+}
+
+
+#addProduct_namediv{
+    top: 20px;
+    position: relative;
+    float: left;
+    
+}
+
+#nameproduct{
+}
+#ADD_productname{
+border-radius: 10px;
+cursor: pointer;
+margin-left:50px;
+
+}
+
+#addProduct_IDdiv{
+    top: 70px;
+    left: -20px;
+    margin-left: -260px;
+    position: relative;
+    float: left;
+
+}
+#idproduct{
+margin-left: -22px;
+}
+#ADD_productid{
+    border-radius: 10px;
+    cursor: pointer;
+    margin-left:70px;
+
+}
+#addProduct_id_span
+{
+    color: red;
+    text-decoration-line: overline underline;
+    font-style: initial;
+}
+#addProduct_pricediv{
+    top: 120px;
+    position: relative;
+    float: left;
+    left: -83px;
+    margin-left: -235px;
+
+}
+#priceproduct{
+
+}
+#ADD_productprice{
+    border-radius: 10px;
+    cursor: pointer;
+    margin-left:25px;
+    
+}
+
+#addProduct_SRL_pricediv{
+    top: 120px;
+
+    position: relative;
+    margin-left: -850px;
+}
+#smallproduct{
+    top: 120px;
+    margin-left: -1120px;
+
+}
+#ADD_productprice_S{
+    top: 120px;
+    /* margin-left: -600px; */
+    border-radius: 10px;
+    cursor: pointer;
+}
+#regularproduct{
+    margin-top: 12px;
+    margin-left: 63px;
+
+}
+#ADD_productprice_R{
+    margin-top: 12px;
+
+    border-radius: 10px;
+    cursor: pointer;
+}
+#largeproduct{
+    margin-top: 12px;
+    margin-left: 53px;
+
+}
+#ADD_productprice_L{
+    border-radius: 10px;
+    cursor: pointer;
+        margin-top: 12px;
+
+}
+
+#addProduct_pagediv{
+    float: right;
+    position: absolute;
+    right: 0px;
+    top: 20px;
+}
+#pageproduct{
+margin-right: 60px;
+}
+#addProduct_pagediv_selectid{
+    border-radius: 6px;
+}
+
+#addProduct_descriptdiv{
+    float: right;
+    position: absolute;
+    right: 0px;
+    top: 60px;
+    bottom: 0;
+}
+#discriptionproduct{
+
+}
+#addProduct_descriptdiv_textareaid{
+    border-radius: 10px;
+}
+
+#fileproduct
+{
+    float: right;
+    position: absolute;
+    right: -200px;
+    top: 140px;
+}
+#AddProduct_buttonid{
+    float: right;
+    position: absolute;
+    right: 125px;
+    top: 180px;
 }

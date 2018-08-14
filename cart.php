@@ -21,7 +21,7 @@ session_start();
  $datasize=array();
  $dataquantity=array();
 
-$conn = mysqli_connect('localhost','root','abc123','pizzeria');
+$conn = mysqli_connect('localhost','root','','pizzeria');
 
     if (!$conn) {die("Connection failed: " . mysqli_connect_error());}
 
@@ -164,7 +164,6 @@ if ($num_of_results > 0) {
 
 
 </div>
-
 
 
 
@@ -355,7 +354,7 @@ function sendForm(){
 
 function thanks(name){
 	alert("chalra");
-	window.location.assign("http://localhost/pizzeria/AllPizzas.php");
+	window.location.assign("http://localhost/pizzeria/mainpage.php");
 }
 
  function checkk(){
@@ -377,4 +376,5 @@ function thanks(name){
 
 
 </body>
+
 </html>	

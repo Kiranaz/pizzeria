@@ -82,6 +82,31 @@
  <?php
 //____________________________________- MYSQL _________________________________
 
+<<<<<<< HEAD
+    if( $nameErr=="" && $EmailErr=="" && $PhoneErr=="" ) {
+    
+        
+    $conn = mysqli_connect('localhost','root','','pizzeria');
+
+    if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());}
+
+    if (!mysqli_select_db($conn,'pizzeria')) {
+        echo "Database Not Selected";
+    }
+
+    $Name = $_POST["name"];
+    $Email = $_POST["email"];
+    $Comment = $_POST["comment"];
+    $Phone=$_POST["phone"];
+
+
+    $sql1="SELECT ID FROM User WHERE Phone='$Phone' AND Name='$Name' ";
+    $result = mysqli_query($conn,$sql1);
+    
+
+    if (mysqli_num_rows($result) == 0) {
+=======
     if( $nameErr=="valid" && $EmailErr=="valid" && $PhoneErr=="valid" ) {
         $conn = mysqli_connect('localhost','root','abc123','pizzeria');
         if (!$conn) {
@@ -98,6 +123,7 @@
         $sql1="SELECT ID FROM User WHERE Phone='$Phone' AND Name='$Name' ";
         $result = mysqli_query($conn,$sql1);
         if (mysqli_num_rows($result) == 0) {
+>>>>>>> 2458642bfe0c479764f92a4832ea0dfd4468b647
             $sql="INSERT INTO User(Name,Email,Phone,Address) VALUES('$Name','$Email','$Phone','$Comment')";
             if (!mysqli_query($conn,$sql)) {
                 echo 'Not inserted';
